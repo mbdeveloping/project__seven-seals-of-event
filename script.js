@@ -131,17 +131,13 @@ $("a[href='#top']").click(function() {
      var $cControl = $(".carousel-control");
      var $mainContainer = $(".container");
 
-     $cControl.css("display", "block")
-     $cControl.hide();
+     $cControl.css("display", "block").hide();
     $mainContainer.mouseover(function(){
-         // $cControl.css("display", "block")
-         $cControl.fadeIn(300);
+         $cControl.stop().fadeIn(300);
      });
 
      $mainContainer.mouseleave(function(){
-         // $cControl.css("display", "none")
-         $cControl.fadeOut(300);
-
+         $cControl.stop().fadeOut(300);
      });
 
    });
