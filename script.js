@@ -140,6 +140,12 @@ $("a[href='#top']").click(function() {
          $cControl.stop().fadeOut(300);
      });
 
+     $cControl.hover(function() {
+       $( this ).css("opacity", "0.9");
+      }, function() {
+        $( this ).css("opacity", "0.5");
+      }
+    );
    });
 
    /***************************************************************************
@@ -339,7 +345,7 @@ $(document).ready(function(){
   $hamburgerBtn.on('click', function(){
     this.classList.toggle("change");
       var $mainNav = $("#main-nav-ul");
-      $mainNav.hide().fadeIn('slow');
+      $mainNav.stop().hide().fadeIn('slow');
   })
 });
 

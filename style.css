@@ -1193,10 +1193,6 @@ text-align: center;
     outline: none;
     opacity: 0.5;
 }
-.carousel-control:hover {
-  opacity: 0.8;
-}
-
 .parallax-wrapper {
   height: 500px;
   width: 100%;
