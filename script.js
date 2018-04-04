@@ -140,13 +140,6 @@ $("a[href='#top']").click(function() {
      $mainContainer.mouseleave(function(){
          $cControl.stop().fadeOut(300);
      });
-
-    //  $cControl.hover(function() {
-    //    $(this).css("opacity", "0.9");
-    //   }, function() {
-    //     $(this).css("opacity", "0.5");
-    //   }
-    // );
      $cControl.hover(function() {
        $(this).css("background", "rgba(0,0,0, .5)");
       }, function() {
