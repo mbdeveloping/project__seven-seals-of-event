@@ -1158,7 +1158,7 @@ text-align: center;
   color: white;
   background-color: black;
   border-radius: 10px;
-  opacity: .5;
+  /* opacity: .5; */
 }
 
 .carousel-control.right {

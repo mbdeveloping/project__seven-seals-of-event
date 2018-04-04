@@ -131,12 +131,7 @@ $("a[href='#top']").click(function() {
      var $cControl = $(".carousel-control");
      var $mainContainer = $(".container");
 
-     $cControl.hover(function() {
-       $( this ).css("opacity", "0.9");
-      }, function() {
-        $( this ).css("opacity", "0.5");
-      }
-    );
+
      $cControl.css("display", "block").hide();
     $mainContainer.mouseover(function(){
          $cControl.stop().fadeIn(300);
@@ -146,7 +141,18 @@ $("a[href='#top']").click(function() {
          $cControl.stop().fadeOut(300);
      });
 
-
+    //  $cControl.hover(function() {
+    //    $(this).css("opacity", "0.9");
+    //   }, function() {
+    //     $(this).css("opacity", "0.5");
+    //   }
+    // );
+     $cControl.hover(function() {
+       $(this).css("background", "rgba(0,0,0, .5)");
+      }, function() {
+        $(this).css("background", "rgba(0,0,0, 1)");
+      }
+    );
    });
 
    /***************************************************************************
