@@ -1,4 +1,6 @@
 # Seven-Seals-of-Event
+Website: https://www.sevensealsofevent.com 
+Please keep in mind that this website server is in Hong Kong so load time can be a bit slower. 
 It is my first project that I have done. This website is for Chinese company called Seven Seals of Event, which provides wedding planning, exhibitions, travels and many other activities which they can organize for any special day. It was a fantastic opportunity to gain a lot of experience and overcome the following challenges while developing this website:
 
 
