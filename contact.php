@@ -77,7 +77,7 @@ if (!$errName && !$errEmail && !$errPhone && !$errMessage && !$errHuman) {
                   <p class="logoText logoTextNormal">Seven Seals of Event<sup><i class="fa fa-registered logo-r-fn" aria-hidden="true"></i></sup></p>
                 </a>
               </div><!--end branding-->
-              <div class="container-hamburger-btn" onclick="myFunction(this)">
+							<div id="hamburger-btn" class="container-hamburger-btn">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>

@@ -4,7 +4,7 @@
  * {
   margin: 0;
   padding: 0;
-  font-family: Gadugi;
+  font-family: "Book Antiqua";
 }
 html, body {
   height: 100%;
@@ -1358,7 +1358,7 @@ main {
 }
 
 .right-w-wrapper {
-  margin-top: 5%;
+  margin-top: 20px;
   margin-left: 5%;
   margin-right: 5%;
   border-bottom: 1px dashed #cccccc;
@@ -1488,10 +1488,9 @@ margin-right: 5%;
 }
 
 #right-w-more-box-btn {
-  height: 30px;
+  padding:10px 0;
   background: #4a4646;
   display: inline-block;
-  padding-top: 10px;
   color: #f8f5f3;
   font-family: "Book Antiqua";
   transition: all .3s linear;
@@ -1559,6 +1558,7 @@ margin-right: 5%;
 
 
 .a-parallax-text-box h5 {
+  line-height: 1.2;
   padding: 0px;
   font-family: "Book Antiqua";
   font-size: 30px;
@@ -1619,28 +1619,27 @@ margin-right: 5%;
 .left-a-box-right h4 {
   font-family: "Book Antiqua";
     font-size: 20px;
-    line-height: 13px;
     color: #3b3b3b;
-    padding: 10% 0;
+    padding: 29px 0;
+    margin:0;
 }
 
 .left-a-box-right p {
   font-family: "Book Antiqua";
-    font-size: 18px;
     color: #3b3b3b;
-    margin-bottom: 60px;
-    padding-bottom: 10%;
+    padding-bottom: 20px;
     padding-left: 5%;
     padding-right: 5%;
+    margin-bottom: 60px;
 }
 
 #left-a-box-right-btn {
+  position: absolute;
+  bottom:0;
+  left:0;
   background:#4a4646;
   padding: 20px 0;
   display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   transition: all .3s linear;
 }
@@ -1663,7 +1662,8 @@ margin-right: 5%;
   font-size: 20px;
   line-height: 13px;
   color: #f8f5f3;
-  padding: 8% 0;
+  padding: 20px 0;
+  margin:0;
 }
 
 .right-a-box ul {
@@ -1671,19 +1671,18 @@ margin-right: 5%;
   margin:0;
   padding:0;
   text-align: left;
-  margin-left: 10%;
-  margin-bottom: 10%;
-
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .right-a-box ul li {
+  text-align: center;
   line-height: 25px;
   color: #f8f5f3;
   margin:0;
   padding:0;
-  margin-right: 20px;
   font-family: "Book Antiqua";
-  font-size: 18px;
   color: #f8f5f3;
 }
 
@@ -2669,32 +2668,16 @@ font-family: "Book Antiqua";
 font-size: 18px;
 line-height: 13px;
 color: #f8f5f3;
-margin-top: 5%;
-margin-bottom5%;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
 .right-w-more-box-second p {
 font-family: "Book Antiqua";
-font-size: 16px;
 color: #f8f5f3;
-margin-bottom: 5%;
-margin-left: 5%;
-margin-right: 5%;
-}
-
-#right-w-more-box-btn {
-  height: 30px;
-  background: #4a4646;
-  display: inline-block;
-  padding-top: 10px;
-  color: #f8f5f3;
-  font-family: "Book Antiqua";
-  transition: all .3s linear;
-  width: 100%;
-}
-
-#right-w-more-box-btn:hover {
-  background:#2b2b2b;
+margin-bottom: 20px;
+margin-left: 20px;
+margin-right: 20px;
 }
 
 .contact-hero-img {
@@ -3594,7 +3577,7 @@ margin-right: 5%;
       font-size: 30px;
   }
 }
-@media (max-width: 730px) {
+@media (max-width: 800px) {
   .boxes{
     width: 100%;
   }
@@ -3936,8 +3919,8 @@ margin-right: 5%;
     height: 46px;
   }
   .right-w-circle h3 {
-    line-height: 10px;
-    font-size: 10px;
+    line-height: 12px;
+    font-size: 12px;
   }
   .right-w-wrapper h2 {
     font-size: 16px;
@@ -3992,8 +3975,9 @@ margin-right: 5%;
      height: 46px;
    }
    .right-w-circle h3 {
-     line-height: 10px;
-     font-size: 10px;
+     line-height: 12px;
+     font-size: 12px;
+     margin-top: 10px;
    }
    .right-w-wrapper h2 {
      font-size: 16px;
@@ -4057,8 +4041,8 @@ margin-right: 5%;
 
 @media screen and ( max-width : 420px ){
   .right-w-out-border {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: table;
     margin: 0 auto;
 
@@ -4068,13 +4052,13 @@ margin-right: 5%;
     margin-right: 0;
   }
   .right-w-rounded {
-    width: 28px;
-    height: 28px;
+    width: 38px;
+    height: 38px;
     border: 1px solid white;
   }
   .right-w-rounded img {
-    width: 28px;
-    height: 28px;
+    width: 38px;
+    height: 38px;
   }
   .right-w-circle {
     margin-right: 1%;
@@ -4149,7 +4133,7 @@ margin-right: 5%;
   }
 }
 
-@media screen and ( max-width : 700px ){
+@media screen and ( max-width : 800px ){
   .left-a-box{
     width: 100%;
   }

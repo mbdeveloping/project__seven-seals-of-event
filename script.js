@@ -589,31 +589,31 @@ $('.owl-carousel').owlCarousel({
         0:{
             items:2,
             nav:true,
-            loop:true,
+            loop:false,
             autoplay:true,
             autoplayTimeout:4000
         },
         500:{
             items:3,
             nav:true,
-            loop:true,
+            loop:false,
             autoplay:true,
             autoplayTimeout:4000
         },
         700:{
             items:4,
             nav:true,
-            loop:true
+            loop:false
         },
         751:{
             items:3,
             nav:true,
-            loop:true
+            loop:false
         },
         1000:{
             items:4,
             nav:true,
-            loop:true,
+            loop:false,
             autoplay:true,
             autoplayTimeout:4000
         },
