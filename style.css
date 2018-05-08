@@ -2510,7 +2510,7 @@ right: 0;
   justify-content: center;
 }
 
-.left-w-circle ul li:not(:first-child) {
+.left-w-circle ul li {
   padding-left: 20px;
 }
 .mb-contact li a i {
