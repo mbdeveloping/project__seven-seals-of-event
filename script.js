@@ -346,6 +346,10 @@ $(document).ready(function(){
     this.classList.toggle("change");
       var $mainNav = $("#main-nav-ul");
       $mainNav.stop().hide().fadeIn('slow');
+      $(".slider-section").toggleClass("menu-blur");
+      $("main").toggleClass("menu-blur");
+      $(".contact-section").toggleClass("menu-blur");
+      $(".main-footer").toggleClass("menu-blur");
   })
 });
 
