@@ -27,6 +27,7 @@ body {
 
 .menu-blur {
   filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 ul {
   margin-bottom: 0;
