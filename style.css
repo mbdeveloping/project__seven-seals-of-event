@@ -1739,6 +1739,10 @@ margin-right: 5%;
 .weddings-photo-wrapper {
   overflow: hidden;
 }
+.weddings-photo-wrapper a{
+  display: inline-block;
+  margin:0 auto;
+}
 .gallery-header {
   background: linear-gradient(to right, rgba(192,192,192,.3), #f8f5f3);
   height: 57px;
@@ -1823,14 +1827,16 @@ margin-right: 5%;
 }
 
 .w-photo-class-boxes h3 {
-  line-height: 18px;
-  font-size: 24px;
-  font-family: "Book Antiqua";
-  color: #c39f57;
-  font-style: italic;
-  font-weight: bold;
-  padding-top: 5%;
-  padding-bottom: 5%;
+    /* line-height: 18px; */
+    font-size: 24px;
+    font-family: "Book Antiqua";
+    color: #c39f57;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .photo-box-text {
@@ -2060,6 +2066,8 @@ margin-right: 5%;
   padding-top: 2%;
   padding-bottom: 2%;
   font-style: italic;
+  /* padding-right: 20px;
+  padding-left: 20px; */
 }
 
 
