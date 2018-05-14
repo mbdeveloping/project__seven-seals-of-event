@@ -342,7 +342,7 @@ $("a[href='#top']").click(function() {
 /************ HAMBURGER MENU ******************/
 $(document).ready(function(){
   var $hamburgerBtn = $("#hamburger-btn");
-  $hamburgerBtn.on('touchstart click', function(){
+  $hamburgerBtn.on('click', function(){
     this.classList.toggle("change");
       var $mainNav = $("#main-nav-ul");
       $mainNav.stop().hide().fadeIn('slow');
@@ -350,20 +350,21 @@ $(document).ready(function(){
       $("main").toggleClass("menu-blur");
       $(".contact-section").toggleClass("menu-blur");
       $(".main-footer").toggleClass("menu-blur");
-  })
+  });
+
 });
 
 
 $(document).ready(function(){
   var $mainNav = $(".main-navigation");
-    $(".container-hamburger-btn").on('touchstart click', function(){
+    $(".container-hamburger-btn").on('click', function(){
         if ($mainNav.hasClass("open-navigation")) {
           $mainNav.removeClass("open-navigation");
           $mainNav.addClass("close-navigation");
-          // unfreeze()
+
         } else {
             $mainNav.addClass("open-navigation");
-            // freeze();
+
         }
     });
 });
