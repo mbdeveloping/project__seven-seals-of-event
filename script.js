@@ -342,7 +342,7 @@ $("a[href='#top']").click(function() {
 /************ HAMBURGER MENU ******************/
 $(document).ready(function(){
   var $hamburgerBtn = $("#hamburger-btn");
-  $hamburgerBtn.on('click', function(){
+  $hamburgerBtn.on('touchstart click', function(){
     this.classList.toggle("change");
       var $mainNav = $("#main-nav-ul");
       $mainNav.stop().hide().fadeIn('slow');
@@ -356,7 +356,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   var $mainNav = $(".main-navigation");
-    $(".container-hamburger-btn").click(function(){
+    $(".container-hamburger-btn").on('touchstart click', function(){
         if ($mainNav.hasClass("open-navigation")) {
           $mainNav.removeClass("open-navigation");
           $mainNav.addClass("close-navigation");
