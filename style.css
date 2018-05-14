@@ -31,7 +31,7 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .menu-blur {
-        -webkit-backdrop-filter: blur(4px); 
+        -webkit-backdrop-filter: blur(4px);
     }
 }
 ul {
@@ -1088,7 +1088,7 @@ text-align: center;
   background: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   text-align: center;
-  transition: all 1s linear, background .3s linear, height 0.03s linear, width 0.03s linear;
+  transition: margin 1s linear, background .3s linear, height 0.03s linear, width 0.03s linear;
   border-radius: 50%;
 }
 

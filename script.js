@@ -128,24 +128,27 @@ $("a[href='#top']").click(function() {
    ****************************************************************************/
 
    $(document).ready(function(){
-     var $cControl = $(".carousel-control");
-     var $mainContainer = $(".container");
+     if (!/Mobi/.test(navigator.userAgent)) {
+       var $cControl = $(".carousel-control");
+       var $mainContainer = $(".container");
 
 
-     $cControl.css("display", "block").hide();
-    $mainContainer.mouseover(function(){
-         $cControl.stop().fadeIn(300);
-     });
+       $cControl.css("display", "block").hide();
+      $mainContainer.mouseover(function(){
+           $cControl.stop().fadeIn(300);
+       });
 
-     $mainContainer.mouseleave(function(){
-         $cControl.stop().fadeOut(300);
-     });
-     $cControl.hover(function() {
-       $(this).css("background", "rgba(0,0,0, .5)");
-      }, function() {
-        $(this).css("background", "rgba(0,0,0, 1)");
-      }
-    );
+       $mainContainer.mouseleave(function(){
+           $cControl.stop().fadeOut(300);
+       });
+       $cControl.hover(function() {
+         $(this).css("background", "rgba(0,0,0, .5)");
+        }, function() {
+          $(this).css("background", "rgba(0,0,0, 1)");
+        }
+      );
+     }
+
    });
 
    /***************************************************************************
@@ -357,6 +360,8 @@ $(document).ready(function(){
       $(".chi-wrapper").toggleClass("menu-blur");
       $(".contact-hero-img").toggleClass("menu-blur");
       $(".testingov").toggleClass("menu-blur");
+      $(".fa-arrow-down").toggleClass("menu-blur");
+      $("#top").toggleClass("menu-blur");
   });
 
 });
