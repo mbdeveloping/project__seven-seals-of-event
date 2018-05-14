@@ -29,6 +29,11 @@ body {
   filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .menu-blur {
+        -webkit-backdrop-filter: blur(4px); 
+    }
+}
 ul {
   margin-bottom: 0;
 }

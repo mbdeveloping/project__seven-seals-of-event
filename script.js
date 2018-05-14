@@ -347,9 +347,16 @@ $(document).ready(function(){
       var $mainNav = $("#main-nav-ul");
       $mainNav.stop().hide().fadeIn('slow');
       $(".slider-section").toggleClass("menu-blur");
+      $(".carousel").toggleClass("menu-blur");
+      $(".item").toggleClass("menu-blur");
       $("main").toggleClass("menu-blur");
       $(".contact-section").toggleClass("menu-blur");
       $(".main-footer").toggleClass("menu-blur");
+      $(".right-w-wrapper-center").toggleClass("menu-blur");
+      $(".left-w-out-border").toggleClass("menu-blur");
+      $(".chi-wrapper").toggleClass("menu-blur");
+      $(".contact-hero-img").toggleClass("menu-blur");
+      $(".testingov").toggleClass("menu-blur");
   });
 
 });
