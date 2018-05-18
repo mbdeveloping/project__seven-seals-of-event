@@ -70,6 +70,8 @@
                 <div class="right-w-wrapper">
 
                   <h2>Weddings we offer:</h2>
+                  <div class="whholder">
+
 
                     <div class="right-w-wrapper-center wrapper-ac ">
 
@@ -201,7 +203,7 @@
                     </div>
 
                   </div>
-
+                  </div>
 
 
                 </div><!-- end right-w-wrapper -->
@@ -461,49 +463,92 @@
   <script src="owl.carousel.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript">
+  // $(document).ready(function(){
+  //
+  //   jQuery(document).ready(function($) {
+  //     var alterClass = function() {
+  //       var ww = document.body.clientWidth;
+  //       if (ww < 580) {
+  //
+  //           $(window).scroll(function(){
+  //           var listOffset = $(".right-w-wrapper-center-second").offset().top;
+  //           var belekas = $(window).scrollTop();
+  //           if (belekas >= listOffset) {
+  //             $(".right-w-wrapper-center").css("display", "block");
+  //             $(".right-w-wrapper-center").css("opacity", "1");
+  //         } else {
+  //             $(".right-w-wrapper-center").css("display", "none")
+  //           }
+  //         });
+  //         $(window).scroll(function(){
+  //           var scrollIki = $(".w-parallax-text-box").offset().top;
+  //           var stickyList = $(".right-w-wrapper-center");
+  //           var stickyListOffsetTop = stickyList = $(".right-w-wrapper-center").offset().top;
+  //           var navigationHeight = $(".right-w-wrapper-center").height();
+  //
+  //           var rezultatas = stickyListOffsetTop + navigationHeight;
+  //
+  //
+  //             if (rezultatas >= scrollIki) {
+  //               $(".right-w-wrapper-center").css("display", "none");
+  //             }
+  //         });
+  //       } else if (ww >= 581) {
+  //         $(window).scroll(function(){
+  //         var listOffset = $(".right-w-wrapper-center-second").offset().top;
+  //         var belekas = $(window).scrollTop();
+  //         if (belekas >= listOffset) {
+  //           // $(".right-w-wrapper-center").addClass("fixed-list");
+  //           $(".right-w-wrapper-center").css("display", "none");
+  //       } else {
+  //           // $(".right-w-wrapper-center").removeClass("fixed-list");
+  //           $(".right-w-wrapper-center").css("display", "none")
+  //         }
+  //       });
+  //         $(".right-w-wrapper-center").css("display", "none")
+  //
+  //       };
+  //     };
+  //     $(window).resize(function(){
+  //       alterClass();
+  //     });
+  //     //Fire it when the page first loads:
+  //     alterClass();
+  //   });
+  //
+  //
+  // });
+
   $(document).ready(function(){
 
     jQuery(document).ready(function($) {
       var alterClass = function() {
-        var ww = document.body.clientWidth;
+        let ww = document.body.clientWidth;
         if (ww < 580) {
 
             $(window).scroll(function(){
-            var listOffset = $(".right-w-wrapper-center-second").offset().top;
-            var belekas = $(window).scrollTop();
-            if (belekas >= listOffset) {
-              $(".right-w-wrapper-center").css("display", "block");
-              $(".right-w-wrapper-center").css("opacity", "1");
-          } else {
-              $(".right-w-wrapper-center").css("display", "none")
-            }
+            let listOffset = parseInt($(".wrapper-ac").offset().top);
+            let wholderOffset = parseInt($(".whholder").offset().top);
+            const navBarH = 60;
+            let scrollTop = parseInt($(window).scrollTop());
+            console.log(listOffset-navBarH);
+            console.log(wholderOffset);
+
+            if (scrollTop >= listOffset-navBarH && listOffset >= wholderOffset) {
+              var containerW = $(".container-skeleton").width();
+              $(".fixed-w-bar").css("width", containerW);
+              $(".wrapper-ac").addClass("fixed-w-bar");
+
+          } else  {
+
+            $(".wrapper-ac").removeClass("fixed-w-bar");
+
+          }
           });
-          $(window).scroll(function(){
-            var scrollIki = $(".w-parallax-text-box").offset().top;
-            var stickyList = $(".right-w-wrapper-center");
-            var stickyListOffsetTop = stickyList = $(".right-w-wrapper-center").offset().top;
-            var navigationHeight = $(".right-w-wrapper-center").height();
 
-            var rezultatas = stickyListOffsetTop + navigationHeight;
-
-
-              if (rezultatas >= scrollIki) {
-                $(".right-w-wrapper-center").css("display", "none");
-              }
-          });
         } else if (ww >= 581) {
           $(window).scroll(function(){
-          var listOffset = $(".right-w-wrapper-center-second").offset().top;
-          var belekas = $(window).scrollTop();
-          if (belekas >= listOffset) {
-            // $(".right-w-wrapper-center").addClass("fixed-list");
-            $(".right-w-wrapper-center").css("display", "none");
-        } else {
-            // $(".right-w-wrapper-center").removeClass("fixed-list");
-            $(".right-w-wrapper-center").css("display", "none")
-          }
         });
-          $(".right-w-wrapper-center").css("display", "none")
 
         };
       };
@@ -516,6 +561,8 @@
 
 
   });
+
+
   $('.owl-carousel').owlCarousel({
     nav:false,
       loop:true,
