@@ -364,6 +364,63 @@ $(document).ready(function(){
       $("#top").toggleClass("menu-blur");
   });
 
+  jQuery(document).ready(function($) {
+    var hamburgerBlur = function() {
+
+      var ww = document.body.clientWidth;
+      if (ww >= 860) {
+        $(".slider-section").removeClass("menu-blur");
+        $(".carousel").removeClass("menu-blur");
+        $(".item").removeClass("menu-blur");
+        $("main").removeClass("menu-blur");
+        $(".contact-section").removeClass("menu-blur");
+        $(".main-footer").removeClass("menu-blur");
+        $(".right-w-wrapper-center").removeClass("menu-blur");
+        $(".left-w-out-border").removeClass("menu-blur");
+        $(".chi-wrapper").removeClass("menu-blur");
+        $(".contact-hero-img").removeClass("menu-blur");
+        $(".testingov").removeClass("menu-blur");
+        $(".fa-arrow-down").removeClass("menu-blur");
+        $("#top").removeClass("menu-blur");
+      } else if (ww < 859) {
+        if ($("#main-nav").hasClass("open-navigation")) {
+            console.log("veikia");
+          $(".slider-section").addClass("menu-blur");
+          $(".carousel").addClass("menu-blur");
+          $(".item").addClass("menu-blur");
+          $("main").addClass("menu-blur");
+          $(".contact-section").addClass("menu-blur");
+          $(".main-footer").addClass("menu-blur");
+          $(".right-w-wrapper-center").addClass("menu-blur");
+          $(".left-w-out-border").addClass("menu-blur");
+          $(".chi-wrapper").addClass("menu-blur");
+          $(".contact-hero-img").addClass("menu-blur");
+          $(".testingov").addClass("menu-blur");
+          $(".fa-arrow-down").addClass("menu-blur");
+          $("#top").addClass("menu-blur");
+        } else {
+          $(".slider-section").removeClass("menu-blur");
+          $(".carousel").removeClass("menu-blur");
+          $(".item").removeClass("menu-blur");
+          $("main").removeClass("menu-blur");
+          $(".contact-section").removeClass("menu-blur");
+          $(".main-footer").removeClass("menu-blur");
+          $(".right-w-wrapper-center").removeClass("menu-blur");
+          $(".left-w-out-border").removeClass("menu-blur");
+          $(".chi-wrapper").removeClass("menu-blur");
+          $(".contact-hero-img").removeClass("menu-blur");
+          $(".testingov").removeClass("menu-blur");
+          $(".fa-arrow-down").removeClass("menu-blur");
+          $("#top").removeClass("menu-blur");
+        }
+      };
+    };
+    $(window).on('resize', function(){
+      hamburgerBlur();
+    });
+
+    hamburgerBlur();
+  });
 });
 
 
