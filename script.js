@@ -383,7 +383,7 @@ $(document).ready(function(){
         $(".fa-arrow-down").removeClass("menu-blur");
         $("#top").removeClass("menu-blur");
       } else if (ww < 859) {
-        if ($("#main-nav").hasClass("open-navigation")) {
+        if ($(".main-navigation").hasClass("open-navigation")) {
             console.log("veikia");
           $(".slider-section").addClass("menu-blur");
           $(".carousel").addClass("menu-blur");
