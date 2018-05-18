@@ -501,8 +501,6 @@ li {
   padding: 12px 50px;
   border: 2px solid #f7edeb;
   transition: all .2s linear;
-  padding-top: 12px;
-  padding-bottom: 12px;
   margin:0 auto;
   margin-top: 40px;
   outline: none;
@@ -2911,9 +2909,7 @@ margin-right: 20px;
     background-color: rgba(0, 0, 0, .5);
     font-size: 20px;
     padding: 10px 40px;
-    border: 2px solid #f7edeb;#
-    padding-top: 12px;
-    padding-bottom: 12px;
+    border: 2px solid #f7edeb;
     margin: 0 auto;
     margin-top: 40px;#
     display: table;
@@ -2944,9 +2940,7 @@ margin-right: 20px;
     background-color: rgba(0, 0, 0, .5);
     font-size: 18px;
     padding: 10px 40px;
-    border: 2px solid #f7edeb;#
-    padding-top: 12px;
-    padding-bottom: 12px;
+    border: 2px solid #f7edeb;
     margin: 0 auto;
     margin-top: 40px;#
     display: table;
@@ -2988,9 +2982,7 @@ margin-right: 20px;
     background-color: rgba(0, 0, 0, .5);
     font-size: 16px;
     padding: 6px 20px;
-    border: 2px solid #f7edeb;#
-    padding-top: 12px;
-    padding-bottom: 12px;
+    border: 2px solid #f7edeb;
     margin: 0 auto;
     margin-top: 20px;
     display: table;
@@ -3033,9 +3025,7 @@ margin-right: 20px;
     background-color: rgba(0, 0, 0, .5);
     font-size: 16px;
     padding: 6px 20px;
-    border: 2px solid #f7edeb;#
-    padding-top: 12px;
-    padding-bottom: 12px;
+    border: 2px solid #f7edeb;
     margin: 0 auto;
     margin-top: 20px;
     display: table;
