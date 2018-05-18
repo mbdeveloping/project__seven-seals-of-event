@@ -521,48 +521,48 @@
   //
   // });
 
-  $(document).ready(function(){
-
-    jQuery(document).ready(function($) {
-      var alterClass = function() {
-        let ww = document.body.clientWidth;
-        if (ww < 580) {
-
-            $(window).scroll(function(){
-            let listOffset = parseInt($(".wrapper-ac").offset().top);
-            let wholderOffset = parseInt($(".whholder").offset().top);
-            const navBarH = 60;
-            let scrollTop = parseInt($(window).scrollTop());
-            console.log(listOffset-navBarH);
-            console.log(wholderOffset);
-
-            if (scrollTop >= listOffset-navBarH && listOffset >= wholderOffset) {
-              // var containerW = $(".container-skeleton").width();
-              // $(".fixed-w-bar").css("width", containerW);
-              $(".wrapper-ac").addClass("fixed-w-bar");
-
-          } else  {
-
-            $(".wrapper-ac").removeClass("fixed-w-bar");
-
-          }
-          });
-
-        } else if (ww >= 581) {
-          $(window).scroll(function(){
-        });
-
-        };
-      };
-      $(window).resize(function(){
-        alterClass();
-      });
-      //Fire it when the page first loads:
-      alterClass();
-    });
-
-
-  });
+  // $(document).ready(function(){
+  //
+  //   jQuery(document).ready(function($) {
+  //     var alterClass = function() {
+  //       let ww = document.body.clientWidth;
+  //       if (ww < 580) {
+  //
+  //           $(window).scroll(function(){
+  //           let listOffset = parseInt($(".wrapper-ac").offset().top);
+  //           let wholderOffset = parseInt($(".whholder").offset().top);
+  //           const navBarH = 60;
+  //           let scrollTop = parseInt($(window).scrollTop());
+  //           console.log(listOffset-navBarH);
+  //           console.log(wholderOffset);
+  //
+  //           if (scrollTop >= listOffset-navBarH && listOffset >= wholderOffset) {
+  //             // var containerW = $(".container-skeleton").width();
+  //             // $(".fixed-w-bar").css("width", containerW);
+  //             $(".wrapper-ac").addClass("fixed-w-bar");
+  //
+  //         } else  {
+  //
+  //           $(".wrapper-ac").removeClass("fixed-w-bar");
+  //
+  //         }
+  //         });
+  //
+  //       } else if (ww >= 581) {
+  //         $(window).scroll(function(){
+  //       });
+  //
+  //       };
+  //     };
+  //     $(window).resize(function(){
+  //       alterClass();
+  //     });
+  //
+  //     alterClass();
+  //   });
+  //
+  //
+  // });
 
 
   $('.owl-carousel').owlCarousel({

@@ -2091,7 +2091,7 @@ margin-right: 5%;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 250px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .fixed-w-bar {
