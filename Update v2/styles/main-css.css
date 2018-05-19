@@ -71,7 +71,7 @@ a {
 .bg-image {
   height: 400px;
   width: 100%;
-  background-image: url("test2.jpg");
+  background-image: url("../test1.jpg");
   background-position: center 0px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -96,11 +96,8 @@ a {
 .weddings-we-offer-h2 {
   font-size: 1.2em;
   text-align: center;
-  margin-top: -30px;
   padding:1em;
   background: rgba(255, 255, 255, .9);
-  z-index: 10000;
-  border-radius: 50px 50px 0 0;
 }
 
 .wedding-header h2 {
@@ -128,7 +125,6 @@ a {
 }
 
 .right-all-cards {
-  padding: 1em;
   display: grid;
   grid-template-columns: repeat(6, 16.666%);
   align-items: center;
@@ -222,7 +218,7 @@ span {
 /* Parallax Section */
 
 #parallax-section {
-  padding-top: 50px;
+  margin-top: 50px;
   width: 100%;
   height: 400px;
   position: relative;
@@ -239,17 +235,25 @@ span {
   position: absolute;
   width: 100%;
   will-change: transform;
+  z-index: -1;
 }
 
 .parallax-section-header h2 {
-  color: #333;
+  color: #fff;
   font-style: italic;
   text-align: center;
-  background: rgba(255, 255, 255, .9);
-  margin-top: -30px;
+  background: rgba(000, 000, 000, .4);
   font-size: 1.2em;
   padding: 1em;
-  border-radius: 0 0 50px 50px;
+  text-shadow: 1px 5px 8px rgba(000, 000, 000, 1);
+}
+
+.parallax-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
 }
 
 /** Contact / Explore vents section */
@@ -379,6 +383,29 @@ span {
   border: 1px solid #fff;
   border-radius: 4px;
   font-size: 12px;
+}
+
+#wedding-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.wedding-hero-clip-path {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background:#fff;
+  width: 101%;
+  height: 55px;
+  clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(50% 99%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+@media only screen and (min-width: 630px) {
+  .bg-image {
+    background-repeat: repeat;
+    background-size: contain;
+  }
 }
 @media only screen and (min-width: 700px) {
   .wedding-main-section {
