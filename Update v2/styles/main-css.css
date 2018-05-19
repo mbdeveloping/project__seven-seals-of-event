@@ -135,6 +135,10 @@ a {
   padding:0 50px;
 }
 
+.cards h4 {
+  margin-top: 40px;
+}
+
 .royal-card img {
   border-radius: 50%;
   border:8px solid white;
@@ -179,6 +183,10 @@ span {
   height: 100%;
   top:0;
   left:0;
+}
+
+.fa.fa-diamond {
+  color: #fff;
 }
 
 .fa.fa-diamond.cards-diamond {
