@@ -26,7 +26,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  padding:1em 0;
+  padding:1rem 0;
 }
 
 a {
@@ -37,7 +37,7 @@ a {
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -68,17 +68,6 @@ a {
   font-size: 1.3rem;
 }
 
-.bg-image {
-  height: 400px;
-  width: 100%;
-  background-image: url("../test1.jpg");
-  background-position: center 0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-  position: absolute;
-}
-
 .alignt-header-text {
   height: 65vh;
   display: flex;
@@ -93,181 +82,43 @@ a {
   background: rgba(192,192,192,.5);
 }
 
-.weddings-we-offer-h2 {
-  font-size: 1.2em;
+.steps {
   text-align: center;
-  padding:1em;
-  background: rgba(255, 255, 255, .9);
-}
-
-.wedding-header h2 {
-  margin-bottom:0;
-}
-.wedding-header p {
-  margin-top: 0;
-}
-.wedding-main-section {
-  width: 100%;
-  grid-gap:10px;
-}
-
-.left-card-description {
-  display: flex;
-  padding: 1em;
-  padding-top: 3em;
-  text-align: center;
-  background: #d7d0c65e;
-  overflow: hidden;
-  border-radius: 50px 0 0 50px;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-}
-
-.left-card-description .cards {
   align-self: center;
+  padding:2rem;
 }
 
-.right-all-cards {
-  display: grid;
-  grid-template-columns: repeat(6, 16.666%);
-  align-items: center;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-  border-radius: 0 50px 0 0;
-}
-
-.main-card-img-outter {
-  position: relative;
-  padding:0 50px;
-}
-
-.cards h4 {
-  margin-top: 40px;
-}
-
-.royal-card img {
-  border-radius: 50%;
-  border:8px solid white;
-  width: 100%;
-  height: auto;
-}
-
-.right-all-cards img {
-  border:1px solid white;
-  border-radius: 50%;
-  width: 100%;
-  height: auto;
-}
-
-span {
-  display:none;
-}
-
-.right-all-cards h3 {
-  padding-top: 0;
-  font-size: 12px;
-  margin:0;
-}
-
-.img-wrapper {
-  padding: 5px;
-  text-align: center;
-}
-.left-card-description ul {
-  list-style:  none;
-}
-
-.left-card-description li {
-  padding: .5em;
-  border-bottom: 2px solid #ddd;
-}
-
-.card-diamond-rotate {
-  transform: rotate(40deg) translateY(-58px);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top:0;
-  left:0;
-}
-
-.fa.fa-diamond {
-  color: #fff;
-}
-
-.fa.fa-diamond.cards-diamond {
-  color:#fff;
-  font-size: 60px;
-}
-
-.right-w-more-box {
-  margin-top: 10px;
-  display: flex;
-  background: #ffe7006e;
-  padding: 2em;
-  grid-column: 2/3;
-  grid-row: 2/3;
-  text-align: center;
-  border-radius: 0 0 50px 0;
-}
-
-.right-w-more-box-text-wrapper {
-  align-self: center;
-  text-align: center;
-}
-
-.right-w-more-box-text-wrapper p {
-  padding: 1em 0;
-}
-
-#right-w-more-box-btn {
-  margin:1em 0;
-  color: #fff;
-  padding: 20px;
-  background: grey;
+.step-icon {
   display: inline-block;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-/* Parallax Section */
-
-#parallax-section {
-  margin-top: 50px;
-  width: 100%;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-}
-
-.parallax-iamge {
-  background-image: url('../images/weddings/wedding-parallax1.jpg');
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  will-change: transform;
-  z-index: -1;
-}
-
-.parallax-section-header h2 {
-  color: #fff;
-  font-style: italic;
+  width: 50px;
+  height: 50px;
+  border:4px solid grey;
+  border-radius: 50%;
   text-align: center;
-  background: rgba(000, 000, 000, .4);
-  font-size: 1.2em;
-  padding: 1em;
-  text-shadow: 1px 5px 8px rgba(000, 000, 000, 1);
+  position: relative;
 }
 
-.parallax-section-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.icon-wrapper {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.step-icon i.fa-gem {
+  color:grey;
+  font-size: 1.2rem;
+  position: absolute;
+  top:0;
+  right:0;
+  transform: translate(14px, -12px) rotate(45deg);
+}
+
+.step-icon i {
+  font-size:1.5rem;
+}
+
 
 /** Contact / Explore vents section */
 
@@ -403,77 +254,7 @@ span {
   overflow: hidden;
 }
 
-.wedding-hero-clip-path {
-  position: absolute;
-  bottom: 0;
-  left:0;
-  background:#fff;
-  width: 101%;
-  height: 55px;
-  clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
-  -webkit-clip-path: polygon(50% 99%, 100% 0, 100% 100%, 0 100%, 0 0);
-}
 
-@media only screen and (min-width: 630px) {
-  .bg-image {
-    background-repeat: repeat;
-    background-size: contain;
-  }
-}
-@media only screen and (min-width: 700px) {
-  .wedding-main-section {
-    margin-bottom: 10px;
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: 1.7fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    grid-auto-rows: auto;
-  }
-
-  .right-all-cards {
-    background: #96959461;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column:2/3;
-  }
-  .left-card-description {
-    padding-top: 1em;
-    grid-column:1/2;
-    grid-row:1/3;
-  }
-
-  .main-card-img-outter {
-    padding: 20px 100px;
-  }
-
-  .img-wrapper {
-    padding:10px;
-  }
-
-  .right-all-cards img {
-    border: 5px solid white;
-  }
-
-  span {
-    display: inline-block;
-  }
-
-  .fa.fa-diamond {
-    font-size: 30px;
-    color: #fff;
-  }
-
-  .weddings-we-offer-h2 {
-    padding: 60px 0;
-  }
-
-  .right-w-more-box {
-    margin-top: 0;
-  }
-
-  .card-diamond-rotate {
-    transform: rotate(40deg) translateY(-40px);
-  }
-}
 
 /* Container BreakPoints */
 @media (min-width: 400px){
