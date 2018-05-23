@@ -1,50 +1,60 @@
 $(document).ready(function() {
-  /***** WEDDING PAGE *****/
-  (function() {
-    let pageBody = $("body");
-    /* Main cards rules */
-    (function() {
-      let thumbnails = $(".thumbnail");
-      let cards = $(".main-card");
+  /***** MAIN RULES FOR ALL PAGES *****/
+  const pageBody = $("body");
 
-      thumbnails.on('click', function() {
+  /* Footer rules */
+  (function(){
+    const weChatBtn = $("#wechat-overlay-btn a");
+    const weChatClose = $("#weChat-overlay-close");
+
+    function openWeChat(element) {
+      element.preventDefault();
+      pageBody.addClass("body-scroll-lock");
+      $(".weChat-overlay").css("display", "flex").hide().fadeIn();
+    }
+    function closeWeChat(element) {
+      element.preventDefault();
+      pageBody.removeClass("body-scroll-lock");
+      $(".weChat-overlay").fadeOut();
+    }
+    weChatBtn.on('click', openWeChat);
+    weChatClose.on('click', closeWeChat);
+  }());
+
+  /***** WEDDING PAGE RULES *****/
+  (function() {
+    /* Main cards rules */
+    const cardsoverlay = $(".cards-overlay");
+
+    (function() {
+      const thumbnails = $(".thumbnail");
+      const cards = $(".main-card");
+
+      function addCard() {
         let element = $(this);
         let elementIndex = thumbnails.index(element);
 
         pageBody.addClass("body-scroll-lock");
-        $(".cards-overlay").addClass("cards-overlay-display").hide().fadeIn('slow');
+        cardsoverlay.addClass("cards-overlay-display").hide().fadeIn('slow');
         $(cards[elementIndex]).removeClass("main-card-display");
-      })
+      }
+      thumbnails.on('click', addCard);
+      
+      /* Cards close button rules */
+      (function() {
+        const closeBtn = $("#card-close-button");
+
+        function closeCard(element) {
+          element.preventDefault();
+          cardsoverlay.fadeOut('slow').removeClass("cards-overlay-display");
+          pageBody.removeClass("body-scroll-lock");
+          $(".main-card").addClass("main-card-display");
+        }
+
+        closeBtn.on('click', closeCard);
+
+      }());
+
     }());
-
-    /* Cards close button rules */
-    (function() {
-      let closeBtn = $("#card-close-button");
-
-      closeBtn.on('click', function(element) {
-        element.preventDefault();
-        $(".cards-overlay").fadeOut('slow').removeClass("cards-overlay-display");
-        pageBody.removeClass("body-scroll-lock");
-        $(".main-card").addClass("main-card-display");
-      })
-    }());
-
-    /* Footer rules */
-    (function(){
-      let weChatBtn = $("#wechat-overlay-btn a");
-      let weChatClose = $("#weChat-overlay-close");
-
-      weChatBtn.on('click', function(e) {
-        e.preventDefault();
-        pageBody.addClass("body-scroll-lock");
-        $(".weChat-overlay").css("display", "flex").hide().fadeIn();
-      });
-
-      weChatClose.on('click', function(e) {
-        e.preventDefault();
-        pageBody.removeClass("body-scroll-lock");
-        $(".weChat-overlay").fadeOut();
-      })
-    }())
   }());
 })
