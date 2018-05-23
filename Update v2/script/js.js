@@ -19,6 +19,15 @@ $(document).ready(function() {
     }
     weChatBtn.on('click', openWeChat);
     weChatClose.on('click', closeWeChat);
+
+    /* Updating copyright date */
+    (function(){
+      var today = new Date();
+      var year = today.getFullYear();
+
+      var el = document.getElementById("updatingDate");
+      el.textContent = year;
+    }())
   }());
 
   /***** WEDDING PAGE RULES *****/
@@ -48,7 +57,7 @@ $(document).ready(function() {
 
         function closeCard(element) {
           element.preventDefault();
-          cardsoverlay.fadeOut('slow').removeClass("cards-overlay-display");
+          cardsoverlay.removeClass("cards-overlay-display");
           pageBody.removeClass("body-scroll-lock");
           $(".main-card").addClass("main-card-display");
         }
