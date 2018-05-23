@@ -30,16 +30,18 @@ $(document).ready(function() {
       const thumbnails = $(".thumbnail");
       const cards = $(".main-card");
 
-      function addCard() {
+      function openCard() {
         let element = $(this);
         let elementIndex = thumbnails.index(element);
 
         pageBody.addClass("body-scroll-lock");
         cardsoverlay.addClass("cards-overlay-display").hide().fadeIn('slow');
         $(cards[elementIndex]).removeClass("main-card-display");
+        $(".outter-main-card").scrollTop(0);
       }
-      thumbnails.on('click', addCard);
-      
+
+      thumbnails.on('click', openCard);
+
       /* Cards close button rules */
       (function() {
         const closeBtn = $("#card-close-button");
@@ -50,11 +52,8 @@ $(document).ready(function() {
           pageBody.removeClass("body-scroll-lock");
           $(".main-card").addClass("main-card-display");
         }
-
         closeBtn.on('click', closeCard);
-
       }());
-
     }());
   }());
 })

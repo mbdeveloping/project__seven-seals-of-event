@@ -223,8 +223,6 @@ a {
   display:none;
 }
 
-
-
 #card-close-button {
   width: 30px;
   height: 30px;
@@ -235,6 +233,21 @@ a {
   right:10px;
   border-radius: 50%;
 }
+
+.card-include-list {
+  list-style-type: none;
+  width: 100%;
+  background:#f0f0f0;
+}
+
+.card-include-list li {
+  padding:.5rem;
+}
+
+.card-include-list li:not(:last-child) {
+  border-bottom: 1px solid #c7c7c7;
+}
+
 /** Contact / Explore vents section */
 
 #contact-gallery-section {
