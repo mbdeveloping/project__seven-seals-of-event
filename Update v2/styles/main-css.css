@@ -37,6 +37,7 @@ a {
 .container {
   position: relative;
   width: 100%;
+  height: 100%;
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 20px;
@@ -174,17 +175,49 @@ a {
 }
 
 .cards-overlay {
-  display:none
-}
-
-.royal-card-overlay {
+  display:none;
   position: fixed;
   top:0;
   left:0;
-  background: rgba(0,0,0, .9);
+  background: rgba(0,0,0, .7);
   width: 100%;
   height: 100vh;
   z-index: 100;
+  padding: 20px;
+}
+
+.cards-overlay-display {
+  display: block;
+}
+
+.royal-main-card {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background:#fff;
+  overflow: auto;
+}
+
+.card-overlay-inner {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-overlay-inner img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid grey;
+}
+
+.card-overlay-inner .fa-gem {
+  color: grey;
+  font-size: 1.3rem;
+  position: absolute;
+  top:0;
+  right:0;
+  transform: translate(-89px, 18px) rotate(45deg);
 }
 /** Contact / Explore vents section */
 

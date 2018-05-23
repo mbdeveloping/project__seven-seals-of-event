@@ -1,17 +1,36 @@
-/*Footer Script */
 $(document).ready(function() {
-  var $weChatBtn = $("#wechat-overlay-btn a");
-  var $weChatClose = $("#weChat-overlay-close");
+  /***** WEDDING PAGE *****/
 
-  $weChatBtn.on('click', function(e) {
-    e.preventDefault();
-    $("body").addClass("body-scroll-lock");
-    $(".weChat-overlay").css("display", "flex").hide().fadeIn();
-  });
+  /* Main cards rules */
+  (function() {
+    let $mainCards = $(".cards");
 
-  $weChatClose.on('click', function(e) {
-    e.preventDefault();
-    $("body").removeClass("body-scroll-lock");
-    $(".weChat-overlay").fadeOut();
-  })
+    $mainCards.on('click', function() {
+      let $element = $(this);
+
+      if ($element.hasClass("royal-card")) {
+        $("body").addClass("body-scroll-lock");
+        $(".cards-overlay").addClass("cards-overlay-display").hide().fadeIn('slow');
+        $(".royal-main-card").addClass("cards-overlay-display").hide().fadeIn('slow');
+      }
+      console.log($element);
+    })
+  }());
+  /* Footer rules */
+  (function(){
+    let $weChatBtn = $("#wechat-overlay-btn a");
+    let $weChatClose = $("#weChat-overlay-close");
+
+    $weChatBtn.on('click', function(e) {
+      e.preventDefault();
+      $("body").addClass("body-scroll-lock");
+      $(".weChat-overlay").css("display", "flex").hide().fadeIn();
+    });
+
+    $weChatClose.on('click', function(e) {
+      e.preventDefault();
+      $("body").removeClass("body-scroll-lock");
+      $(".weChat-overlay").fadeOut();
+    })
+  }())
 })
