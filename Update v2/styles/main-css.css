@@ -70,6 +70,19 @@ a {
   font-style: italic;
 }
 
+.hero-bg {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 65vh;
+  width: 100%;
+  background-image: url('../weddings1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
 .alignt-header-text {
   height: 65vh;
   display: flex;
@@ -81,7 +94,7 @@ a {
   height: 65vh;
   width: 100%;
   text-align: center;
-  background: rgba(192,192,192,.5);
+  background: rgba(192,192,192,.4);
 }
 
 .wedding-section {
@@ -189,7 +202,7 @@ a {
 }
 
 .cards-overlay-display {
-  display: grid;
+  display: flex;
 }
 
 .outter-main-card {
@@ -201,13 +214,25 @@ a {
 
 .card-overlay-inner {
   padding: 20px;
+  padding-bottom: 180px;
   overflow: hidden;
   position: relative;
 }
 
+.card-img-wrapper {
+  max-width: 100px;
+  max-height: 100px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
 .card-overlay-inner img {
-  height: 100px;
-  width: 100px;
+  max-height: 100px;
+  max-width: 100px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border: 5px solid grey;
 }
@@ -218,7 +243,7 @@ a {
   position: absolute;
   top:0;
   right:0;
-  transform: translate(-89px, 18px) rotate(45deg);
+  transform: translate(4px, -2px) rotate(45deg);
 }
 
 .main-card-display {
@@ -234,7 +259,39 @@ a {
   position: absolute;
   top:0;
   right:0;
-  border-radius: 0 0 0% 50%;
+  border-radius: 50% 0 50% 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#card-close-button-bottom {
+  width: 40px;
+  height: 40px;
+  background:lightgrey;
+  color:#fff;
+  position: absolute;
+  bottom:0;
+  right:0;
+  border-radius: 50% 50% 0 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#card-contact {
+  width: 40px;
+  height: 40px;
+  background:lightgrey;
+  color:#fff;
+  position: absolute;
+  bottom:0;
+  left:0;
+  border-radius: 50% 50% 50% 0;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -243,6 +300,11 @@ a {
 }
 
 #card-close-button i {
+  color: #444;
+  font-size: 1rem;
+}
+
+#card-close-button-bottom i {
   color: #444;
   font-size: 1rem;
 }
@@ -261,6 +323,41 @@ a {
   border-bottom: 1px solid #c7c7c7;
 }
 
+.other-wedding-categories {
+  position: absolute;
+  bottom:0px;
+  left:0;
+  width: 100%;
+  overflow: hidden;
+  background:#fff;
+  padding-bottom: 30px;
+}
+
+.other-wedding-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.other-wedding {
+  text-align: center;
+}
+
+.other-wedding-circle {
+  margin:0 auto;
+  border-radius: 50%;
+  background:grey;
+  height: 50px;
+  width: 50px;
+}
+
+.other-wedding.royal-other {
+  opacity:0.2;
+}
+
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+  display: flex;
+}
 /** Contact / Explore vents section */
 
 #contact-gallery-section {
@@ -394,6 +491,8 @@ a {
   position: relative;
   overflow: hidden;
 }
+
+
 
 .sub-footer {
   background:#181717;

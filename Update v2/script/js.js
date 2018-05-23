@@ -1,6 +1,9 @@
 $(document).ready(function() {
-  /***** MAIN RULES FOR ALL PAGES *****/
+  /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
+
+  /* Owl carousel Rules*/
+  $(".owl-carousel").owlCarousel();
 
   /* Footer rules */
   (function(){
@@ -30,7 +33,7 @@ $(document).ready(function() {
     }())
   }());
 
-  /***** WEDDING PAGE RULES *****/
+  /********** WEDDING PAGE RULES **********/
   (function() {
     /* Main cards rules */
     const cardsoverlay = $(".cards-overlay");
@@ -47,13 +50,19 @@ $(document).ready(function() {
         cardsoverlay.addClass("cards-overlay-display").hide().fadeIn('slow');
         $(cards[elementIndex]).removeClass("main-card-display");
         $(".outter-main-card").scrollTop(0);
+        console.log($(".other-wedding").length);
+        console.log($(".other-wedding")[0]);
       }
-
+      $(".other-wedding").on('click', function() {
+        console.log(this);
+        console.log($(".other-wedding").index(this));
+      })
       thumbnails.on('click', openCard);
 
       /* Cards close button rules */
       (function() {
         const closeBtn = $("#card-close-button");
+        const closeBtnBot = $("#card-close-button-bottom");
 
         function closeCard(element) {
           element.preventDefault();
@@ -62,6 +71,7 @@ $(document).ready(function() {
           $(".main-card").addClass("main-card-display");
         }
         closeBtn.on('click', closeCard);
+        closeBtnBot.on('click', closeCard);
       }());
     }());
   }());

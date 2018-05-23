@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Circle Images</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
     <link rel="stylesheet" href="styles/main-css.css">
   </head>
   <body>
     <main>
       <section id="wedding-hero" class="wedding-header">
         <header>
-
+          <div class="hero-bg">
+             <span role="img" aria-label="Background picture of flowers on wedding table"> </span>
+          </div>
           <div class="alignt-header-text">
             <div class="text-wrapper">
               <h1>Your Weddings<br>
@@ -70,8 +73,11 @@
                         </a>
 
                         <div id="royal-main-card" class="main-card main-card-display">
-                          <i class="far fa-gem"></i>
-                          <img src="../images/gallery/royal/royal1.jpg" alt="Royal wedding avatar">
+                          <div class="card-img-wrapper">
+                            <i class="far fa-gem"></i>
+                            <img src="../images/gallery/royal/royal1.jpg" alt="Royal wedding avatar">
+                          </div>
+
                           <h3>Royal Wedding</h3>
                           <p>No secret – everyone dreams of feeling and being treated as a King and Queen in their wedding. Our Royal Wedding team will ensure this dream to come true in an extensive way!</p>
                           <h4>Royal Wedding includes:</h4>
@@ -87,11 +93,12 @@
                             <li>Overseas wedding any country you want;</li>
                             <li>Special Gift from our company.</li>
                           </ul>
+
                         </div>
 
                         <div id="traditional-main-card" class="main-card main-card-display">
                           <i class="far fa-gem"></i>
-                          <img src="../images/gallery/royal/royal1.jpg" alt="Royal wedding avatar">
+                          <img src="../images/gallery/royal/royal1.jpg" alt="Traditional wedding avatar">
                           <h3>Traditional Wedding</h3>
                           <p>Are You seeking Your Wedding to be filled with traditions and emotional feel? Then You are in correct place! Our team will ensure Your perfect day includes emotional and traditional feel to it.</p>
                           <h4>Traditional Wedding includes:</h4>
@@ -110,7 +117,7 @@
 
                         <div id="midClass-main-card" class="main-card main-card-display">
                           <i class="far fa-gem"></i>
-                          <img src="../images/gallery/royal/royal1.jpg" alt="Royal wedding avatar">
+                          <img src="../images/gallery/royal/royal1.jpg" alt="Mid class wedding avatar">
                           <h3>Mid Class Wedding</h3>
                           <p>Please bear in mind -  that it’s only the name of wedding section. But we will ensure budget option for those who would like to be treated like a King and Queen but would like to save money.</p>
                           <h4>Mid Class Wedding includes:</h4>
@@ -128,7 +135,7 @@
 
                         <div id="simpleClass-main-card" class="main-card main-card-display">
                           <i class="far fa-gem"></i>
-                          <img src="../images/gallery/royal/royal1.jpg" alt="Royal wedding avatar">
+                          <img src="../images/gallery/royal/royal1.jpg" alt="Simple class wedding avatar">
                           <h3>Simple Class Wedding</h3>
                           <p>It’s only the name of the wedding section too. For those who want economy wedding. But we promise you will feel so special in your day.</p>
                           <h4>Simple Class Wedding includes:</h4>
@@ -145,7 +152,7 @@
 
                         <div id="western-main-card" class="main-card main-card-display">
                           <i class="far fa-gem"></i>
-                          <img src="../images/gallery/royal/royal1.jpg" alt="Royal wedding avatar">
+                          <img src="../images/gallery/royal/royal1.jpg" alt="Western wedding avatar">
                           <h3>Western Wedding</h3>
                           <p>This option is for those who would like their special day to be like… in Hollywood movies. Our team will create a feel so that You feel like in your favourite most romantic movie.</p>
                           <h4>Western Wedding includes:</h4>
@@ -166,7 +173,7 @@
 
                         <div id="mix-main-card" class="main-card main-card-display">
                           <i class="far fa-gem"></i>
-                          <img src="../images/gallery/royal/royal1.jpg" alt="Royal wedding avatar">
+                          <img src="../images/gallery/royal/royal1.jpg" alt="Mix class wedding avatar">
                           <h3>Mix Wedding</h3>
                           <p>For those who aim for something unique for their Special day we offer Mix Wedding option by combining various traditions and styles together. Choose any style, let us know your favourite bits of any traditions and we will create extraordinary Wedding to be one-and-only in the history.</p>
                           <h4>Mix Wedding includes:</h4>
@@ -182,9 +189,57 @@
                             <li>Gift from our company.</li>
                           </ul>
                         </div>
+                        <div class="other-wedding-categories">
+                          <h4>Other Weddings</h4>
+                          <div class="other-wedding-wrapper">
+                            <div class="owl-carousel">
+                              <div class="other-wedding royal-other">
+                                <div class="other-wedding-circle">
 
-                      </div>
-                    </div><!-- end royal card -->
+                                </div>
+                                <h5>Royal</h5>
+                              </div>
+                              <div class="other-wedding traditional-other">
+                                <div class="other-wedding-circle">
+
+                                </div>
+                                <h5>Traditional</h5>
+                              </div>
+                              <div class="other-wedding mid-other">
+                                <div class="other-wedding-circle">
+
+                                </div>
+                                <h5>Mid</h5>
+                              </div>
+                              <div class="other-wedding simple-other">
+                                <div class="other-wedding-circle">
+
+                                </div>
+                                <h5>Simple</h5>
+                              </div>
+                              <div class="other-wedding western-other">
+                                <div class="other-wedding-circle">
+
+                                </div>
+                                <h5>Western</h5>
+                              </div>
+                              <div class="other-wedding mix-other">
+                                <div class="other-wedding-circle">
+
+                                </div>
+                                <h5>Mix</h5>
+                              </div>
+                            </div><!-- end owl carousel -->
+                          </div><!-- end other wedding wrapper -->
+                          <a id="card-close-button-bottom" role="button" href="#">
+                            <i class="fas fa-times"></i>
+                          </a>
+                          <a id="card-contact" role="button" href="#">
+                            <i class="fas fa-envelope"></i>
+                          </a>
+                        </div><!--end other categories -->
+                      </div><!-- end inner -->
+                    </div><!-- end outter card -->
 
                 </div><!-- end cards overlay -->
                 <div class="thumbnail royal-thumbnail">
@@ -285,6 +340,7 @@
     </footer>
     <script src="https://use.fontawesome.com/f436a90964.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="script/owl.carousel.min.js"></script>
     <script src="script/TweenMax.min.js"></script>
     <script src="script/js.js"></script>
   </body>
