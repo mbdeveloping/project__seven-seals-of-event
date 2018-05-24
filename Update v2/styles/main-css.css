@@ -356,8 +356,14 @@ a {
   width: 50px;
 }
 
+.other-wedding-circle img {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .other-wedding.royal-other {
-  opacity:0.2;
+  opacity:0.5;
 }
 
 .no-js .owl-carousel, .owl-carousel.owl-loaded {
