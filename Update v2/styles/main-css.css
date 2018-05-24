@@ -229,10 +229,8 @@ a {
 }
 
 .card-overlay-inner img {
-  max-height: 100px;
-  max-width: 100px;
-  width: 100%;
-  height: 100%;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   border: 5px solid grey;
 }
@@ -250,6 +248,13 @@ a {
   display:none;
 }
 
+.card-thumbnail-grey-ov {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:grey;
+  opacity:0.2;
+}
 
 #card-close-button {
   width: 40px;

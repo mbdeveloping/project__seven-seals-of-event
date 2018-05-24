@@ -50,12 +50,12 @@ $(document).ready(function() {
         cardsoverlay.addClass("cards-overlay-display").hide().fadeIn('slow');
         $(cards[elementIndex]).removeClass("main-card-display");
         $(".outter-main-card").scrollTop(0);
-        console.log($(".other-wedding").length);
-        console.log($(".other-wedding")[0]);
+        // console.log($(".other-wedding").length);
+        // console.log($(".other-wedding")[0]);
       }
       $(".other-wedding").on('click', function() {
-        console.log(this);
-        console.log($(".other-wedding").index(this));
+        // console.log(this);
+        // console.log($(".other-wedding").index(this));
       })
       thumbnails.on('click', openCard);
 
