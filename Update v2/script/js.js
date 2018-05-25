@@ -1,10 +1,8 @@
 $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
-
   /* Owl carousel Rules*/
   $(".owl-carousel").owlCarousel();
-
   /* Footer rules */
   (function(){
     const weChatBtn = $("#wechat-overlay-btn a");
@@ -37,6 +35,19 @@ $(document).ready(function() {
   (function() {
     /* Main cards rules */
     const cardsoverlay = $(".cards-overlay");
+    //Hide/show top right close button
+    function hideCloseBtn() {
+      let windowH = window.innerHeight;
+      let cardInnerH = $(".card-overlay-inner").outerHeight();
+      let closeBtnH = $("#card-close-button-bottom").height();
+
+      if (windowH >= cardInnerH + closeBtnH) {
+        $("#card-close-button").css("display", "none");
+      } else {
+        $("#card-close-button").css("display", "flex");
+      }
+    }
+    hideCloseBtn();
 
     (function() {
       const thumbnails = $(".thumbnail");
@@ -48,6 +59,7 @@ $(document).ready(function() {
         let element = $(this);
         let thumbnailIndex = thumbnails.index(element);
 
+
         otherWedding.removeClass("current-other");
         $(otherWedding[thumbnailIndex]).addClass("current-other");
         pageBody.addClass("body-scroll-lock");
@@ -55,6 +67,7 @@ $(document).ready(function() {
         cardsoverlay.addClass("cards-overlay-display");
         $(cards[thumbnailIndex]).removeClass("main-card-display");
         outterCard.scrollTop(0);
+        hideCloseBtn();
       }
       //On other-wedding click open next card funtion
       function nextCard() {
@@ -69,9 +82,11 @@ $(document).ready(function() {
           TweenMax.to(outterCard, 1, {scrollTo:{y:0}});
         }
       }
+
       //Events
       otherWedding.on('click', nextCard)
       thumbnails.on('click', openCard);
+      $(window).on('resize', hideCloseBtn);
 
       /* Cards close button rules */
       (function() {
