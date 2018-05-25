@@ -17,15 +17,20 @@ $(document).ready(function() {
   (function(){
     const weChatBtn = $("#wechat-overlay-btn a");
     const weChatClose = $("#weChat-overlay-close");
+    const weChatOv = $(".weChat-overlay");
+
     function openWeChat(element) {
       element.preventDefault();
       pageBody.addClass("body-scroll-lock");
-      $(".weChat-overlay").css("display", "flex").hide().fadeIn();
+      weChatOv.css("display", "flex");
+      TweenMax.fromTo(weChatOv, .7, {opacity:0}, {opacity:1});
     }
     function closeWeChat(element) {
       element.preventDefault();
       pageBody.removeClass("body-scroll-lock");
-      $(".weChat-overlay").fadeOut();
+      TweenMax.fromTo(weChatOv, .7, {opacity:1}, {opacity:0, onComplete:function(){
+        weChatOv.css("display","none");
+      }});
     }
     weChatBtn.on('click', openWeChat);
     weChatClose.on('click', closeWeChat);
