@@ -11,22 +11,26 @@ $(document).ready(function() {
       pageBody.toggleClass("body-scroll-lock");
       this.classList.toggle("change");
       navUl.toggleClass("nav-ul-display");
-      TweenMax.fromTo(navUl, .7, {opacity:0}, {opacity:1});
+      TweenMax.fromTo(navUl, .3, {opacity:0}, {opacity:1});
     });
     //Scroll back to top btn function
     (function() {
       const scrollTopBtn = $("#go-back-top");
-      $(window).on('scroll', function(){
+      //Button show/hide animation
+      function scrollTopanim() {
         if ($(window).scrollTop() > 900) {
           TweenMax.to(scrollTopBtn, 2, {x:0,y:0, ease: Elastic.easeOut.config(1, 0.3)});
         }else if ($(window).scrollTop() < 900) {
           TweenMax.to(scrollTopBtn, .5, {x:50, y:50});
         }
-      });
+      }
+      //Scroll to top
       function backToTop(e) {
         e.preventDefault();
           TweenMax.to(window, 1, {scrollTo:{y:0, ease: Power4.easeOut}});
       }
+      //Events
+      $(window).on('scroll', scrollTopanim);
       scrollTopBtn.on('click', backToTop)
     }())
   }());
@@ -49,6 +53,7 @@ $(document).ready(function() {
         weChatOv.css("display","none");
       }});
     }
+    //Events
     weChatBtn.on('click', openWeChat);
     weChatClose.on('click', closeWeChat);
 
