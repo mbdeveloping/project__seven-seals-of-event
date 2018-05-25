@@ -41,22 +41,36 @@ $(document).ready(function() {
     (function() {
       const thumbnails = $(".thumbnail");
       const cards = $(".main-card");
+      const otherWedding = $(".other-wedding");
+      const outterCard = $(".outter-main-card");
 
       function openCard() {
         let element = $(this);
-        let elementIndex = thumbnails.index(element);
+        let thumbnailIndex = thumbnails.index(element);
 
+        otherWedding.removeClass("current-other");
+        $(otherWedding[thumbnailIndex]).addClass("current-other");
         pageBody.addClass("body-scroll-lock");
-        cardsoverlay.addClass("cards-overlay-display").hide().fadeIn('slow');
-        $(cards[elementIndex]).removeClass("main-card-display");
-        $(".outter-main-card").scrollTop(0);
-        // console.log($(".other-wedding").length);
-        // console.log($(".other-wedding")[0]);
+        TweenMax.fromTo(cardsoverlay, 1, {opacity:0}, {opacity:1});
+        cardsoverlay.addClass("cards-overlay-display");
+        $(cards[thumbnailIndex]).removeClass("main-card-display");
+        outterCard.scrollTop(0);
       }
-      $(".other-wedding").on('click', function() {
-        // console.log(this);
-        // console.log($(".other-wedding").index(this));
-      })
+      //On other-wedding click open next card funtion
+      function nextCard() {
+        let element = $(this);
+        let otherWeddingtIndex = otherWedding.index(element);
+
+        if (!element.hasClass("current-other")) {
+          otherWedding.removeClass("current-other");
+          element.addClass("current-other");
+          cards.addClass("main-card-display");
+          $(cards[otherWeddingtIndex]).removeClass("main-card-display");
+          TweenMax.to(outterCard, 1, {scrollTo:{y:0}});
+        }
+      }
+      //Events
+      otherWedding.on('click', nextCard)
       thumbnails.on('click', openCard);
 
       /* Cards close button rules */
@@ -70,6 +84,7 @@ $(document).ready(function() {
           pageBody.removeClass("body-scroll-lock");
           $(".main-card").addClass("main-card-display");
         }
+        //Events
         closeBtn.on('click', closeCard);
         closeBtnBot.on('click', closeCard);
       }());
