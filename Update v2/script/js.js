@@ -3,11 +3,20 @@ $(document).ready(function() {
   const pageBody = $("body");
   /* Owl carousel Rules*/
   $(".owl-carousel").owlCarousel();
+  /* Header nav hamburger-btn rules */
+  (function() {
+    const navBtn = $("#hamburger-btn");
+    const navUl = $("#main-nav ul");
+    navBtn.on('click', function() {
+      this.classList.toggle("change");
+      navUl.toggleClass("nav-ul-display");
+      TweenMax.fromTo(navUl, .7, {opacity:0}, {opacity:1});
+    })
+  }());
   /* Footer rules */
   (function(){
     const weChatBtn = $("#wechat-overlay-btn a");
     const weChatClose = $("#weChat-overlay-close");
-
     function openWeChat(element) {
       element.preventDefault();
       pageBody.addClass("body-scroll-lock");
@@ -40,7 +49,6 @@ $(document).ready(function() {
       let windowH = window.innerHeight;
       let cardInnerH = $(".card-overlay-inner").outerHeight();
       let closeBtnH = $("#card-close-button-bottom").height();
-
       if (windowH >= cardInnerH + closeBtnH) {
         $("#card-close-button").css("display", "none");
       } else {
@@ -54,12 +62,9 @@ $(document).ready(function() {
       const cards = $(".main-card");
       const otherWedding = $(".other-wedding");
       const outterCard = $(".outter-main-card");
-
       function openCard() {
         let element = $(this);
         let thumbnailIndex = thumbnails.index(element);
-
-
         otherWedding.removeClass("current-other");
         $(otherWedding[thumbnailIndex]).addClass("current-other");
         pageBody.addClass("body-scroll-lock");
@@ -73,7 +78,6 @@ $(document).ready(function() {
       function nextCard() {
         let element = $(this);
         let otherWeddingtIndex = otherWedding.index(element);
-
         if (!element.hasClass("current-other")) {
           otherWedding.removeClass("current-other");
           element.addClass("current-other");
@@ -92,7 +96,6 @@ $(document).ready(function() {
       (function() {
         const closeBtn = $("#card-close-button");
         const closeBtnBot = $("#card-close-button-bottom");
-
         function closeCard(element) {
           element.preventDefault();
           cardsoverlay.removeClass("cards-overlay-display");
