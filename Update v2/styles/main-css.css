@@ -52,6 +52,25 @@ a {
   overflow: hidden;
 }
 
+#go-back-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background:rgba(0,0,0, .5);
+  border-radius: 50% 50% 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  transform: translate(50px, 50px);
+}
+
+#go-back-top i {
+  color: #fff;
+}
+
 /* Main Header rules */
 #main-header {
   position: fixed;
@@ -77,7 +96,7 @@ a {
 
 #header-branding img {
   width: 100%;
-  max-width: 45px;
+  max-width: 40px;
 }
 
 
@@ -208,10 +227,13 @@ a {
   display: inline-block;
   width: 50px;
   height: 50px;
-  border:4px solid grey;
+  border:4px solid #dfd774;
   border-radius: 50%;
   text-align: center;
   position: relative;
+  /* -webkit-box-shadow: 0px 0px 37px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 37px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75); */
 }
 
 .icon-wrapper {
@@ -223,12 +245,13 @@ a {
 }
 
 .step-icon i.fa-gem {
-  color:grey;
+  color:#dfd774;
   font-size: 1.2rem;
   position: absolute;
   top:0;
   right:0;
   transform: translate(14px, -12px) rotate(45deg);
+  /* text-shadow: 0px 0px 11px #000; */
 }
 
 .step-icon i {
@@ -312,7 +335,7 @@ a {
 
 .card-overlay-inner {
   padding: 20px;
-  padding-bottom: 180px;
+  padding-bottom: 186px;
   overflow: hidden;
   position: relative;
 }
@@ -330,16 +353,20 @@ a {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 5px solid grey;
+  border: 5px solid #dfd774;
+  -webkit-box-shadow: 0px 0px 37px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 37px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
 }
 
 .card-overlay-inner .fa-gem {
-  color: grey;
+  color: #dfd774;
   font-size: 1.3rem;
   position: absolute;
   top:0;
   right:0;
   transform: translate(4px, -2px) rotate(45deg);
+  text-shadow: 0px 0px 11px #000;
 }
 
 .main-card-display {
@@ -466,6 +493,10 @@ a {
 
 .no-js .owl-carousel, .owl-carousel.owl-loaded {
   display: flex;
+}
+
+.owl-carousel .owl-stage {
+  padding-top: 6px;
 }
 /** Contact / Explore vents section */
 

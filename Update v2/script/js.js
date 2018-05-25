@@ -8,17 +8,34 @@ $(document).ready(function() {
     const navBtn = $("#hamburger-btn");
     const navUl = $("#main-nav ul");
     navBtn.on('click', function() {
+      pageBody.toggleClass("body-scroll-lock");
       this.classList.toggle("change");
       navUl.toggleClass("nav-ul-display");
       TweenMax.fromTo(navUl, .7, {opacity:0}, {opacity:1});
-    })
+    });
+    //Scroll back to top btn function
+    (function() {
+      const scrollTopBtn = $("#go-back-top");
+      $(window).on('scroll', function(){
+        if ($(window).scrollTop() > 900) {
+          TweenMax.to(scrollTopBtn, 2, {x:0,y:0, ease: Elastic.easeOut.config(1, 0.3)});
+        }else if ($(window).scrollTop() < 900) {
+          TweenMax.to(scrollTopBtn, .5, {x:50, y:50});
+        }
+      });
+      function backToTop(e) {
+        e.preventDefault();
+          TweenMax.to(window, 1, {scrollTo:{y:0, ease: Power4.easeOut}});
+      }
+      scrollTopBtn.on('click', backToTop)
+    }())
   }());
+
   /* Footer rules */
   (function(){
     const weChatBtn = $("#wechat-overlay-btn a");
     const weChatClose = $("#weChat-overlay-close");
     const weChatOv = $(".weChat-overlay");
-
     function openWeChat(element) {
       element.preventDefault();
       pageBody.addClass("body-scroll-lock");
