@@ -1,27 +1,33 @@
-$('.owl-carousel').owlCarousel({
-  loop:false,
-  margin:10,
-  nav:false,
-  responsive:{
-      0:{
-          items:3
-      },
-      700:{
-          items:4
-      },
-      1000:{
-          items:5
-      }
-  }
-});
 $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
 
+  //Owl carousel rules
+  $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:3
+        },
+        700:{
+            items:4
+        },
+        1000:{
+            items:5
+        }
+    }
+  });
   /* Header nav hamburger-btn rules */
   (function() {
     const navBtn = $("#hamburger-btn");
     const navUl = $("#main-nav ul");
+    const headerBar = $("#main-header");
+    const navLiA = $("#main-nav ul li a");
+    const brandingP = $("#header-branding p");
+    const brandingImg = $("#header-branding img");
+    const hamburgerBars = $(".bar");
 
     function hamburgerClick() {
       if (!navUl.hasClass("nav-open")) {
@@ -29,10 +35,16 @@ $(document).ready(function() {
         $(this).addClass("change");
         navUl.addClass("nav-ul-display nav-open");
         TweenMax.fromTo(navUl, .3, {opacity:0}, {opacity:1});
+        $("main").addClass("blur-bg");
+        $("#contact-gallery-section").addClass("blur-bg");
+        $("#main-footer").addClass("blur-bg");
       } else {
         pageBody.removeClass("body-scroll-lock");
         $(this).removeClass("change");
         navUl.removeClass("nav-ul-display nav-open");
+        $("main").removeClass("blur-bg");
+        $("#contact-gallery-section").removeClass("blur-bg");
+        $("#main-footer").removeClass("blur-bg");
       }
     }
     //Scroll back to top btn function
@@ -51,8 +63,23 @@ $(document).ready(function() {
         e.preventDefault();
           TweenMax.to(window, 1, {scrollTo:{y:0, ease: Power4.easeOut}});
       }
-      console.log(window.innerWidth);
+      function headerbarSize() {
+        if ($(window).scrollTop() > 20) {
+          headerBar.addClass("header-size");
+          navLiA.addClass("navLiA-size");
+          brandingP.addClass("navLiA-size");
+          brandingImg.addClass("logo-size");
+          hamburgerBars.addClass("bars-size");
+        } else {
+          headerBar.removeClass("header-size");
+          navLiA.removeClass("navLiA-size");
+          brandingP.removeClass("navLiA-size");
+          brandingImg.removeClass("logo-size");
+          hamburgerBars.removeClass("bars-size");
+        }
+      }
       //Events
+      $(window).on('scroll', headerbarSize)
       navBtn.on('click', hamburgerClick);
       $(window).on('resize', resizeNav);
       $(window).on('scroll', scrollTopanim);
@@ -143,7 +170,7 @@ $(document).ready(function() {
           element.addClass("current-other");
           cards.addClass("main-card-display");
           $(cards[otherWeddingtIndex]).removeClass("main-card-display");
-          TweenMax.to(outterCard, 1, {scrollTo:{y:0}});
+          TweenMax.to(outterCard, .5, {scrollTo:{y:0}});
         }
       }
 

@@ -71,11 +71,16 @@ a {
   color: #fff;
 }
 
+.blur-bg {
+  filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 /* Main Header rules */
 #main-header {
   position: fixed;
   width: 100%;
-  height: 60px;
+  height: 90px;
   background:rgba(0,0,0, .8);
   z-index: 10;
   /* overflow: hidden; */
@@ -101,14 +106,63 @@ a {
 
 #header-branding img {
   width: 100%;
-  max-width: 40px;
+  max-width: 50px;
 }
 
-
+/*Testing navBar animation*/
 #header-branding p {
+  font-size: 1.2rem;
   padding-left: 5px;
   color: #fff;
   display: inline-block;
+}
+
+#header-branding p, #main-nav ul li a {
+  transition: font-size .3s, padding .3s;
+}
+
+#header-branding img {
+  transition: max-width .3s;
+}
+
+#main-header {
+  transition: height .3s;
+}
+
+#main-header.header-size {
+  height: 60px;
+}
+
+ #main-nav ul li a.navLiA-size {
+   font-size: 1rem;
+   padding: .5rem;
+ }
+
+ #header-branding p.navLiA-size {
+   font-size: 1rem;
+ }
+
+ #header-branding img.logo-size {
+   max-width: 40px;
+ }
+
+ .bar.bars-size {
+   height: 4px;
+   width: 35px;
+ }
+
+/*end testing navbar animation*/
+
+.active-page {
+  background:#dfd774;
+}
+
+#main-nav ul li.active-page a {
+  color:#444;
+}
+
+#main-nav {
+  height: 100%;
 }
 
 #main-nav ul {
@@ -129,6 +183,11 @@ a {
 #main-nav ul li {
   height: 100%;
   text-align: center;
+  transition: background .3s;
+}
+
+#main-nav ul li:hover{
+  background:#dfd774;
 }
 
 #main-nav ul li a {
@@ -151,14 +210,15 @@ a {
   z-index: 10;
   position: absolute;
   right: 20px;
+  cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
+.bar {
+    width: 40px;
+    height: 6px;
     background-color: #bbb;
     margin: 6px 0;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .change .bar1 {
@@ -199,7 +259,7 @@ a {
   width: 100%;
   background-image: url('../images/gallery/traditional/traditional3-4.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   z-index: -1;
 }
@@ -289,6 +349,11 @@ a {
   background:#fff;
   padding:1rem;
   border-radius: 4px;
+  transition: box-shadow .3s;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .thumbnail-icon-wrapper {
@@ -302,6 +367,14 @@ a {
   height: 30px;
   background:#444;
   border-radius: 50% 50% 0 50%;
+  transition: background .3s ease;
+}
+
+.thumbnail-icon-wrapper:hover {
+  background: #dfd774;
+}
+.btn:hover {
+  background: #dfd774;
 }
 
 .thumbnail-icon-wrapper i {
@@ -510,6 +583,11 @@ a {
   position: relative;
   display: flex;
   justify-content: space-around;
+  cursor: pointer;
+}
+
+.other-wedding-wrapper:hover {
+  cursor: pointer;
 }
 
 .other-wedding {
@@ -564,6 +642,7 @@ a {
   display: inline-block;
   border:2px solid #c39f57;
   border-radius: 40px 40px 0 40px;
+  transition: background .3s;
 }
 /** Contact / Explore vents section */
 
@@ -629,6 +708,12 @@ a {
   font-size: 1em;
   margin-bottom: 20px;
   color: #b8b3aa;
+  transition: color .3s, text-decoration .3s;
+}
+
+.footer-address a:hover, .footer-address p:hover {
+    text-decoration: underline;
+    color: #fff;
 }
 
 .footer-address i {
@@ -649,6 +734,12 @@ a {
 .footer-social-links li a i {
   font-size: 3em;
   color: #b8b3aa;
+  transition: color .3s, transform .3s;
+}
+
+.footer-social-links li a i:hover {
+  color: #fff;
+  transform: scale(1.2);
 }
 
 .weChat-overlay {
@@ -717,6 +808,12 @@ a {
 
 
 /* Container BreakPoints */
+@media (max-height: 500px){
+  /* Navigation rules */
+  #main-nav ul {
+    padding:3rem 0;
+  }
+}
 @media (min-width: 374px){
   .thumbnail {
     padding: 2rem;
@@ -733,10 +830,20 @@ a {
 .container {
     width: 80%;
   }
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (min-width: 700px){
-.container {
+  /* Wedding page rules */
+  #wedding-hero .alignt-header-text h1 {
+    font-size: 2rem;
+  }
+  #wedding-hero .alignt-header-text p {
+    font-size: 1.5rem;
+  }
+  .container {
     width: 90%;
   }
   .cards-wrapper {
@@ -759,7 +866,6 @@ a {
   }
   .thumbnail {
     padding: 1rem;
-    padding-bottom: 66px;
   }
   .thumbnail p {
     display: block;
@@ -776,6 +882,9 @@ a {
     height: 150px;
   }
   .thumbnail-icon-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
     width: auto;
     height: auto;
     border-radius: 20px 20px 0 20px;
@@ -798,37 +907,27 @@ a {
   .like-what-you-see {
     margin-bottom: 0;
   }
+  #main-nav ul {
+    width: 20%;
+    right: 0;
+    left:auto;
+  }
 }
 
 @media (min-width: 1024px){
+  /* Wedding page rules */
   .cards-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
   }
-/*
-  .royal-thumbnail {
-    grid-column: 1/2;
-  }
-  .traditional-thumbnail {
-    grid-column: 2/3;
-  }
-  .midClass-thumbnail {
-    grid-column: 3/4;
-  }
-
-  .simpleClass-thumbnail {
-    grid-column: 4/5;
-  }
-  .western-thumbnail {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .mix-thumbnail {
-    grid-column: 3/4;
-    grid-row: 2/3;
-  } */
   .thumbnail {
     padding: 2rem;
   }
+  .card-overlay-inner {
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  /* Navigation rules */
   #hamburger-btn {
     display:none;
   }
@@ -839,14 +938,13 @@ a {
     align-items: center;
     list-style-type: none;
     width: 100%;
-    height: 0;
+    height: 100%;
     padding: 0;
-    height: 60px;
     background:none;
     position: relative;
   }
   #main-nav ul li a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding:0 1rem;
   }
 }
