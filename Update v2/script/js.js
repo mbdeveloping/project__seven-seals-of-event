@@ -123,6 +123,19 @@ $(document).ready(function() {
     }())
   }());
 
+  /********** HOME PAGE RULES **********/
+  //Home page parallax
+  (function() {
+    const parallaxElements = $('.home-parallax-bg');
+
+    $(window).on('scroll', function () {
+      window.requestAnimationFrame(function () {
+        let scrolled = $(window).scrollTop();
+        TweenMax.to(parallaxElements, .5, {y: scrolled * -0.2});
+      });
+    });
+  }());
+
   /********** WEDDING PAGE RULES **********/
   (function() {
     /* Main cards rules */
@@ -151,7 +164,7 @@ $(document).ready(function() {
         otherWedding.removeClass("current-other");
         $(otherWedding[thumbnailIndex]).addClass("current-other");
         pageBody.addClass("body-scroll-lock");
-        TweenMax.fromTo(cardsoverlay, 1, {opacity:0}, {opacity:1});
+        TweenMax.fromTo(cardsoverlay, .3, {opacity:0}, {opacity:1});
         cardsoverlay.addClass("cards-overlay-display");
         $(cards[thumbnailIndex]).removeClass("main-card-display");
         outterCard.scrollTop(0);

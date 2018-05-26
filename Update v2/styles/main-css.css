@@ -233,10 +233,13 @@ a {
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 /***** HOME PAGE RULES*****/
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+  height: 85vh;
+}
 #home-carousel {
   height: 85vh;
   width: 100%;
-  background:grey;
+  background:#F6F1EE;
 }
 
 #home-carousel .item {
@@ -266,6 +269,44 @@ a {
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+#home-wedding-parallax {
+  width: 100%;
+  height: 65vh;
+  background:grey;
+}
+
+#intro-about {
+  padding:2rem 0;
+  text-align: center;
+}
+
+#intro-about h2 {
+  padding-top:0;
+}
+
+#home-wedding-parallax {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-parallax-bg {
+  background-image: url("../images/home/wedding1.jpg");
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top:0;
+  left:0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  will-change: transform;
+}
+
+.activities img {
+  border-radius: 50%;
 }
 /***** WEDDING PAGE RULES ******/
 
