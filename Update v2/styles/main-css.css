@@ -123,7 +123,7 @@ a {
   background:rgba(0,0,0, .9);
   top:0;
   left:0;
-  padding:40% 0;
+  padding:8rem 0;
 }
 
 #main-nav ul li {
@@ -279,14 +279,12 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   justify-content: center;
-  align-items: center;
   padding-top: 2rem;
 }
 
 .thumbnail {
   position: relative;
   justify-self: center;
-  align-self: center;
   margin: 0.25rem;
   background:#fff;
   padding:1rem;
@@ -331,8 +329,23 @@ a {
 
 .thumbnail img {
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #dfd774;
+}
+
+.thumbnail-img-wrapper {
+  position: relative;
+
+}
+
+.thumbnail-img-wrapper i {
+  font-size: 1.2rem;
+  color: #dfd774;
+  position: absolute;
+  top:0;
+  right: 0;
+  transform: rotate(45deg) translate(0px, -3px);
 }
 
 .royal-card {
@@ -555,12 +568,16 @@ a {
 /** Contact / Explore vents section */
 
 #contact-gallery-section {
-  padding-top: 20px;
+  padding: 1rem 0;
   background: #F6F1EE;
 }
 
 .contact-gallery-box-wrapper {
   overflow: hidden;
+}
+
+.like-what-you-see {
+  margin-bottom: 1rem;
 }
 
 .like-what-you-see, .explore-events {
@@ -569,7 +586,6 @@ a {
   width: 100%;
   background: #fff;
   text-align: center;
-  margin-bottom: 20px;
   border-radius: 4px;
 }
 
@@ -598,7 +614,7 @@ a {
 
 .footer-textarea h4 {
   padding:0;
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 30px;
   font-size: 1.2em;
   color: #c39f57;
@@ -621,7 +637,7 @@ a {
 }
 
 .footer-social-links {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .footer-social-links li {
@@ -701,6 +717,11 @@ a {
 
 
 /* Container BreakPoints */
+@media (min-width: 374px){
+  .thumbnail {
+    padding: 2rem;
+  }
+}
 @media (min-width: 400px){
 .container {
     width: 85%;
@@ -720,11 +741,14 @@ a {
   }
   .cards-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
   }
   .steps-wrapper {
+    padding: 2rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .steps:not(:last-child) {
+    border-right: 2px solid #d0cccc;
   }
   #have-question {
     grid-column:1/4;
@@ -733,41 +757,54 @@ a {
     display: inline-block;
     color: #444;
   }
+  .thumbnail {
+    padding: 1rem;
+    padding-bottom: 66px;
+  }
+  .thumbnail p {
+    display: block;
+  }
+  .thumbnail-icon-wrapper i {
+    display: none;
+  }
+  .thumbnail-img-wrapper i {
+    font-size: 1.5rem;
+    transform:rotate(45deg) translate(0px, 0px);
+  }
+  .thumbnail img {
+    width: 150px;
+    height: 150px;
+  }
+  .thumbnail-icon-wrapper {
+    width: auto;
+    height: auto;
+    border-radius: 20px 20px 0 20px;
+  }
+  .thumbnail-icon-wrapper p {
+    cursor: pointer;
+    color: #fff;
+    padding: .5rem 1rem;
+  }
+  .thumbnail-img-wrapper {
+    width: 150px;
+    height: 150px;
+    margin:0 auto;
+  }
+  .contact-gallery-box-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .like-what-you-see {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1024px){
   .cards-wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  /* #have-question {
-    grid-column:3/5;
-    grid-row: 2/2;
-    padding:5rem;
-  } */
-  /* .royal-thumbnail {
-    grid-column: 2/3;
-  }
-  .traditional-thumbnail {
-    grid-column: 3/4;
-  }
-  .midClass-thumbnail {
-    grid-column: 4/5;
-  }
-
-  .simpleClass-thumbnail {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .western-thumbnail {
-    grid-column: 3/4;
-    grid-row: 2/3;
-  }
-  .mix-thumbnail {
-    grid-column: 4/5;
-    grid-row: 2/3;
-  } */
-
+/*
   .royal-thumbnail {
     grid-column: 1/2;
   }
@@ -788,12 +825,29 @@ a {
   .mix-thumbnail {
     grid-column: 3/4;
     grid-row: 2/3;
+  } */
+  .thumbnail {
+    padding: 2rem;
   }
-
-  .contact-gallery-box-wrapper {
+  #hamburger-btn {
+    display:none;
+  }
+  #main-nav ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    height: 60px;
+    background:none;
+    position: relative;
+  }
+  #main-nav ul li a {
+    font-size: 1rem;
+    padding:0 1rem;
   }
 }
 

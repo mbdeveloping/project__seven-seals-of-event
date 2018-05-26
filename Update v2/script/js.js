@@ -1,18 +1,40 @@
+$('.owl-carousel').owlCarousel({
+  loop:false,
+  margin:10,
+  nav:false,
+  responsive:{
+      0:{
+          items:3
+      },
+      700:{
+          items:4
+      },
+      1000:{
+          items:5
+      }
+  }
+});
 $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
-  /* Owl carousel Rules*/
-  $(".owl-carousel").owlCarousel();
+
   /* Header nav hamburger-btn rules */
   (function() {
     const navBtn = $("#hamburger-btn");
     const navUl = $("#main-nav ul");
-    navBtn.on('click', function() {
-      pageBody.toggleClass("body-scroll-lock");
-      this.classList.toggle("change");
-      navUl.toggleClass("nav-ul-display");
-      TweenMax.fromTo(navUl, .3, {opacity:0}, {opacity:1});
-    });
+
+    function hamburgerClick() {
+      if (!navUl.hasClass("nav-open")) {
+        pageBody.addClass("body-scroll-lock");
+        $(this).addClass("change");
+        navUl.addClass("nav-ul-display nav-open");
+        TweenMax.fromTo(navUl, .3, {opacity:0}, {opacity:1});
+      } else {
+        pageBody.removeClass("body-scroll-lock");
+        $(this).removeClass("change");
+        navUl.removeClass("nav-ul-display nav-open");
+      }
+    }
     //Scroll back to top btn function
     (function() {
       const scrollTopBtn = $("#go-back-top");
@@ -29,10 +51,21 @@ $(document).ready(function() {
         e.preventDefault();
           TweenMax.to(window, 1, {scrollTo:{y:0, ease: Power4.easeOut}});
       }
+      console.log(window.innerWidth);
       //Events
+      navBtn.on('click', hamburgerClick);
+      $(window).on('resize', resizeNav);
       $(window).on('scroll', scrollTopanim);
       scrollTopBtn.on('click', backToTop)
     }())
+    //resize window remove body block
+    function resizeNav() {
+      let windowW = window.innerWidth;
+      if (windowW >= 1024) {
+        pageBody.removeClass("body-scroll-lock");
+      }
+    }
+    resizeNav();
   }());
 
   /* Footer rules */
@@ -118,7 +151,6 @@ $(document).ready(function() {
       otherWedding.on('click', nextCard)
       thumbnails.on('click', openCard);
       $(window).on('resize', hideCloseBtn);
-
       /* Cards close button rules */
       (function() {
         const closeBtn = $("#card-close-button");
