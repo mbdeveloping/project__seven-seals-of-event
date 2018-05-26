@@ -1,21 +1,17 @@
 $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
-
-  //Owl carousel rules
-  $('.owl-carousel').owlCarousel({
-    loop:false,
-    margin:10,
+  //Home page owl carousel
+  $('.owl1').owlCarousel({
+    loop:true,
+    autoplay:false,
+    autoplayHoverPause:true,
+    smartSpeed:500,
+    margin:0,
     nav:false,
     responsive:{
         0:{
-            items:3
-        },
-        700:{
-            items:4
-        },
-        1000:{
-            items:5
+            items:1
         }
     }
   });

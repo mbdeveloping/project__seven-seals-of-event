@@ -232,8 +232,42 @@ a {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
+/***** HOME PAGE RULES*****/
+#home-carousel {
+  height: 85vh;
+  width: 100%;
+  background:grey;
+}
 
-/***** WEDDING PAGE ******/
+#home-carousel .item {
+  height: 85vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#home-carousel .slide1 {
+  background-image: url("../images/home/slide11.jpg");
+}
+
+#home-carousel .slide2 {
+  background-image: url("../images/home/slide2.jpg");
+}
+
+#home-carousel .slide3 {
+  background-image: url("../images/home/slide3.jpg");
+}
+.caption {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+/***** WEDDING PAGE RULES ******/
 
 #wedding-hero .alignt-header-text h1, .alignt-header-text p {
   color: #fff;
