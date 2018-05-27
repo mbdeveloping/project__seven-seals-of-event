@@ -31,7 +31,7 @@ $(document).ready(function() {
         pageBody.addClass("body-scroll-lock");
         $(this).addClass("change");
         navUl.addClass("nav-ul-display nav-open");
-        TweenMax.fromTo(navUl, .3, {opacity:0}, {opacity:1});
+        TweenMax.fromTo(navUl, .3, {opacity:0,x:"100%"}, {opacity:1, x:"0%"});
         $("main").addClass("blur-bg");
         $("#contact-gallery-section").addClass("blur-bg");
         $("#main-footer").addClass("blur-bg");
@@ -39,7 +39,10 @@ $(document).ready(function() {
       } else {
         pageBody.removeClass("body-scroll-lock");
         $(this).removeClass("change");
-        navUl.removeClass("nav-ul-display nav-open");
+        TweenMax.to(navUl, .3, {opacity:0,x:"100%", onComplete:function(){
+          TweenMax.set(navUl, {opacity:1, x:"0%"});
+          navUl.removeClass("nav-ul-display nav-open");
+        }});
         $("main").removeClass("blur-bg");
         $("#contact-gallery-section").removeClass("blur-bg");
         $("#main-footer").removeClass("blur-bg");
@@ -83,6 +86,10 @@ $(document).ready(function() {
           brandingP.addClass("navLiA-size");
           brandingImg.addClass("logo-size");
           hamburgerBars.addClass("bars-size");
+          $("main").removeClass("blur-bg");
+          $("#contact-gallery-section").removeClass("blur-bg");
+          $("#main-footer").removeClass("blur-bg");
+          $("#header-branding").removeClass("blur-bg");
         }
       }
       //Events
