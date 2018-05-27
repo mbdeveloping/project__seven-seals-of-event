@@ -5,7 +5,7 @@ $(document).ready(function() {
   $('.owl1').owlCarousel({
     loop:true,
     startPosition:0,
-    autoplay:false,
+    autoplay:true,
     autoplayHoverPause:true,
     smartSpeed:500,
     margin:0,
@@ -35,6 +35,7 @@ $(document).ready(function() {
         $("main").addClass("blur-bg");
         $("#contact-gallery-section").addClass("blur-bg");
         $("#main-footer").addClass("blur-bg");
+        $("#header-branding").addClass("blur-bg");
       } else {
         pageBody.removeClass("body-scroll-lock");
         $(this).removeClass("change");
@@ -42,6 +43,7 @@ $(document).ready(function() {
         $("main").removeClass("blur-bg");
         $("#contact-gallery-section").removeClass("blur-bg");
         $("#main-footer").removeClass("blur-bg");
+        $("#header-branding").removeClass("blur-bg");
       }
     }
     //Scroll back to top btn function
@@ -61,26 +63,36 @@ $(document).ready(function() {
           TweenMax.to(window, 1, {scrollTo:{y:0, ease: Power4.easeOut}});
       }
       function headerbarSize() {
-        if ($(window).scrollTop() > 20) {
+        if (window.innerWidth >= 1024) {
+          if ($(window).scrollTop() > 20) {
+            headerBar.addClass("header-size");
+            navLiA.addClass("navLiA-size");
+            brandingP.addClass("navLiA-size");
+            brandingImg.addClass("logo-size");
+            hamburgerBars.addClass("bars-size");
+          } else {
+            headerBar.removeClass("header-size");
+            navLiA.removeClass("navLiA-size");
+            brandingP.removeClass("navLiA-size");
+            brandingImg.removeClass("logo-size");
+            hamburgerBars.removeClass("bars-size");
+          }
+        }else {
           headerBar.addClass("header-size");
           navLiA.addClass("navLiA-size");
           brandingP.addClass("navLiA-size");
           brandingImg.addClass("logo-size");
           hamburgerBars.addClass("bars-size");
-        } else {
-          headerBar.removeClass("header-size");
-          navLiA.removeClass("navLiA-size");
-          brandingP.removeClass("navLiA-size");
-          brandingImg.removeClass("logo-size");
-          hamburgerBars.removeClass("bars-size");
         }
       }
       //Events
-      $(window).on('scroll', headerbarSize)
+      $(window).on('scroll', headerbarSize);
+      $(window).on('resize', headerbarSize);
       navBtn.on('click', hamburgerClick);
       $(window).on('resize', resizeNav);
       $(window).on('scroll', scrollTopanim);
       scrollTopBtn.on('click', backToTop)
+      headerbarSize();
     }())
     //resize window remove body block
     function resizeNav() {
