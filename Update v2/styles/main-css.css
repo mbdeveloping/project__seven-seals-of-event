@@ -71,11 +71,6 @@ a {
   color: #fff;
 }
 
-.blur-bg {
-  filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
 /* Main Header rules */
 #main-header {
   position: fixed;
@@ -172,11 +167,11 @@ a {
   align-items: center;
   list-style-type: none;
   position: fixed;
-  width: 100%;
+  width: 50%;
   height: 100vh;
-  background:rgba(0,0,0, .9);
+  background:rgba(0,0,0, .6);
   top:0;
-  left:0;
+  right:0;
   padding:8rem 0;
 }
 

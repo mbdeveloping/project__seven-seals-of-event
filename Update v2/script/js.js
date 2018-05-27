@@ -25,6 +25,7 @@ $(document).ready(function() {
     const brandingP = $("#header-branding p");
     const brandingImg = $("#header-branding img");
     const hamburgerBars = $(".bar");
+    const blurBg = $(".blur-bg");
 
     function hamburgerClick() {
       if (!navUl.hasClass("nav-open")) {
@@ -32,14 +33,7 @@ $(document).ready(function() {
         $(this).addClass("change");
         navUl.addClass("nav-ul-display nav-open");
         TweenMax.fromTo(navUl, .3, {opacity:0,x:"100%"}, {opacity:1, x:"0%"});
-        TweenMax.fromTo($("main"), .3, {'-webkit-filter':'blur(0px)'}, {'-webkit-filter':'blur(10px)'});
-        TweenMax.fromTo($("#contact-gallery-section"), .3, {'-webkit-filter':'blur(0px)'}, {'-webkit-filter':'blur(10px)'});
-        TweenMax.fromTo($("#main-footer"), .3, {'-webkit-filter':'blur(0px)'}, {'-webkit-filter':'blur(10px)'});
-        TweenMax.fromTo($("#header-branding"), .3, {'-webkit-filter':'blur(0px)'}, {'-webkit-filter':'blur(10px)'});
-        // $("main").addClass("blur-bg");
-        // $("#contact-gallery-section").addClass("blur-bg");
-        // $("#main-footer").addClass("blur-bg");
-        // $("#header-branding").addClass("blur-bg");
+        TweenMax.fromTo(blurBg, .5, {'-webkit-filter':'blur(0px)'}, {'-webkit-filter':'blur(10px)'});
       } else {
         pageBody.removeClass("body-scroll-lock");
         $(this).removeClass("change");
@@ -47,14 +41,7 @@ $(document).ready(function() {
           TweenMax.set(navUl, {opacity:1, x:"0%"});
           navUl.removeClass("nav-ul-display nav-open");
         }});
-        TweenMax.fromTo($("main"), .3, {'-webkit-filter':'blur(10px)'}, {'-webkit-filter':'blur(0px)'});
-        TweenMax.fromTo($("#contact-gallery-section"), .3, {'-webkit-filter':'blur(10px)'}, {'-webkit-filter':'blur(0px)'});
-        TweenMax.fromTo($("#main-footer"), .3, {'-webkit-filter':'blur(10px)'}, {'-webkit-filter':'blur(0px)'});
-        TweenMax.fromTo($("#header-branding"), .3, {'-webkit-filter':'blur(10px)'}, {'-webkit-filter':'blur(0px)'});
-        // $("main").removeClass("blur-bg");
-        // $("#contact-gallery-section").removeClass("blur-bg");
-        // $("#main-footer").removeClass("blur-bg");
-        // $("#header-branding").removeClass("blur-bg");
+        TweenMax.fromTo(blurBg, .5, {'-webkit-filter':'blur(10px)'}, {'-webkit-filter':'blur(0px)'});
       }
     }
     //Scroll back to top btn function
@@ -94,10 +81,6 @@ $(document).ready(function() {
           brandingP.addClass("navLiA-size");
           brandingImg.addClass("logo-size");
           hamburgerBars.addClass("bars-size");
-          $("main").removeClass("blur-bg");
-          $("#contact-gallery-section").removeClass("blur-bg");
-          $("#main-footer").removeClass("blur-bg");
-          $("#header-branding").removeClass("blur-bg");
         }
       }
       //Events
