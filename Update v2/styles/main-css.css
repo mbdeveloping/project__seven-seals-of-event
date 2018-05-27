@@ -287,7 +287,7 @@ a {
   font-style: italic;
 }
 
-.slide2 h1, .slide2 p, .slide3 h1, .slide3 p {
+.slide2 h1, .slide2 p, .slide3 h1, .slide3 p, .slide1 p {
   color: #fff;
   text-shadow: 2px 2px 4px #000000;
 }
