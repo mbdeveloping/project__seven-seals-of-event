@@ -854,7 +854,13 @@ a {
 #more-activities-list {
   list-style-type: none;
 }
-
+#main-activities-section .card-overlay-inner img {
+  border:2px solid #fff;
+  box-shadow: 0 0 0 3px #777;
+}
+#main-activities-section .other-wedding-circle img {
+  box-shadow: 0 0 0 1px #777;
+}
 /********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
   padding: 1rem 0;
