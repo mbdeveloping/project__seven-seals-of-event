@@ -16,6 +16,22 @@ $(document).ready(function() {
         }
     }
   });
+  $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:0,
+    nav:false,
+    responsive:{
+        0:{
+            items:3
+        },
+        700:{
+            items:4
+        },
+        1000:{
+            items:5
+        }
+    }
+  });
   /* Header nav hamburger-btn rules */
   (function() {
     const navBtn = $("#hamburger-btn");
@@ -26,6 +42,24 @@ $(document).ready(function() {
     const brandingImg = $("#header-branding img");
     const hamburgerBars = $(".bar");
     const blurBg = $(".blur-bg");
+
+    jQuery(document).ready(function($) {
+      var hamburgerBlur = function() {
+
+        var ww = document.body.clientWidth;
+        if (ww >= 1024) {
+          TweenMax.set(blurBg, {'-webkit-filter':'none'});
+        } else if (navUl.hasClass("nav-open")) {
+          TweenMax.set(blurBg, {'-webkit-filter':'blur(10px)'});
+          console.log("true");
+        }
+      };
+      $(window).on('resize', function(){
+        hamburgerBlur();
+      });
+
+      hamburgerBlur();
+    });
 
     function hamburgerClick() {
       if (!navUl.hasClass("nav-open")) {
@@ -41,7 +75,9 @@ $(document).ready(function() {
           TweenMax.set(navUl, {opacity:1, x:"0%"});
           navUl.removeClass("nav-ul-display nav-open");
         }});
-        TweenMax.fromTo(blurBg, .5, {'-webkit-filter':'blur(10px)'}, {'-webkit-filter':'blur(0px)'});
+        TweenMax.fromTo(blurBg, .5, {'-webkit-filter':'blur(10px)'}, {'-webkit-filter':'blur(0px)', onComplete:function(){
+          TweenMax.set(blurBg, {'-webkit-filter':'none'});
+        }});
       }
     }
     //Scroll back to top btn function
