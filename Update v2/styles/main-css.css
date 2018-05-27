@@ -454,14 +454,14 @@ a {
   align-items: center;
 }
 
-.wedding-header {
+.intro-header {
   height: 65vh;
   width: 100%;
   text-align: center;
   background: rgba(192,192,192,.4);
 }
 
-.wedding-section {
+.item-section {
   background:#F6F1EE;
 }
 
@@ -561,7 +561,6 @@ a {
 }
 
 .cards-text {
-  /* position: absolute; */
   bottom:0;
   left:0;
   width: 100%;
@@ -818,6 +817,24 @@ a {
   border:2px solid #c39f57;
   border-radius: 40px 40px 0 40px;
   transition: background .3s;
+}
+
+/********** ACTIVITIES PAGE RULES **********/
+#activities-hero .hero-bg {
+  background-image: url("../images/gallery/activity/malaysia/mal8.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#activities-hero .alignt-header-text h1 {
+  font-size: 1.5rem;
+}
+#activities-hero .alignt-header-text h1, .alignt-header-text p {
+    color: #fff;
+    text-shadow: 1px 5px 8px rgba(000, 000, 000, 1);
+}
+#activities-item .step-icon {
+  border-color: #777;
 }
 /** Contact / Explore vents section */
 
