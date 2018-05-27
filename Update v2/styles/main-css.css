@@ -233,7 +233,7 @@ a {
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 /***** HOME PAGE RULES*****/
-.no-js .owl-carousel, .owl-carousel.owl-loaded {
+#home-carousel .no-js .owl-carousel, #home-carousel .owl-carousel.owl-loaded {
   height: 85vh;
 }
 #home-carousel {
@@ -248,6 +248,16 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.home-carousel-grey-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:grey;
+  top:0;
+  left: 0;
+  opacity: .4;
 }
 
 #home-carousel .slide1 {
@@ -269,6 +279,35 @@ a {
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+.slide1 h1 {
+  color: #fff;
+  text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
+  font-style: italic;
+}
+
+.slide2 h1, .slide2 p, .slide3 h1, .slide3 p {
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#slide1-btn {
+  color:#fff;
+  background: rgba(0,0,0, .5);
+  border-color: #dfd774
+}
+
+#slide2-btn {
+  color:#fff;
+  background: rgba(0,0,0, .5);
+  border-color: #dfd774;
+}
+
+#slide3-btn {
+  color:#fff;
+  background: rgba(0,0,0, .5);
+  border-color: #dfd774;
 }
 
 #home-wedding-parallax {
@@ -305,8 +344,67 @@ a {
   will-change: transform;
 }
 
+#home-parallax-text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home-parallax-text h2 {
+  color: #fff;
+  text-shadow: -1px 5px 8px rgba(000, 000, 000, 1);
+}
+
+#home-parallax-text p {
+  font-style: italic;
+  color: #fff;
+  background: rgba(0,0,0, .5);
+  padding:1rem;
+  border-radius: 50px;
+}
+
+#home-parallax-btn {
+  color:#fff;
+  background: rgba(0,0,0, .5);
+  border-color: #fff;
+  padding:1rem 2rem;
+  border-radius: 40px 40px 0 40px;
+}
+
+#home-activity {
+  text-align: center;
+}
+
+#home-activity-header {
+  padding: 2rem 0;
+}
+
+.home-activity-img-wrapper {
+  padding: 2rem;
+}
+
+#exhibition .home-activity-img-wrapper{
+  padding-top: 0;
+}
+
 .activities img {
+  width: 100%;
   border-radius: 50%;
+}
+
+#home-activities-wrapper {
+  padding:2rem;
+}
+
+#home-activities-wrapper  h3 {
+  padding-top: 0;
+}
+
+#home-activity-btn {
+  margin-top: 2rem;
 }
 /***** WEDDING PAGE RULES ******/
 

@@ -4,6 +4,7 @@ $(document).ready(function() {
   //Home page owl carousel
   $('.owl1').owlCarousel({
     loop:true,
+    startPosition:0,
     autoplay:false,
     autoplayHoverPause:true,
     smartSpeed:500,
