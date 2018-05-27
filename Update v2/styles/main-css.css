@@ -524,7 +524,7 @@ a {
 .thumbnail {
   position: relative;
   justify-self: center;
-  margin: 0.25rem;
+  /* margin: 0.25rem; */
   background:#fff;
   padding:1rem;
   border-radius: 4px;
@@ -836,8 +836,26 @@ a {
 #activities-item .step-icon {
   border-color: #777;
 }
-/** Contact / Explore vents section */
+#main-activities-section .thumbnail img {
+  border:2px solid #fff;
+  box-shadow: 0 0 0 3px #777;
+}
+#main-activities-section .thumbnail-icon-wrapper {
+  background: #777;
+}
+#activities-more {
+  background: #fff;
+  grid-column: 1/3;
+  padding:2rem;
+}
+#activities-more h3 {
+  padding-top: 0;
+}
+#more-activities-list {
+  list-style-type: none;
+}
 
+/********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
   padding: 1rem 0;
   background: #F6F1EE;
