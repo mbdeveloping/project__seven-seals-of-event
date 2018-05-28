@@ -10,6 +10,8 @@
     <title>Weddings Photo Gallery</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/photoswipe.css">
+    <link rel="stylesheet" href="styles/default-skin/default-skin.css">
     <link rel="stylesheet" href="styles/main-css.css">
     <link rel="icon" href="favicon.png">
     <!-- Adds HTML5 element support for earlier versions of IE -->
@@ -43,79 +45,103 @@
       </div>
     </header>
     <main class="blur-bg">
-      <section id="weddings-gallery" class="main-gallery">
-        <div class="gallery-bg">
-          <span role="img" aria-label="Background picture"></span>
-        </div>
+    <div class="height-holder">
+
+    </div>
+
+      <section class="main-images-page">
         <div class="container">
-          <div class="gallery-text">
-            <h1>WEDDINGS GALLERY</h1>
-          </div>
-        </div>
-      </section>
-      <section id="main-weddings-gallery-section">
-        <div class="container">
+          <h1>Western Class Wedding</h1>
           <ul id="wedding-gallery-location" class="gallery-location-links">
             <li>
               <a href="gallery.html">GALLERY</a>
             </li>
             <li>/</li>
             <li>
-              <a href="#">WEDDINGS GALLERY</a>
+              <a href="weddings-gallery.html">WEDDINGS GALLERY</a>
+            </li>
+            <li>/</li>
+            <li>
+              <a href="#">WESTERN WEDDING</a>
             </li>
           </ul>
-          <ul class="gallery-thumbnails-wrapper">
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="royal-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/royal/royal-card-thumbnail.jpg" alt="Royal wedding avatar">
-                  <h2>Royal <span>Wedding</span></h2>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="traditional-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/traditional/traditional-card-thumbnail.jpg" alt="Royal wedding avatar">
-                  <h2>Traditional <span>Wedding</span></h2>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="mid-class-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/mid-class/mid-class-card-thumbnail.jpg" alt="Royal wedding avatar">
-                  <h2>Mid Class <span>Wedding</span></h2>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="simple-class-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/simple-class/simple-class-card-thumbnail.jpg" alt="Royal wedding avatar">
-                  <h2>Simple Class <span>Wedding</span></h2>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="western-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/western/western-card-thumbnail.jpg" alt="Royal wedding avatar">
-                  <h2>Western <span>Wedding</span></h2>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="mix-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/mix/mix-card-thumbnail.jpg" alt="Royal wedding avatar">
-                  <h2>Mix Class <span>Wedding</span></h2>
-                </div>
-              </a>
-            </li>
-          </ul>
+
+  <div id="western-gallery-photos" class="my-gallery" itemscope>
+    <figure itemprop="associatedMedia" itemscope>
+      <a href="images/gallery/western/western1.jpg" itemprop="contentUrl" data-size="490x735">
+          <img src="images/gallery/western/western1.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+    </figure>
+  </div>
+  <a class="btn" role="button" href="weddings-gallery.html">Back to Weddings Gallery</a>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
         </div>
-        <a class="btn" role="button" href="gallery.html">Back to Main Gallery</a>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+        </div><!-- end container -->
       </section>
     </main>
     <footer id="main-footer" class="blur-bg">
@@ -161,6 +187,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="script/owl.carousel.min.js"></script>
     <script src="script/TweenMax.min.js"></script>
+    <script src="script/photoswipe.min.js"></script>
+    <script src="script/photoswipe-ui-default.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
     <script src="script/js.js"></script>
   </body>

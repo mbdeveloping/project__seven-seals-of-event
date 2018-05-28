@@ -1087,6 +1087,7 @@ ul {
   overflow: hidden;
   padding:1rem 0;
   background:#F6F1EE;
+  text-align: center;
 }
 .gallery-thumbnails-wrapper {
   display: grid;
@@ -1130,7 +1131,11 @@ ul {
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   justify-content: center;
+  align-items: center;
   padding:2rem 0;
+}
+#western-gallery-photos.my-gallery, #mix-gallery-photos.my-gallery {
+  grid-template-columns: 1fr;
 }
 .my-gallery img {
   width: 100%;
@@ -1138,6 +1143,8 @@ ul {
 }
 .my-gallery figure {
   max-width: 150px;
+  justify-self:center;
+  align-self: center;
 }
 .my-gallery figcaption {
   display: none;
@@ -1147,8 +1154,13 @@ ul {
   width: 100%;
   height: 60px;
 }
-.main-images-page h1 {
+.main-images-page {
   text-align: center;
+  padding-bottom: 2rem;
+}
+.main-images-page h1 {
+  padding:2rem 0;
+  padding-top: 4rem;
 }
 /* Container BreakPoints */
 @media (min-width: 458px){
@@ -1195,6 +1207,9 @@ ul {
   }
   .thumbnail {
     padding:1rem;
+  }
+  .my-gallery {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -1323,6 +1338,13 @@ ul {
   .gallery-thumbnail h2 {
     font-size: 1.2rem;
   }
+  .my-gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .gallery-location-links {
+    display:flex;
+    padding-top: 2rem;
+  }
 }
 
 @media (min-width: 1024px){
@@ -1331,6 +1353,9 @@ ul {
     filter: blur(0px)!important;
     -webkit-backdrop-filter: blur(0px)!important;
   } */
+  .height-holder {
+    height: 90px;
+  }
   /* Home page rules */
   .activities img {
     border:4px solid #fff;
@@ -1378,15 +1403,14 @@ ul {
     padding: .9rem;
   }
   /*** wedding gallery rules ***/
-  .gallery-location-links {
-    display:flex;
-    padding-top: 2rem;
-  }
   .gallery-location-links a {
     font-family: 'Poppins',sans-serif;
     font-weight: bold;
     color: #777;
     font-size: .7rem;
+  }
+  .my-gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
   .container {
       width: 100%;
