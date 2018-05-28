@@ -33,7 +33,9 @@ a {
   text-decoration: none;
   color: #333;
 }
-
+ul {
+  list-style-type: none;
+}
 .container {
   position: relative;
   width: 100%;
@@ -1016,13 +1018,14 @@ a {
   padding: 2rem;
 }
 /********** GALLERY PAGE RULES **********/
+/* Sub gallery rules */
 .main-gallery-thumbnail {
   width: 100%;
   height: 50vh;
   position: relative;
-  background:rgba(0,0,0,.5);
+  background:rgba(0,0,0,.3);
 }
-.gallery-thumbnail-bg{
+.gallery-bg{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1033,10 +1036,10 @@ a {
   height: 100%;
   z-index: -1;
 }
-#weddings-gallery-thumbnail .gallery-thumbnail-bg {
+#weddings-gallery-thumbnail .gallery-bg {
   background-image: url("../images/home/slide11.jpg");
 }
-#activities-gallery-thumbnail .gallery-thumbnail-bg {
+#activities-gallery-thumbnail .gallery-bg {
   background-image: url("../images/gallery/activity/malaysia/mal8.jpg");
   background-position: top;
 }
@@ -1059,7 +1062,50 @@ a {
   color: #ccc;
   border:2px solid #ccc;
 }
-
+/*** Main weddings gallery rules ***/
+.main-gallery {
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  background:rgba(0,0,0,.3);
+}
+#weddings-gallery .gallery-bg {
+  background-image: url("../images/home/slide11.jpg");
+}
+#main-weddings-gallery-section {
+  width: 100%;
+  overflow: hidden;
+  padding:1rem 0;
+  background:#F6F1EE;
+}
+.gallery-thumbnails-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5rem;
+}
+.gallery-thumbnail {
+  position: relative;
+}
+.gallery-thumbnail h2{
+  font-size: 1rem;
+  /* background:rgba(255,255,255, .5); */
+  background: rgba(0,0,0, .5);
+  color:rgb(223, 215, 116);
+  padding:.5rem;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom:3px;
+  left:0;
+}
+.gallery-thumbnail span {
+  display: none;
+  color:rgb(223, 215, 116);
+}
+.gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
 /* Container BreakPoints */
 @media (min-width: 458px){
   .gallery-text h1 {
@@ -1087,6 +1133,9 @@ a {
 @media (min-width: 450px){
   .activities img {
     width: 218px;
+  }
+  .gallery-thumbnails-wrapper {
+    grid-gap: 2rem;
   }
 }
 
@@ -1221,6 +1270,11 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  /*** Wedding gallery page rules ***/
+  .gallery-thumbnails-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 0;
   }
 }
 
