@@ -162,11 +162,12 @@ $(document).ready(function() {
 
     /* Updating copyright date */
     (function(){
-      var today = new Date();
-      var year = today.getFullYear();
-
-      var el = document.getElementById("updatingDate");
-      el.textContent = year;
+      let today = new Date();
+      let year = today.getFullYear();
+      let el = document.getElementById("updatingDate");
+      if (el) {
+        el.textContent = year;
+      }
     }())
   }());
 

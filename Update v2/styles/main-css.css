@@ -70,7 +70,6 @@ a {
 #go-back-top i {
   color: #fff;
 }
-
 /* Main Header rules */
 #main-header {
   position: fixed;
@@ -518,7 +517,7 @@ a {
 
 .thumbnail {
   position: relative;
-  justify-self: center;
+  /* justify-self: center; */
   /* margin: 0.25rem; */
   background:#fff;
   padding:1rem;
@@ -1016,9 +1015,57 @@ a {
 .sub-footer p {
   padding: 2rem;
 }
-
+/********** GALLERY PAGE RULES **********/
+.main-gallery-thumbnail {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  background:rgba(0,0,0,.5);
+}
+.gallery-thumbnail-bg{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#weddings-gallery-thumbnail .gallery-thumbnail-bg {
+  background-image: url("../images/home/slide11.jpg");
+}
+#activities-gallery-thumbnail .gallery-thumbnail-bg {
+  background-image: url("../images/gallery/activity/malaysia/mal8.jpg");
+  background-position: top;
+}
+.gallery-text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:2rem;
+  z-index: 10;
+}
+.gallery-text h1 {
+  color: #dfd774;
+  border:2px solid #dfd774;
+  padding:2rem;
+}
+#activities-gallery-thumbnail .gallery-text h1 {
+  color: #ccc;
+  border:2px solid #ccc;
+}
 
 /* Container BreakPoints */
+@media (min-width: 458px){
+  .gallery-text h1 {
+    padding:4rem;
+  }
+}
 @media (max-height: 500px){
   /* Navigation rules */
   #main-nav ul {
@@ -1052,6 +1099,9 @@ a {
   }
   #activities-more {
     grid-column: 1/4;
+  }
+  .thumbnail {
+    padding:1rem;
   }
 }
 
