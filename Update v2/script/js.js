@@ -322,12 +322,16 @@ initPhotoSwipeFromDOM('.my-gallery');
       });
     });
   }());
-  //Activities slide click rules#
+  //Activities slide click rules
   (function() {
     const travelSlideBtn = $("a#slide2-btn");
+    const consultationSlide = $("a#slide3-btn");
+
     travelSlideBtn.on('click', function(){
-      console.log("testing");
       localStorage.setItem("travelSlide", "travelSlide");
+    });
+    consultationSlide.on('click', function(){
+      localStorage.setItem("consultationSlide", "consultationSlide");
     })
   }());
 

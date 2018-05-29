@@ -328,15 +328,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
     <script src="script/js.js"></script>
     <script type="text/javascript">
-    let traveSlide = localStorage.getItem("travelSlide");
+    //Open thumbnal that was requested from home page
+    let travelSlide = localStorage.getItem("travelSlide");
+    let consultationSlide = localStorage.getItem("consultationSlide");
     const thumbnail = $(".thumbnail");
-    let travelThumbnail = $(".travel-thumbnail");
+    const travelThumbnail = $(".travel-thumbnail");
+    const consultationThumbnail = $(".consultation-thumbnail");
     let thumbnailOffsetTop = thumbnail.offset().top - $("#main-header").height();
-    
-    if (traveSlide == "travelSlide") {
+
+    if (travelSlide == "travelSlide") {
       TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
         localStorage.removeItem("travelSlide");
         travelThumbnail.click();
+      }});
+    }
+    if (consultationSlide == "consultationSlide") {
+      TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
+        localStorage.removeItem("consultationSlide");
+        consultationThumbnail.click();
       }});
     }
     </script>
