@@ -322,6 +322,14 @@ initPhotoSwipeFromDOM('.my-gallery');
       });
     });
   }());
+  //Activities slide click rules#
+  (function() {
+    const travelSlideBtn = $("a#slide2-btn");
+    travelSlideBtn.on('click', function(){
+      console.log("testing");
+      localStorage.setItem("travelSlide", "travelSlide");
+    })
+  }());
 
   /********** WEDDING PAGE RULES **********/
   (function() {

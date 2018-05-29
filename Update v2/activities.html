@@ -35,7 +35,7 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="wedding.html">Weddings</a></li>
-              <li class="active-page"><a href="activites.html">Activities</a></li>
+              <li class="active-page"><a href="activities.html">Activities</a></li>
               <li><a href="gallery.html">Gallery</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
@@ -327,23 +327,18 @@
     <script src="script/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
     <script src="script/js.js"></script>
-    <!-- <script type="text/javascript">
-    $('.owl-carousel').owlCarousel({
-      loop:false,
-      margin:10,
-      nav:false,
-      responsive:{
-          0:{
-              items:3
-          },
-          700:{
-              items:4
-          },
-          1000:{
-              items:5
-          }
-      }
-    });
-    </script> -->
+    <script type="text/javascript">
+    let traveSlide = localStorage.getItem("travelSlide");
+    const thumbnail = $(".thumbnail");
+    let travelThumbnail = $(".travel-thumbnail");
+    let thumbnailOffsetTop = thumbnail.offset().top - $("#main-header").height();
+    
+    if (traveSlide == "travelSlide") {
+      TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
+        localStorage.removeItem("travelSlide");
+        travelThumbnail.click();
+      }});
+    }
+    </script>
   </body>
 </html>
