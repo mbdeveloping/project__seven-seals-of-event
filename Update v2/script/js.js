@@ -327,12 +327,16 @@ initPhotoSwipeFromDOM('.my-gallery');
     const travelSlideBtn = $("a#slide2-btn");
     const consultationSlide = $("a#slide3-btn");
 
-    travelSlideBtn.on('click', function(){
+    function setTravelSlide() {
       localStorage.setItem("travelSlide", "travelSlide");
-    });
-    consultationSlide.on('click', function(){
+    }
+    function setConsultationSlide() {
       localStorage.setItem("consultationSlide", "consultationSlide");
-    })
+    }
+
+    //Events
+    travelSlideBtn.on('click', setTravelSlide);
+    consultationSlide.on('click', setConsultationSlide)
   }());
 
   /********** WEDDING PAGE RULES **********/
