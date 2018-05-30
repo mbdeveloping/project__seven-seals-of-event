@@ -1178,6 +1178,13 @@ figure:hover img{
 .my-gallery figcaption {
   display: none;
 }
+/*** Main activities gallery rules ***/
+#activities-gallery .gallery-bg {
+  background-image: url("../images/gallery/activity/malaysia/mal8.jpg");
+}
+#activities-gallery h1 {
+  border-color: #fff;
+}
 /*** Main images page rules ***/
 .height-holder {
   width: 100%;
