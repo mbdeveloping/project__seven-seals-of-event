@@ -1082,7 +1082,7 @@ ul {
 #weddings-gallery .gallery-bg {
   background-image: url("../images/home/slide11.jpg");
 }
-#main-weddings-gallery-section {
+#main-weddings-gallery-section, #main-activities-gallery-section {
   width: 100%;
   overflow: hidden;
   padding:1rem 0;
@@ -1184,6 +1184,14 @@ figure:hover img{
 }
 #activities-gallery h1 {
   border-color: #fff;
+}
+#main-activities-gallery-section .gallery-thumbnail p {
+  background: rgba(119, 119, 119, .7);
+  color: #fff;
+}
+#main-activities-gallery-section .gallery-thumbnail h2 {
+  background: rgba(255, 255, 255, .7);
+  color: #333;
 }
 /*** Main images page rules ***/
 .height-holder {
