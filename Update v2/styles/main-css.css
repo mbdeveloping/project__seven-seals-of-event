@@ -1193,6 +1193,16 @@ figure:hover img{
   background: rgba(255, 255, 255, .7);
   color: #333;
 }
+#go-back-arrow i {
+  position: fixed;
+  color: #fff;
+  top:70px;
+  left:20px;
+  z-index: 2000;
+  background: rgba(0,0,0, .8);
+  padding:.5rem;
+  border-radius: 50%;
+}
 /*** Main images page rules ***/
 .height-holder {
   width: 100%;
