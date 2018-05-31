@@ -1203,6 +1203,11 @@ figure:hover img{
   padding:.5rem;
   border-radius: 50%;
 }
+.lithuania-city-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  grid-column: 1/3;
+}
 /*** Main images page rules ***/
 .height-holder {
   width: 100%;
