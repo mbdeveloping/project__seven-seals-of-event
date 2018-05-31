@@ -10,6 +10,8 @@
     <title>Weddings Photo Gallery</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/photoswipe.css">
+    <link rel="stylesheet" href="styles/default-skin/default-skin.css">
     <link rel="stylesheet" href="styles/main-css.css">
     <link rel="icon" href="favicon.png">
     <!-- Adds HTML5 element support for earlier versions of IE -->
@@ -43,94 +45,68 @@
       </div>
     </header>
     <main class="blur-bg">
-      <section id="activities-gallery" class="main-gallery">
-        <div class="gallery-bg">
-          <span role="img" aria-label="Background picture"></span>
-        </div>
+    <div class="height-holder">
+
+    </div>
+      <section class="main-images-page">
         <div class="container">
-          <div class="gallery-text">
-            <h1>ACTIVITIES GALLERY</h1>
-          </div>
-        </div>
-      </section>
-      <section id="main-activities-gallery-section">
-        <div class="container">
-          <ul id="activities-gallery-location" class="gallery-location-links">
+          <h1>Travel to France</h1>
+          <ul class="gallery-location-links">
             <li>
               <a href="gallery.html">GALLERY</a>
             </li>
             <li>/</li>
             <li>
-              <a href="#">ACTIVITIES GALLERY</a>
+              <a href="activities-gallery.html">ACTIVITIES GALLERY</a>
+            </li>
+            <li>/</li>
+            <li>
+              <a href="#">TRAVEL TO FRANCE</a>
             </li>
           </ul>
-          <ul class="gallery-thumbnails-wrapper">
-            <li>
-              <a role="button" href="baby-100day-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/activity/100day/baby9.jpg" alt="Baby 100th day celebration  avatar">
-                  <p class="images-count">15 Photos</p>
-                  <h2>Baby 100th day celebration</h2>
-                </div>
+          <div class="my-gallery" itemscope>
+            <figure itemprop="associatedMedia" itemscope>
+              <a href="images/gallery/activity/prancuzija/pranc1.jpg" itemprop="contentUrl" data-size="300x220">
+                <img src="images/gallery/activity/prancuzija/pranc1.jpg" itemprop="thumbnail" alt="Image description" />
               </a>
-            </li>
-            <li>
-              <a role="button" href="bangkok-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/activity/bankokas/bankokas1.jpg" alt="Travel to Bangkok avatar">
-                  <p class="images-count">5 Photos</p>
-                  <h2>Travel to Bangkok</h2>
+            </figure>
+          </div>
+          <a class="btn" role="button" href="activities-gallery.html">Back to Activities Gallery</a>
+          <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+              <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+              </div>
+              <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                  <div class="pswp__counter"></div>
+                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                  <button class="pswp__button pswp__button--share" title="Share"></button>
+                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                  <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a role="button" href="belgium-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/activity/belgija/belgija8.jpg" alt="Travel to Belgium">
-                  <p class="images-count">10 Photos</p>
-                  <h2>Travel to Belgium</h2>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                  <div class="pswp__share-tooltip"></div>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a role="button" href="lithuania-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/activity/lietuva/siauliai/siauliai8.jpg" alt="Travel to Lithuania avatar">
-                  <p class="images-count">44 Photos</p>
-                  <h2>Travel to Lithuania</h2>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                  <div class="pswp__caption__center"></div>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="france-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/activity/prancuzija/pranc3.jpg" alt="Travel to France avatar">
-                  <p class="images-count">11 Photos</p>
-                  <h2>Travel to France</h2>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="mix-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/activity/varsuva/vars2.jpg" alt="Travel to Warsaw">
-                  <p class="images-count">14 Photos</p>
-                  <h2>Travel to Warsaw</h2>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a id="gallery-thumbnail-royal" role="button" href="mix-photos.html">
-                <div class="gallery-thumbnail">
-                  <img src="images/gallery/activity/malaysia/mal10.jpg" alt="Travel to Malaysia">
-                  <p class="images-count">13 Photos</p>
-                  <h2>Travel to Malaysia</h2>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <a class="btn" role="button" href="gallery.html">Back to Main Gallery</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- end container -->
       </section>
     </main>
     <footer id="main-footer" class="blur-bg">
@@ -172,13 +148,15 @@
     <a id="go-back-top" href="#">
       <i class="fas fa-arrow-up"></i>
     </a>
-    <a id="go-back-arrow" href="gallery.html">
+    <a id="go-back-arrow" href="activities-gallery.html">
       <i class="fas fa-arrow-left"></i>
     </a>
     <script src="https://use.fontawesome.com/f436a90964.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="script/owl.carousel.min.js"></script>
     <script src="script/TweenMax.min.js"></script>
+    <script src="script/photoswipe.min.js"></script>
+    <script src="script/photoswipe-ui-default.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
     <script src="script/js.js"></script>
   </body>
