@@ -1085,7 +1085,7 @@ ul {
 #main-weddings-gallery-section, #main-activities-gallery-section {
   width: 100%;
   overflow: hidden;
-  padding:1rem 0;
+  padding:2rem 0;
   background:#F6F1EE;
   text-align: center;
 }
@@ -1388,13 +1388,15 @@ figure:hover img{
     flex-direction: column;
     justify-content: center;
   }
-  /*** Wedding gallery page rules ***/
+  /*** Gallery page rules ***/
   .gallery-thumbnails-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 2rem 0;
+    grid-gap: 3rem;
   }
   .gallery-thumbnail h2 {
     font-size: 1.2rem;
+    padding:1rem;
   }
   .my-gallery {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1402,6 +1404,9 @@ figure:hover img{
   .gallery-location-links {
     display:flex;
     padding-top: 2rem;
+  }
+  #go-back-arrow i {
+    display:none;
   }
 }
 
@@ -1470,6 +1475,9 @@ figure:hover img{
   .my-gallery {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
+  .gallery-thumbnails-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
   .container {
       width: 100%;
     }
