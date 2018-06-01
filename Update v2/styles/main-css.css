@@ -857,6 +857,34 @@ ul {
 #main-activities-section .other-wedding-circle img {
   box-shadow: 0 0 0 1px #777;
 }
+/********* CONTACT UPS PAGE RULES **********/
+#contact-hero .hero-bg {
+  background-image: url("../images/china2.png");
+}
+#contact-hero.intro-header {
+  background: rgba(0,0,0,.5);
+}
+#contact-hero .alignt-header-text h1 {
+  color: #fff;
+  text-shadow: 1px 5px 8px rgba(000, 000, 000, 1);
+}
+.main-contact-section {
+  text-align: center;
+}
+.form-success-box {
+  width: 100%;
+  background:#dfd774;
+  height: auto;
+  padding:1rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+input, textarea, label {
+  padding: 1rem;
+  font-family: "Noto Serif",serif;
+}
 /********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
   padding: 1rem 0;

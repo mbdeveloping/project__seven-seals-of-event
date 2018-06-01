@@ -118,42 +118,26 @@ if (!$errName && !$errEmail && !$errPhone && !$errMessage && !$errHuman) {
 	        <section class="contact-form tcell-group-contact">
 
 	          <form class="form-horizontal" role="form" method="post" action="contact.php">
+	  					<div class="from-success-box">
+	  						<?php echo $result; ?>
+	  					</div>
+	  					<input aria-label="First and last name" type="text" class="form-control" id="name" name="name" placeholder="FIRST & LAST NAME" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+	  					<?php echo "<p class='text-danger'>$errName</p>";?>
 
-	  						<div class="from-success-box">
-	  							<?php echo $result; ?>
-	  						</div>
+	  					<input aria-label="Your email" type="email" class="form-control" id="email" name="email" placeholder="EMAIL" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+	  					<?php echo "<p class='text-danger'>$errEmail</p>";?>
 
+	  					<input aria-label="Phone number" type="tel" class="form-control" id="phone" name="phone" placeholder="PHONE NUMBER" value="<?php echo htmlspecialchars($_POST['phone']); ?>">
+	  					<?php echo "<p class='text-danger'>$errPhone</p>";?>
 
-	  						<!-- <label for="name" class="col-sm-2 control-label">Name</label> -->
+	  					<textarea aria-label="your message" class="form-control" id="message" rows="4" name="message" placeholder="ENTER YOUR MESSAGE"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+	  					<?php echo "<p class='text-danger'>$errMessage</p>";?>
 
-	  							<input aria-label="First and last name" type="text" class="form-control" id="name" name="name" placeholder="FIRST & LAST NAME" value="<?php echo htmlspecialchars($_POST['name']); ?>">
-	  							<?php echo "<p class='text-danger'>$errName</p>";?>
+							<label for="human" id="anti-spam-q" aria-label="Anti-spam question: 2 + 3 = ?">Anti-spam question: 2 + 3 = ?</label>
+		  				<input type="text" class="form-control anti-spam-w" id="human" name="human" placeholder="Your Answer">
+		  				<?php echo "<p class='text-danger'>$errHuman</p>";?>
 
-	  						<!-- <label for="email" class="col-sm-2 control-label">Email</label> -->
-
-	  							<input aria-label="Your email" type="email" class="form-control" id="email" name="email" placeholder="EMAIL" value="<?php echo htmlspecialchars($_POST['email']); ?>">
-	  							<?php echo "<p class='text-danger'>$errEmail</p>";?>
-
-	  						<!-- <label for="phone" class="col-sm-2 control-label">Phone Number</label> -->
-
-	  							<input aria-label="Phone number" type="tel" class="form-control" id="phone" name="phone" placeholder="PHONE NUMBER" value="<?php echo htmlspecialchars($_POST['phone']); ?>">
-	  							<?php echo "<p class='text-danger'>$errPhone</p>";?>
-
-	  						<!-- <label for="message" class="col-sm-2 control-label">Message</label> -->
-
-	  							<textarea aria-label="your message" class="form-control" id="message" rows="4" name="message" placeholder="ENTER YOUR MESSAGE"><?php echo htmlspecialchars($_POST['message']);?></textarea>
-	  							<?php echo "<p class='text-danger'>$errMessage</p>";?>
-
-
-										<label for="human" id="anti-spam-q" aria-label="Anti-spam question: 2 + 3 = ?">Anti-spam question: 2 + 3 = ?</label>
-		  							<input type="text" class="form-control anti-spam-w" id="human" name="human" placeholder="Your Answer">
-		  							<?php echo "<p class='text-danger'>$errHuman</p>";?>
-
-
-
-	  							<input id="form-btn" name="submit" type="submit" value="Send" onclick="formValidation()">
-
-
+	  					<input id="form-btn" name="submit" type="submit" value="Send">
 	  				</form>
 	        </section>
 
