@@ -57,18 +57,19 @@
         </header>
       </section>
       <article class="item-section">
-        <section class="main-contact-section">
+        <section id="main-contact-section">
           <div class="container">
             <h2>Contact Us</h2>
             <form class="contact-form" role="form" method="post" action="contact.php">
   	  				<div class="form-success-box">
-                Your message has beend send!
   	  					<!-- <?php echo $result; ?> -->
   	  				</div>
   	  				<input aria-label="First and last name" type="text" class="form-control" id="name" name="name" placeholder="FIRST & LAST NAME" value="">
-  	  				<!-- <?php echo "<p class='text-danger'>$errName</p>";?> -->
+              <!-- <p>Test Error Message!</p> -->
+              <!-- <?php echo "<p class='text-danger'>$errName</p>";?> -->
   	  				<input aria-label="Your email" type="email" class="form-control" id="email" name="email" placeholder="EMAIL" value="">
-  	  				<!-- <?php echo "<p class='text-danger'>$errEmail</p>";?> -->
+              <!-- <p>Test Error Message!</p> -->
+              <!-- <?php echo "<p class='text-danger'>$errEmail</p>";?> -->
   	  				<input aria-label="Phone number" type="tel" class="form-control" id="phone" name="phone" placeholder="PHONE NUMBER" value="">
   	  				<!-- <?php echo "<p class='text-danger'>$errPhone</p>";?> -->
   	  				<textarea aria-label="your message" class="form-control" id="message" rows="4" name="message" placeholder="ENTER YOUR MESSAGE"></textarea>
@@ -78,6 +79,9 @@
   		  			<!-- <?php echo "<p class='text-danger'>$errHuman</p>";?> -->
   	  				<input id="form-btn" name="submit" type="submit" value="Send">
   	  			</form>
+            <section id="contact-drect">
+              <h3>Contact Direct</h3>
+            </section>
           </div><!-- end container -->
         </section>
       </article>

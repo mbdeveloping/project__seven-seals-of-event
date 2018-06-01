@@ -868,22 +868,53 @@ ul {
   color: #fff;
   text-shadow: 1px 5px 8px rgba(000, 000, 000, 1);
 }
-.main-contact-section {
+#main-contact-section {
   text-align: center;
 }
-.form-success-box {
+#main-contact-section h2 {
+  padding-top: 2rem;
+}
+.alert-success {
   width: 100%;
   background:#dfd774;
   height: auto;
   padding:1rem;
+  font-style: italic;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
+  padding:1rem;
 }
 input, textarea, label {
   padding: 1rem;
   font-family: "Noto Serif",serif;
+  margin:.5rem 0;
+  border-radius: 4px;
+  outline: none;
+}
+input, textarea {
+  border: 1px solid #c39f57;
+}
+input:nth-child(2) {
+  margin-top: 0;
+}
+label {
+  margin:0;
+}
+.contact-form p {
+  padding-bottom: 1rem;
+  text-align: left;
+  color:#a94442;
+}
+#form-btn {
+  font-weight: bold;
+  letter-spacing: 3px;
+  background: #c39f57;
+  color: #fff;
+  outline: none;
+  text-transform: uppercase;
+  border: 2px solid #c39f57;
 }
 /********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
