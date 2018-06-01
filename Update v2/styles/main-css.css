@@ -857,7 +857,7 @@ ul {
 #main-activities-section .other-wedding-circle img {
   box-shadow: 0 0 0 1px #777;
 }
-/********* CONTACT UPS PAGE RULES **********/
+/********* CONTACT US PAGE RULES **********/
 #contact-hero .hero-bg {
   background-image: url("../images/china2.png");
 }
@@ -895,12 +895,16 @@ input, textarea, label {
 }
 input, textarea {
   border: 1px solid #c39f57;
+  transition: background .3s;
 }
 input:nth-child(2) {
   margin-top: 0;
 }
 label {
   margin:0;
+}
+input:focus, textarea:focus{
+  background: #dfd774;
 }
 .contact-form p {
   padding-bottom: 1rem;
@@ -914,7 +918,7 @@ label {
   color: #fff;
   outline: none;
   text-transform: uppercase;
-  border: 2px solid #c39f57;
+  border:none;
 }
 #contact-direct  {
   text-align: center;
@@ -939,16 +943,27 @@ label {
   font-size: 1.5rem;
   padding-right: .5rem;
   color: #777;
+  transition: transform .3s;
 }
 #contact-direct ul li a {
   text-decoration: underline;
+  transition: color .3s;
 }
+
 #google-maps {
   padding-top: 1rem;
 }
 #map {
   width: 100%;
   height: 30vh;
+}
+/*Hover states*/
+#contact-direct ul li a:hover {
+  color:#dfd774;
+}
+#form-btn:hover {
+  cursor: pointer;
+  background:#dfd774;
 }
 /********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
@@ -1094,8 +1109,6 @@ label {
   position: relative;
   overflow: hidden;
 }
-
-
 
 .sub-footer {
   background:#181717;

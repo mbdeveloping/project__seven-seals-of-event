@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
   //Home page owl carousel
@@ -407,5 +406,45 @@ initPhotoSwipeFromDOM('.my-gallery');
       }());
     }());
   }());
-  /************* GALLERY PAGE RULES ********************/
+  /************* CONTACT PAGE RULES ********************/
+  /*** JS Form validation ***/
+  (function() {
+    $('form').on('submit', function(e) {
+      const requiredElements = $('.required');
+      let formOffsetTop = $('#main-contact-section').offset().top;
+      let navBarH = $('#main-header').height();
+      let isFormValid;
+      let emailVal = document.getElementById('email').value;
+
+      //General check
+      requiredElements.each(function() {
+        if (this.value === "") {
+          isFormValid = false;
+          $(this).css({
+            border: "2px solid #a94442",
+            background:"#febbba"
+          });
+          $(this).next("p").text("Please fill this field");
+          TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH}});
+        }
+      });
+
+      //Type custom validation
+      //EMAIL
+      if (emailVal) {
+        let valid = /[^@]+@[^@]+/.test(emailVal);
+        if (!valid) {
+          $('#email').next("p").text("Please enter a valid email");
+          console.log("enter valdi email")
+          isFormValid = false;
+        }
+      return valid;
+      }
+
+      //Prevent form from being subbmited
+      if (!isFormValid) {
+        e.preventDefault();
+      }
+    })
+  }())
 })
