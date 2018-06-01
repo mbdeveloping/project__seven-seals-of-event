@@ -1507,6 +1507,7 @@ figure:hover img{
   /*** Contact page rules ***/
   #contact-hero .hero-text-wrapper {
     padding: 2rem 5rem;
+    max-width: 960px;
   }
   #contact-hero .alignt-header-text h1 {
     font-size: 2rem;
@@ -1584,7 +1585,19 @@ figure:hover img{
   .gallery-thumbnails-wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-  .container {
-      width: 100%;
-    }
-}
+/*** CONTACT PAGE RULES ***/
+  #main-contact-outter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding:1rem;
+    padding-bottom: 0;
+  }
+  #main-contact-section {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  #contact-direct h3 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+  }

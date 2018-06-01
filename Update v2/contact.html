@@ -34,10 +34,10 @@
           <nav id="main-nav">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li class="active-page"><a href="wedding.html">Weddings</a></li>
+              <li><a href="wedding.html">Weddings</a></li>
               <li><a href="activities.html">Activities</a></li>
               <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li class="active-page"><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
       </div>
@@ -56,59 +56,56 @@
           </div>
         </header>
       </section>
-      <article class="item-section">
-        <section id="main-contact-section">
-          <div class="container">
-            <h2>Contact Us</h2>
-            <form class="contact-form" role="form" method="post" action="contact.php">
-  	  				<div class="form-success-box">
-  	  					<!-- <?php echo $result; ?> -->
-  	  				</div>
-  	  				<input aria-label="First and last name" type="text" class="form-control" id="name" name="name" placeholder="FIRST & LAST NAME" value="">
-              <!-- <p>Test Error Message!</p> -->
-              <!-- <?php echo "<p class='text-danger'>$errName</p>";?> -->
-  	  				<input aria-label="Your email" type="email" class="form-control" id="email" name="email" placeholder="EMAIL" value="">
-              <!-- <p>Test Error Message!</p> -->
-              <!-- <?php echo "<p class='text-danger'>$errEmail</p>";?> -->
-  	  				<input aria-label="Phone number" type="tel" class="form-control" id="phone" name="phone" placeholder="PHONE NUMBER" value="">
-  	  				<!-- <?php echo "<p class='text-danger'>$errPhone</p>";?> -->
-  	  				<textarea aria-label="your message" class="form-control" id="message" rows="4" name="message" placeholder="ENTER YOUR MESSAGE"></textarea>
-  	  				<!-- <?php echo "<p class='text-danger'>$errMessage</p>";?> -->
-  						<label for="human" id="anti-spam-q" aria-label="Anti-spam question: 2 + 3 = ?">Anti-spam question: 2 + 3 = ?</label>
-  		  			<input type="text" class="form-control anti-spam-w" id="human" name="human" placeholder="ANTI-SPAM ANSWER">
-  		  			<!-- <?php echo "<p class='text-danger'>$errHuman</p>";?> -->
-  	  				<input id="form-btn" name="submit" type="submit" value="Send">
-  	  			</form>
-          </div><!-- end container -->
-        </section>
-        <section id="contact-direct">
-          <div class="container">
-            <h3>Contact Direct</h3>
-            <ul class="contact-direct-inner">
-              <li>
-                <i class="fas fa-mobile-alt"></i>
-                <a href="tel:+86 150-1324-6047">+86 150-1324-6047</a>
-              </li>
-              <li>
-                <i class="far fa-envelope"></i>
-                <a href="mailto:seven-seals-of-event@hotmail.com">seven-seals-of-event@hotmail.com</a>
-              </li>
-              <li>
-                <i class="fab fa-skype"></i>
-                <a href="skype:live:edgar.stasiukonis?chat">edgar.stasiukonis</a>
-              </li>
-              <li><i class="fab fa-weixin"></i>edgaras</li>
-              <li><i class="fas fa-map-marker"></i>Room 905, No 1, NanZhuNan Road, HaiZhu District, Guangzhou City, Guangdong Province, China</li>
-            </ul>
+      <article  class="item-section">
+        <div class="container">
+          <div id="main-contact-outter">
+            <section id="main-contact-section">
+              <h2>Contact Us</h2>
+              <form class="contact-form" role="form" method="post" action="contact.php">
+                <div class="form-success-box">
+                  <!-- <?php echo $result; ?> -->
+                </div>
+                <input aria-label="First and last name" type="text" class="form-control" id="name" name="name" placeholder="FIRST & LAST NAME" value="">
+                <!-- <p>Test Error Message!</p> -->
+                <!-- <?php echo "<p class='text-danger'>$errName</p>";?> -->
+                <input aria-label="Your email" type="email" class="form-control" id="email" name="email" placeholder="EMAIL" value="">
+                <!-- <p>Test Error Message!</p> -->
+                <!-- <?php echo "<p class='text-danger'>$errEmail</p>";?> -->
+                <input aria-label="Phone number" type="tel" class="form-control" id="phone" name="phone" placeholder="PHONE NUMBER" value="">
+                <!-- <?php echo "<p class='text-danger'>$errPhone</p>";?> -->
+                <textarea aria-label="your message" class="form-control" id="message" rows="4" name="message" placeholder="ENTER YOUR MESSAGE"></textarea>
+                <!-- <?php echo "<p class='text-danger'>$errMessage</p>";?> -->
+                <label for="human" id="anti-spam-q" aria-label="Anti-spam question: 2 + 3 = ?">Anti-spam question: 2 + 3 = ?</label>
+                <input type="text" class="form-control anti-spam-w" id="human" name="human" placeholder="ANTI-SPAM ANSWER">
+                <!-- <?php echo "<p class='text-danger'>$errHuman</p>";?> -->
+                <input id="form-btn" name="submit" type="submit" value="Send">
+              </form>
+            </section>
+            <section id="contact-direct">
+              <h3>Contact Direct</h3>
+              <ul class="contact-direct-inner">
+                <li>
+                  <i class="fas fa-mobile-alt"></i>
+                  <a href="tel:+86 150-1324-6047">+86 150-1324-6047</a>
+                </li>
+                <li>
+                  <i class="far fa-envelope"></i>
+                  <a href="mailto:seven-seals-of-event@hotmail.com">seven-seals-of-event@hotmail.com</a>
+                </li>
+                <li>
+                  <i class="fab fa-skype"></i>
+                  <a href="skype:live:edgar.stasiukonis?chat">edgar.stasiukonis</a>
+                </li>
+                <li><i class="fab fa-weixin"></i>edgaras</li>
+                <li><i class="fas fa-map-marker"></i>Room 905, No 1, NanZhuNan Road, HaiZhu District, Guangzhou City, Guangdong Province, China</li>
+              </ul>
+            </section>
+            <section id="google-maps">
+              <div id="map">
+                </div>
+            </section>
           </div>
-        </section>
-        <section id="google-maps">
-          <div class="container">
-            <div id="map">
-
-            </div>
-          </div>
-        </section>
+        </div>
       </article>
     </main>
     <section id="contact-gallery-section" class="blur-bg">
