@@ -965,6 +965,10 @@ input:focus, textarea:focus{
   cursor: pointer;
   background:#dfd774;
 }
+.formValidationError {
+  border: 2px solid #a94442;
+  background:#febbba
+};
 /********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
   padding: 1rem 0;

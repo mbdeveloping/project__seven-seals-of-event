@@ -409,36 +409,89 @@ initPhotoSwipeFromDOM('.my-gallery');
   /************* CONTACT PAGE RULES ********************/
   /*** JS Form validation ***/
   (function() {
+    $('.required').on('blur', function() {
+      $(this).each(function() {
+        if (this.value === "") {
+          isFormValid = false;
+          $(this).addClass("formValidationError");
+          $(this).next("p").text("Please fill this field");
+        } else {
+          $(this).removeClass("formValidationError");
+          $(this).next("p").text("");
+        }
+      });
+    })
+    $('#email').on('blur', function() {
+      if (this.value) {
+        let valid = /[^@]+@[^@]+/.test(this.value);
+        if (!valid) {
+          $('#email').addClass("formValidationError");
+          $('#email').next("p").text("Please enter a valid email");
+          console.log("enter valdi email")
+          isFormValid = false;
+        } else {
+          $('#email').removeClass("formValidationError");
+          $('#email').next("p").text("");
+        }
+      }
+    })
+    $('#human').on('blur', function() {
+      if (this.value) {
+        if (this.value==="5") {
+          $('#human').removeClass("formValidationError");
+          console.log("antispam is correct!!!")
+        }else {
+          $('#human').addClass("formValidationError");
+          $('#human').next("p").text("Your anti-spam is inccorect");
+          console.log("Your anti-spam is inccorect")
+          isFormValid = false;
+        }
+      }
+    })
     $('form').on('submit', function(e) {
       const requiredElements = $('.required');
       let formOffsetTop = $('#main-contact-section').offset().top;
       let navBarH = $('#main-header').height();
       let isFormValid;
       let emailVal = document.getElementById('email').value;
+      let antiSpamlVal = document.getElementById('human').value;
 
       //General check
       requiredElements.each(function() {
         if (this.value === "") {
           isFormValid = false;
-          $(this).css({
-            border: "2px solid #a94442",
-            background:"#febbba"
-          });
+          $(this).addClass("formValidationError");
           $(this).next("p").text("Please fill this field");
           TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH}});
+        } else {
+          $(this).removeClass("formValidationError");
+          $(this).next("p").text("");
+          isFormValid = true;
         }
       });
-
       //Type custom validation
       //EMAIL
       if (emailVal) {
         let valid = /[^@]+@[^@]+/.test(emailVal);
         if (!valid) {
+          $('#email').addClass("formValidationError");
           $('#email').next("p").text("Please enter a valid email");
           console.log("enter valdi email")
           isFormValid = false;
         }
-      return valid;
+      }
+      //ANTI-SPAM
+      //check if has a value
+      if (antiSpamlVal) {
+        if (antiSpamlVal==="5") {
+          $('#human').removeClass("formValidationError");
+          console.log("antispam is correct!!!")
+        }else {
+          $('#human').addClass("formValidationError");
+          $('#human').next("p").text("Your anti-spam is inccorect");
+          console.log("Your anti-spam is inccorect")
+          isFormValid = false;
+        }
       }
 
       //Prevent form from being subbmited
