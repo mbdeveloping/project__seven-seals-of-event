@@ -916,6 +916,9 @@ label {
   text-transform: uppercase;
   border: 2px solid #c39f57;
 }
+#contact-direct  {
+  text-align: center;
+}
 #contact-direct h3 {
   padding-bottom: 2rem;
 }
@@ -930,7 +933,7 @@ label {
   font-size: .9rem;
 }
 #contact-direct ul li:not(:last-child) {
-  border-bottom: .5rem solid #F6F1EE;
+  border-bottom: .3rem solid #F6F1EE;
 }
 #contact-direct ul li i {
   font-size: 1.5rem;
@@ -939,6 +942,13 @@ label {
 }
 #contact-direct ul li a {
   text-decoration: underline;
+}
+#google-maps {
+  padding-top: 1rem;
+}
+#map {
+  width: 100%;
+  height: 30vh;
 }
 /********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
@@ -1308,6 +1318,9 @@ figure:hover img{
   .gallery-text h1 {
     padding:4rem;
   }
+  #contact-direct ul li i {
+    padding:0 1rem;
+  }
 }
 @media (max-height: 500px){
   /* Navigation rules */
@@ -1490,6 +1503,16 @@ figure:hover img{
   }
   #go-back-arrow i {
     display:none;
+  }
+  /*** Contact page rules ***/
+  #contact-hero .hero-text-wrapper {
+    padding: 2rem 5rem;
+  }
+  #contact-hero .alignt-header-text h1 {
+    font-size: 2rem;
+  }
+  #contact-hero .alignt-header-text p {
+    font-size: 1.5rem;
   }
 }
 

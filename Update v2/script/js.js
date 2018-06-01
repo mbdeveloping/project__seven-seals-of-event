@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
   //Home page owl carousel

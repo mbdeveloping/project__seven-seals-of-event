@@ -79,26 +79,35 @@
   		  			<!-- <?php echo "<p class='text-danger'>$errHuman</p>";?> -->
   	  				<input id="form-btn" name="submit" type="submit" value="Send">
   	  			</form>
-            <section id="contact-direct">
-              <h3>Contact Direct</h3>
-              <ul class="contact-direct-inner">
-                <li>
-                  <i class="fas fa-mobile-alt"></i>
-                  <a href="tel:+86 150-1324-6047">+86 150-1324-6047</a>
-                </li>
-                <li>
-                  <i class="far fa-envelope"></i>
-                  <a href="mailto:seven-seals-of-event@hotmail.com">seven-seals-of-event@hotmail.com</a>
-                </li>
-                <li>
-                  <i class="fab fa-skype"></i>
-                  <a href="skype:live:edgar.stasiukonis?chat">edgar.stasiukonis</a>
-                </li>
-                <li><i class="fab fa-weixin"></i>edgaras</li>
-                <li><i class="fas fa-map-marker"></i>Room 905, No 1, NanZhuNan Road, HaiZhu District, Guangzhou City, Guangdong Province, China</li>
-              </ul>
-            </section>
           </div><!-- end container -->
+        </section>
+        <section id="contact-direct">
+          <div class="container">
+            <h3>Contact Direct</h3>
+            <ul class="contact-direct-inner">
+              <li>
+                <i class="fas fa-mobile-alt"></i>
+                <a href="tel:+86 150-1324-6047">+86 150-1324-6047</a>
+              </li>
+              <li>
+                <i class="far fa-envelope"></i>
+                <a href="mailto:seven-seals-of-event@hotmail.com">seven-seals-of-event@hotmail.com</a>
+              </li>
+              <li>
+                <i class="fab fa-skype"></i>
+                <a href="skype:live:edgar.stasiukonis?chat">edgar.stasiukonis</a>
+              </li>
+              <li><i class="fab fa-weixin"></i>edgaras</li>
+              <li><i class="fas fa-map-marker"></i>Room 905, No 1, NanZhuNan Road, HaiZhu District, Guangzhou City, Guangdong Province, China</li>
+            </ul>
+          </div>
+        </section>
+        <section id="google-maps">
+          <div class="container">
+            <div id="map">
+
+            </div>
+          </div>
         </section>
       </article>
     </main>
@@ -163,5 +172,17 @@
     <script src="script/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
     <script src="script/js.js"></script>
+    <script>
+      function myMap() {
+        var myCenter = new google.maps.LatLng(23.08072453972975,113.27934539154057);
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {center: myCenter, zoom: 18, fullscreenControl:false};
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({position:myCenter});
+        marker.setMap(map);
+      }
+    </script>
+    <script src="http://maps.google.cn/maps/api/js?key=AIzaSyCgFqA73BX3urIDInRLXFUL-pGvD8mz3OA&callback=myMap" type="text/javascript"></script>
+
   </body>
 </html>
