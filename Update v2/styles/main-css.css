@@ -916,6 +916,30 @@ label {
   text-transform: uppercase;
   border: 2px solid #c39f57;
 }
+#contact-direct h3 {
+  padding-bottom: 2rem;
+}
+#contact-direct ul {
+  background:#fff;
+  padding:1rem;
+  border-radius: 4px;
+}
+#contact-direct ul li {
+  padding:.5rem 0;
+  text-align: left;
+  font-size: .9rem;
+}
+#contact-direct ul li:not(:last-child) {
+  border-bottom: .5rem solid #F6F1EE;
+}
+#contact-direct ul li i {
+  font-size: 1.5rem;
+  padding-right: .5rem;
+  color: #777;
+}
+#contact-direct ul li a {
+  text-decoration: underline;
+}
 /********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
   padding: 1rem 0;
