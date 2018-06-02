@@ -409,6 +409,7 @@ initPhotoSwipeFromDOM('.my-gallery');
   /************* CONTACT PAGE RULES ********************/
   /*** JS Form validation ***/
   (function() {
+    let isFormValid;
     $('.required').on('blur', function() {
       $(this).each(function() {
         if (this.value === "") {
@@ -437,7 +438,6 @@ initPhotoSwipeFromDOM('.my-gallery');
       if (this.value) {
         if (this.value==="5") {
           $('#human').removeClass("formValidationError");
-          console.log("antispam is correct!!!")
         }else {
           $('#human').addClass("formValidationError");
           $('#human').next("p").text("Your anti-spam is inccorect");
@@ -449,10 +449,21 @@ initPhotoSwipeFromDOM('.my-gallery');
       const requiredElements = $('.required');
       let formOffsetTop = $('#main-contact-section').offset().top;
       let navBarH = $('#main-header').height();
-      let isValid;
-      let isFormValid;
       let emailVal = document.getElementById('email').value;
       let antiSpamlVal = document.getElementById('human').value;
+
+      //General check
+        requiredElements.each(function() {
+        if (this.value === "") {
+          $(this).addClass("formValidationError");
+          $(this).next("p").text("Please fill this field");
+          TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH}});
+        } else {
+          $(this).removeClass("formValidationError");
+          $(this).next("p").text("");
+          // isFormValid = true;
+        }
+      });
 
       //Type custom validation
       //EMAIL
@@ -474,22 +485,11 @@ initPhotoSwipeFromDOM('.my-gallery');
           $('#human').addClass("formValidationError");
           $('#human').next("p").text("Your anti-spam is inccorect");
           console.log("Your anti-spam is inccorect")
+          isFormValid = false;
         }
       }
 
-      //General check
-      isValid = requiredElements.each(function() {
-        if (this.value === "") {
-          $(this).addClass("formValidationError");
-          $(this).next("p").text("Please fill this field");
-          TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH}});
-        } else {
-          $(this).removeClass("formValidationError");
-          $(this).next("p").text("");
-          // isFormValid = true;
-        }
-      });
-      if ($(isValid).hasClass("formValidationError")) {
+      if (requiredElements.hasClass("formValidationError")) {
         isFormValid = false;
       } else {
         isFormValid = true;
