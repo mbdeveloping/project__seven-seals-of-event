@@ -967,8 +967,8 @@ input:focus, textarea:focus{
 }
 .formValidationError {
   border: 2px solid #a94442;
-  background:#febbba
-};
+  background:#febbba;
+}
 /********** CONTACT / EXPLORE EVENTS SECTION RULES **********/
 #contact-gallery-section {
   padding: 1rem 0;
