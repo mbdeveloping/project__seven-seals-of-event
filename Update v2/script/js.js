@@ -1,6 +1,11 @@
 $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
+  /*** Website preloader screen spinner rules ***/
+    TweenMax.to($(".preloader"), .3, {opacity:0, onComplete:function() {
+      $(".preloader").detach();
+    }});
+    pageBody.removeClass("body-scroll-lock");
   //Home page owl carousel
   $('.owl1').owlCarousel({
     loop:true,
@@ -32,7 +37,7 @@ $(document).ready(function() {
         }
     }
   });
-  //3rd party plugins
+  //3rd party lightbox for gallery plugin
   (function(){
     var initPhotoSwipeFromDOM = function(gallerySelector) {
     var parseThumbnailElements = function(el) {
