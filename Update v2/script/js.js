@@ -1,9 +1,10 @@
 $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
+  const preloader = $(".preloader");
   /*** Website preloader screen spinner rules ***/
-    TweenMax.to($(".preloader"), .3, {opacity:0, onComplete:function() {
-      $(".preloader").detach();
+    TweenMax.to(preloader, .3, {opacity:0, onComplete:function() {
+      preloader.detach();
     }});
     pageBody.removeClass("body-scroll-lock");
   //Home page owl carousel
