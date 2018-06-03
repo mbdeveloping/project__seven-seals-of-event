@@ -1263,6 +1263,9 @@ input:focus, textarea:focus{
 #weddings-gallery-thumbnail .main-gallery-thumbnail:hover {
   background: rgba(223, 215, 116, 0);
 }
+#activities-gallery-thumbnail .main-gallery-thumbnail:hover {
+  background: rgba(192,192,192, 0)
+}
 #activities-gallery-thumbnail .main-gallery-thumbnail {
   height: 45vh;
   background: rgba(192,192,192, .8)
