@@ -1264,11 +1264,11 @@ input:focus, textarea:focus{
   background: rgba(223, 215, 116, 0);
 }
 #activities-gallery-thumbnail .main-gallery-thumbnail:hover {
-  background: rgba(192,192,192, 0)
+  background: rgba(192,192,192, 0);
 }
 #activities-gallery-thumbnail .main-gallery-thumbnail {
   height: 45vh;
-  background: rgba(192,192,192, .8)
+  background: rgba(192,192,192, .8);
 }
 #main-weddings-gallery-section, #main-activities-gallery-section {
   width: 100%;
@@ -1622,6 +1622,21 @@ figure:hover img{
     height: 90px;
   }
   /* Home page rules */
+  .caption h1 {
+    font-size: 2.2rem;
+  }
+  .slide1 .caption h1 {
+    padding:1rem 10rem;
+  }
+  .intro-about-text-wrapper {
+    padding: 4rem 5rem;
+  }
+  #home-parallax-text h2 {
+    font-size: 1.8rem;
+  }
+  #home-parallax-text p {
+    font-size: 1.3rem;
+  }
   .activities img {
     border:4px solid #fff;
   }
