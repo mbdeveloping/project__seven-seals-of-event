@@ -338,7 +338,7 @@
     <script type="text/javascript">
     //Open thumbnal that was requested from home page
     // let travelSlide = localStorage.getItem("travelSlide");
-    let travelSlide = store.get('travelSlide');
+    let travelSlide = store.get("travelSlide");
     let consultationSlide = localStorage.getItem("consultationSlide");
     const thumbnail = $(".thumbnail");
     const travelThumbnail = $(".travel-thumbnail");
@@ -357,23 +357,21 @@
       }
     }
       if (hasLocalStorage) {
-        console.log("Works");
         if (travelSlide == "travelSlide") {
-          TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
+          TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut, autoKill:false}, onComplete:function(){
             travelThumbnail.click();
             // localStorage.removeItem("travelSlide");
             store.remove('travelSlide');
           }});
         }
         if (consultationSlide == "consultationSlide") {
-          TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
+          TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut, autoKill:false}, onComplete:function(){
             localStorage.removeItem("consultationSlide");
             consultationThumbnail.click();
           }});
         }
       }else {
-        console.log("Does not work!");
-        $(".item-section").css("background", "red");
+        TweenMax.set($(".item-section"), {background:"blue"});
       }
 
 
