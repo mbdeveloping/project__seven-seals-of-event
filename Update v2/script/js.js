@@ -334,7 +334,8 @@ initPhotoSwipeFromDOM('.my-gallery');
     const consultationSlide = $("a#slide3-btn");
 
     function setTravelSlide() {
-      localStorage.setItem("travelSlide", "travelSlide");
+      // localStorage.setItem("travelSlide", "travelSlide");
+      store.set('travelSlide', 'travelSlide');
     }
     function setConsultationSlide() {
       localStorage.setItem("consultationSlide", "consultationSlide");

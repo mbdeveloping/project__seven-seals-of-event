@@ -333,28 +333,50 @@
     <script src="script/owl.carousel.min.js"></script>
     <script src="script/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
+    <script src="script/store.everything.min.js"></script>
     <script src="script/js.js"></script>
     <script type="text/javascript">
     //Open thumbnal that was requested from home page
-    let travelSlide = localStorage.getItem("travelSlide");
+    // let travelSlide = localStorage.getItem("travelSlide");
+    let travelSlide = store.get('travelSlide');
     let consultationSlide = localStorage.getItem("consultationSlide");
     const thumbnail = $(".thumbnail");
     const travelThumbnail = $(".travel-thumbnail");
     const consultationThumbnail = $(".consultation-thumbnail");
     let thumbnailOffsetTop = thumbnail.offset().top - $("#main-header").height();
+    let hasLocalStorage = false;
 
-    if (travelSlide == "travelSlide") {
-      TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
-        localStorage.removeItem("travelSlide");
-        travelThumbnail.click();
-      }});
+    if (localStorage) {
+      try {
+        const x = 'testStorage';
+        localStorage.setItem(x, x);
+        localStorage.removeItem(x);
+        hasLocalStorage = true;
+      } catch (e) {
+        hasLocalStorage = false;
+      }
     }
-    if (consultationSlide == "consultationSlide") {
-      TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
-        localStorage.removeItem("consultationSlide");
-        consultationThumbnail.click();
-      }});
-    }
+      if (hasLocalStorage) {
+        console.log("Works");
+        if (travelSlide == "travelSlide") {
+          TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
+            travelThumbnail.click();
+            // localStorage.removeItem("travelSlide");
+            store.remove('travelSlide');
+          }});
+        }
+        if (consultationSlide == "consultationSlide") {
+          TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut}, onComplete:function(){
+            localStorage.removeItem("consultationSlide");
+            consultationThumbnail.click();
+          }});
+        }
+      }else {
+        console.log("Does not work!");
+        $(".item-section").css("background", "red");
+      }
+
+
     </script>
   </body>
 </html>
