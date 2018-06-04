@@ -410,7 +410,6 @@ initPhotoSwipeFromDOM('.my-gallery');
         function closeCard(element) {
           element.preventDefault();
           TweenMax.fromTo($(".outter-main-card"), .3, {scale:1}, {scale:0, onComplete:function(){
-
             pageBody.removeClass("body-scroll-lock");
             $(".main-card").addClass("main-card-display");
           }});
