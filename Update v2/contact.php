@@ -1,3 +1,48 @@
+<?php
+	if (isset($_POST["submit"])) {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+    $phone = $_POST['phone'];
+		$message = $_POST['message'];
+		$human = intval($_POST['human']);
+		$from = 'Seven Seals of Event';
+		$to = 'mantvydas.binderis@gmail.com';
+		$subject = 'Message from Seven Seals of Event ';
+
+		$body ="From: $name\n E-Mail: $email\n Phone number: $phone\n Message:\n $message";
+		// Check if name has been entered
+		if (!$_POST['name']) {
+			$errName = 'Please enter your name';
+		}
+
+		// Check if email has been entered and is valid
+		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			$errEmail = 'Please enter a valid email address';
+		}
+
+    //Check if phone has been entered
+		// if (!$_POST['phone']) {
+		// 	$errPhone = 'Please enter your phone number';
+		// }
+
+		//Check if message has been entered
+		if (!$_POST['message']) {
+			$errMessage = 'Please enter your message';
+		}
+		//Check if simple anti-bot test is correct
+		if ($human !== 5) {
+			$errHuman = 'Your anti-spam is incorrect';
+		}
+// If there are no errors, send the email
+if (!$errName && !$errEmail && !$errPhone && !$errMessage && !$errHuman) {
+	if (mail ($to, $subject, $body, $from)) {
+		$result='<div class="alert alert-success">Thank You! We will be in touch as soon as possible!</div>';
+	} else {
+		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
+	}
+}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +50,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Sevens Seals of Event now!">
     <meta name="keywords" content="Seven Seals of Event, Contact Seven Seals of Event, email, phone, phone number, address, skype, wechat">
-    <meta property="og:image" content="https://testingweb000.000webhostapp.com/images/contact-page-thumbnail.JPG">
+    <meta property="og:image" content="https://sevensealsofevent.com/images/contact-page-thumbnail.JPG">
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="300">
     <meta property="og:type" content="website">
@@ -76,23 +121,19 @@
               <h2>Contact Us</h2>
               <form class="contact-form" role="form" method="post" action="contact.php" novalidate>
                 <div class="form-success-box">
-                  <!-- <?php echo $result; ?> -->
+                  <?php echo $result; ?>
                 </div>
-                <input aria-label="First and last name" type="text" class="form-control required" id="name" name="name" placeholder="FIRST & LAST NAME" value="">
-                <p></p>
-                <!-- <?php echo "<p class='text-danger'>$errName</p>";?> -->
-                <input aria-label="Your email" type="email" class="form-control required" id="email" name="email" placeholder="EMAIL" >
-                <p></p>
-                <!-- <?php echo "<p class='text-danger'>$errEmail</p>";?> -->
-                <input aria-label="Phone number" type="tel" class="form-control" id="phone" name="phone" placeholder="PHONE NUMBER" value="">
-                <!-- <?php echo "<p class='text-danger'>$errPhone</p>";?> -->
-                <textarea aria-label="your message" class="form-control required" id="message" rows="4" name="message" placeholder="ENTER YOUR MESSAGE"></textarea>
-                <p></p>
-                <!-- <?php echo "<p class='text-danger'>$errMessage</p>";?> -->
+                <input aria-label="First and last name" type="text" class="form-control required" id="name" name="name" placeholder="FIRST & LAST NAME" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+                <?php echo "<p class='text-danger'>$errName</p>";?>
+                <input aria-label="Your email" type="email" class="form-control required" id="email" name="email" placeholder="EMAIL" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+                <?php echo "<p class='text-danger'>$errEmail</p>";?>
+                <input aria-label="Phone number" type="tel" class="form-control" id="phone" name="phone" placeholder="PHONE NUMBER" value="<?php echo htmlspecialchars($_POST['phone']); ?>">
+                <?php echo "<p class='text-danger'>$errPhone</p>";?>
+                <textarea aria-label="your message" class="form-control required" id="message" rows="4" name="message" placeholder="ENTER YOUR MESSAGE"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+                <?php echo "<p class='text-danger'>$errMessage</p>";?>
                 <label for="human" id="anti-spam-q" aria-label="Anti-spam question: 2 + 3 = ?">Anti-spam question: 2 + 3 = ?</label>
                 <input type="text" class="form-control anti-spam-w required" id="human" name="human" placeholder="ANTI-SPAM ANSWER">
-                <p></p>
-                <!-- <?php echo "<p class='text-danger'>$errHuman</p>";?> -->
+                <?php echo "<p class='text-danger'>$errHuman</p>";?>
                 <input id="form-btn" name="submit" type="submit" value="Send">
               </form>
             </section>

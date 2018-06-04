@@ -374,13 +374,14 @@ ul {
   background: rgba(0,0,0, .5);
   border-color: #dfd774;
 }
-
+#slide1-btn:hover, #slide2-btn:hover, #slide3-btn:hover, #home-parallax-btn:hover {
+  background: rgba(0,0,0, 1);
+}
 #home-wedding-parallax {
   width: 100%;
   height: 65vh;
   background:grey;
 }
-
 #intro-about {
   text-align: center;
 }
@@ -1416,6 +1417,7 @@ figure:hover img{
   padding:2rem 0;
   padding-top: 4rem;
 }
+/*** CONTACT PAGE RULES ***/
 /* Container BreakPoints */
 @media (min-width: 458px){
   .gallery-text h1 {
