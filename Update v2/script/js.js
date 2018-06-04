@@ -1,9 +1,9 @@
 $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
-  const pageBody = $("body, html");
+  const pageBody = $("body");
   const preloader = $(".preloader");
 
-  // $(".cards-overlay").height(window.innerHeight);
+  // $(".cards-overlay").height(window.innerHeight - 40);
   // console.log(window.innerHeight);
   // console.log($(".cards-overlay").height());
 
@@ -373,6 +373,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       const cards = $(".main-card");
       const otherWedding = $(".other-wedding");
       const outterCard = $(".outter-main-card");
+
       function openCard() {
         let element = $(this);
         let thumbnailIndex = thumbnails.index(element);
@@ -407,8 +408,9 @@ initPhotoSwipeFromDOM('.my-gallery');
       (function() {
         const closeBtn = $("#card-close-button");
         const closeBtnBot = $("#card-close-button-bottom");
-        function closeCard(element) {
-          element.preventDefault();
+
+
+        function closeCard() {
           TweenMax.fromTo($(".outter-main-card"), .3, {scale:1}, {scale:0, onComplete:function(){
             pageBody.removeClass("body-scroll-lock");
             $(".main-card").addClass("main-card-display");
@@ -417,9 +419,17 @@ initPhotoSwipeFromDOM('.my-gallery');
             cardsoverlay.removeClass("cards-overlay-display");
           }});
         }
+        //Close card on overlay background click
+        function overlayBgClickClose(e) {
+          let $element = $(e.target);
+          if ($element.hasClass("cards-overlay")) {
+            closeCard();
+          }
+        }
         //Events
         closeBtn.on('click', closeCard);
         closeBtnBot.on('click', closeCard);
+        cardsoverlay.on('click', overlayBgClickClose);
       }());
     }());
   }());
