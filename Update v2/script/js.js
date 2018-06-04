@@ -407,7 +407,6 @@ initPhotoSwipeFromDOM('.my-gallery');
       /* Cards close button rules */
       (function() {
         const closeBtn = $("#card-close-button");
-        const closeBtnBot = $("#card-close-button-bottom");
 
 
         function closeCard() {
@@ -426,9 +425,13 @@ initPhotoSwipeFromDOM('.my-gallery');
             closeCard();
           }
         }
+        //prevent close button preventDefault
+        function prevDefBtn(e) {
+          e.preventDefault();
+        }
         //Events
+        closeBtn.on('click', prevDefBtn);
         closeBtn.on('click', closeCard);
-        closeBtnBot.on('click', closeCard);
         cardsoverlay.on('click', overlayBgClickClose);
       }());
     }());
