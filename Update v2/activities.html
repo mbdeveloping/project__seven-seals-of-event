@@ -337,9 +337,8 @@
     <script src="script/js.js"></script>
     <script type="text/javascript">
     //Open thumbnal that was requested from home page
-    // let travelSlide = localStorage.getItem("travelSlide");
     let travelSlide = store.get("travelSlide");
-    let consultationSlide = localStorage.getItem("consultationSlide");
+    let consultationSlide = store.get("consultationSlide");
     const thumbnail = $(".thumbnail");
     const travelThumbnail = $(".travel-thumbnail");
     const consultationThumbnail = $(".consultation-thumbnail");
@@ -360,13 +359,12 @@
         if (travelSlide == "travelSlide") {
           TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut, autoKill:false}, onComplete:function(){
             travelThumbnail.click();
-            // localStorage.removeItem("travelSlide");
             store.remove('travelSlide');
           }});
         }
         if (consultationSlide == "consultationSlide") {
           TweenMax.to(window, 1, {scrollTo:{y:thumbnailOffsetTop, ease: Power4.easeOut, autoKill:false}, onComplete:function(){
-            localStorage.removeItem("consultationSlide");
+            store.remove("consultationSlide");
             consultationThumbnail.click();
           }});
         }
