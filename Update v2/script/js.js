@@ -198,12 +198,6 @@ initPhotoSwipeFromDOM('.my-gallery');
       var hamburgerBlur = function() {
 
         var ww = document.body.clientWidth;
-        if (ww >= 1024) {
-          TweenMax.set(blurBg, {'-webkit-filter':'none'});
-        } else if (navUl.hasClass("nav-open")) {
-          TweenMax.set(blurBg, {'-webkit-filter':'blur(10px)'});
-          console.log("true");
-        }
       };
       $(window).on('resize', function(){
         hamburgerBlur();
@@ -218,16 +212,12 @@ initPhotoSwipeFromDOM('.my-gallery');
         $(this).addClass("change");
         navUl.addClass("nav-ul-display nav-open");
         TweenMax.fromTo(navUl, .3, {opacity:0,x:"100%"}, {opacity:1, x:"0%"});
-        TweenMax.fromTo(blurBg, .5, {'-webkit-filter':'blur(0px)'}, {'-webkit-filter':'blur(10px)'});
       } else {
         pageBody.removeClass("body-scroll-lock");
         $(this).removeClass("change");
         TweenMax.to(navUl, .3, {opacity:0,x:"100%", onComplete:function(){
           TweenMax.set(navUl, {opacity:1, x:"0%"});
           navUl.removeClass("nav-ul-display nav-open");
-        }});
-        TweenMax.fromTo(blurBg, .5, {'-webkit-filter':'blur(10px)'}, {'-webkit-filter':'blur(0px)', onComplete:function(){
-          TweenMax.set(blurBg, {'-webkit-filter':'none'});
         }});
       }
     }
