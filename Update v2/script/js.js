@@ -7,6 +7,7 @@ $(document).ready(function() {
       preloader.detach();
     }});
     pageBody.removeClass("body-scroll-lock");
+  
   //Home page owl carousel
   $('.owl1').owlCarousel({
     loop:true,

@@ -179,6 +179,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
     <script src="script/js.js"></script>
     <script>
+    //Chec if from china
+    (function() {
+      let offset = new Date().getTimezoneOffset();
+      let script = document.createElement('script');
+
+      if (offset/60 == -8) {
+      console.log('Hello from China!');
+      script.type='text/javascript';
+      script.src='http://maps.google.cn/maps/api/js?key=AIzaSyCgFqA73BX3urIDInRLXFUL-pGvD8mz3OA&callback=myMap';
+      $("body").append(script);
+    } else {
+      script.type='text/javascript';
+      script.src='https://maps.google.com/maps/api/js?key=AIzaSyCgFqA73BX3urIDInRLXFUL-pGvD8mz3OA&callback=myMap';
+      $("body").append(script);
+    }
+    }());
       function myMap() {
         var myCenter = new google.maps.LatLng(23.08072453972975,113.27934539154057);
         var mapCanvas = document.getElementById("map");
@@ -188,7 +204,5 @@
         marker.setMap(map);
       }
     </script>
-    <script src="http://maps.google.cn/maps/api/js?key=AIzaSyCgFqA73BX3urIDInRLXFUL-pGvD8mz3OA&callback=myMap" type="text/javascript"></script>
-
   </body>
 </html>
