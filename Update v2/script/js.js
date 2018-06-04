@@ -1,7 +1,12 @@
 $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
-  const pageBody = $("body");
+  const pageBody = $("body, html");
   const preloader = $(".preloader");
+
+  // $(".cards-overlay").height(window.innerHeight);
+  // console.log(window.innerHeight);
+  // console.log($(".cards-overlay").height());
+
   /*** Website preloader screen spinner rules ***/
     TweenMax.to(preloader, .3, {opacity:0, onComplete:function() {
       preloader.detach();
@@ -375,6 +380,7 @@ initPhotoSwipeFromDOM('.my-gallery');
         $(otherWedding[thumbnailIndex]).addClass("current-other");
         pageBody.addClass("body-scroll-lock");
         TweenMax.fromTo(cardsoverlay, .3, {opacity:0}, {opacity:1});
+        TweenMax.fromTo($(".outter-main-card"), .3, {scale:0}, {scale:1, onComplete:function(){}});
         cardsoverlay.addClass("cards-overlay-display");
         $(cards[thumbnailIndex]).removeClass("main-card-display");
         outterCard.scrollTop(0);
@@ -403,9 +409,14 @@ initPhotoSwipeFromDOM('.my-gallery');
         const closeBtnBot = $("#card-close-button-bottom");
         function closeCard(element) {
           element.preventDefault();
-          cardsoverlay.removeClass("cards-overlay-display");
-          pageBody.removeClass("body-scroll-lock");
-          $(".main-card").addClass("main-card-display");
+          TweenMax.fromTo($(".outter-main-card"), .3, {scale:1}, {scale:0, onComplete:function(){
+
+            pageBody.removeClass("body-scroll-lock");
+            $(".main-card").addClass("main-card-display");
+          }});
+          TweenMax.fromTo(cardsoverlay, .3, {opacity:1}, {opacity:0, onComplete:function(){
+            cardsoverlay.removeClass("cards-overlay-display");
+          }});
         }
         //Events
         closeBtn.on('click', closeCard);
