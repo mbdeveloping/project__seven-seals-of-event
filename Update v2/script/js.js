@@ -7,7 +7,7 @@ $(document).ready(function() {
       preloader.detach();
     }});
     pageBody.removeClass("body-scroll-lock");
-  
+
   //Home page owl carousel
   $('.owl1').owlCarousel({
     loop:true,
@@ -464,7 +464,7 @@ initPhotoSwipeFromDOM('.my-gallery');
         if (this.value === "") {
           $(this).addClass("formValidationError");
           $(this).next("p").text("Please fill this field");
-          TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH}});
+          TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH, autoKill:false}});
         } else {
           $(this).removeClass("formValidationError");
           $(this).next("p").text("");
