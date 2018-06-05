@@ -235,7 +235,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       //Scroll to top
       function backToTop(e) {
         e.preventDefault();
-          TweenMax.to(window, 1, {scrollTo:{y:0, ease: Power4.easeOut}});
+          TweenMax.to(window, 1, {scrollTo:{y:0, ease: Power4.easeOut, autoKill:false}});
       }
       function headerbarSize() {
         if (window.innerWidth >= 1024) {
