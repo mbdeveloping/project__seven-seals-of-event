@@ -2,9 +2,6 @@ $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
   const preloader = $(".preloader");
-  TweenMax.set($(".caption"),  {opacity:0});
-  // $(".caption").fadeOut();
-
   /*** Website preloader screen spinner rules ***/
     TweenMax.to(preloader, .3, {opacity:0, onComplete:function() {
       preloader.detach();
@@ -24,20 +21,7 @@ $(document).ready(function() {
         0:{
             items:1
         }
-    },
-    // onInitialize: function() {
-    //   TweenMax.fromTo($(".caption"), 1.5, {opacity:0}, {opacity:1});
-    // },
-    // onTranslate: function() {
-    //   // TweenMax.fromTo($(".active .caption"), 1.5, {opacity:0}, {opacity:1});
-    //   TweenMax.to($(".caption"), 1.5, {opacity:0});
-    //   TweenMax.to($(".caption"), 1.5, {opacity:1});
-    // },
-    // onDrag:function() {
-    //   // TweenMax.to($(".active .caption"), .5, {x:-50});
-    //   // TweenMax.fromTo($(".caption"), 1.5, {opacity:0}, {opacity:1});
-    //   // TweenMax.to($(".active .caption"), 1.5, {opacity:0});
-    // }
+    }
   });
   $('.owl-carousel').owlCarousel({
     loop:false,
@@ -460,7 +444,7 @@ initPhotoSwipeFromDOM('.my-gallery');
         if (!valid) {
           $('#email').addClass("formValidationError");
           $('#email').next("p").text("Please enter a valid email");
-          console.log("enter valdi email")
+          console.log("enter valdi email blur")
         } else {
           $('#email').removeClass("formValidationError");
           $('#email').next("p").text("");
@@ -474,7 +458,7 @@ initPhotoSwipeFromDOM('.my-gallery');
         }else {
           $('#human').addClass("formValidationError");
           $('#human').next("p").text("Your anti-spam is inccorect");
-          console.log("Your anti-spam is inccorect")
+          console.log("Your anti-spam is inccorect blur")
         }
       }
     })
@@ -505,7 +489,8 @@ initPhotoSwipeFromDOM('.my-gallery');
         if (!valid) {
           $('#email').addClass("formValidationError");
           $('#email').next("p").text("Please enter a valid email");
-          console.log("enter valdi email")
+          TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH, autoKill:false}});
+          console.log("enter valdi email on submit")
         }
       }
       //ANTI-SPAM
@@ -517,7 +502,8 @@ initPhotoSwipeFromDOM('.my-gallery');
         }else {
           $('#human').addClass("formValidationError");
           $('#human').next("p").text("Your anti-spam is inccorect");
-          console.log("Your anti-spam is inccorect")
+          TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH, autoKill:false}});
+          console.log("Your anti-spam is inccorect on submit")
           isFormValid = false;
         }
       }
