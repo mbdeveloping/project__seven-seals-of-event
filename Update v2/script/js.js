@@ -2,19 +2,17 @@ $(document).ready(function() {
   /********** MAIN RULES FOR ALL PAGES **********/
   const pageBody = $("body");
   const preloader = $(".preloader");
-
-  // $(".cards-overlay").height(window.innerHeight - 40);
-  // console.log(window.innerHeight);
-  // console.log($(".cards-overlay").height());
+  TweenMax.set($(".caption"),  {opacity:0});
+  // $(".caption").fadeOut();
 
   /*** Website preloader screen spinner rules ***/
     TweenMax.to(preloader, .3, {opacity:0, onComplete:function() {
       preloader.detach();
     }});
     pageBody.removeClass("body-scroll-lock");
-
   //Home page owl carousel
-  $('.owl1').owlCarousel({
+  let homeOwl = $('.owl1');
+  homeOwl.owlCarousel({
     loop:true,
     startPosition:0,
     autoplay:true,
@@ -26,7 +24,20 @@ $(document).ready(function() {
         0:{
             items:1
         }
-    }
+    },
+    // onInitialize: function() {
+    //   TweenMax.fromTo($(".caption"), 1.5, {opacity:0}, {opacity:1});
+    // },
+    // onTranslate: function() {
+    //   // TweenMax.fromTo($(".active .caption"), 1.5, {opacity:0}, {opacity:1});
+    //   TweenMax.to($(".caption"), 1.5, {opacity:0});
+    //   TweenMax.to($(".caption"), 1.5, {opacity:1});
+    // },
+    // onDrag:function() {
+    //   // TweenMax.to($(".active .caption"), .5, {x:-50});
+    //   // TweenMax.fromTo($(".caption"), 1.5, {opacity:0}, {opacity:1});
+    //   // TweenMax.to($(".active .caption"), 1.5, {opacity:0});
+    // }
   });
   $('.owl-carousel').owlCarousel({
     loop:false,
@@ -194,31 +205,32 @@ initPhotoSwipeFromDOM('.my-gallery');
     const hamburgerBars = $(".bar");
     const blurBg = $(".blur-bg");
 
-    jQuery(document).ready(function($) {
-      var hamburgerBlur = function() {
-
-        var ww = document.body.clientWidth;
-      };
-      $(window).on('resize', function(){
-        hamburgerBlur();
-      });
-
-      hamburgerBlur();
-    });
-
+    //Close nva menu on !menu click
+    function closeMenuOnSideClick(e) {
+      let $element = $(e.target);
+      if (!$element.hasClass("nav-ul-display") && !$element.hasClass('bar') && !$element.hasClass('hamburger-btn') && navUl.hasClass('nav-open') && !$element.hasClass('nav-link')) {
+        closeNav();
+      }
+    }
+    function openNav() {
+      pageBody.addClass("body-scroll-lock");
+      navBtn.addClass("change");
+      navUl.addClass("nav-ul-display nav-open");
+      TweenMax.fromTo(navUl, .3, {opacity:0,x:"100%"}, {opacity:1, x:"0%"});
+    }
+    function closeNav() {
+      pageBody.removeClass("body-scroll-lock");
+      navBtn.removeClass("change");
+      TweenMax.to(navUl, .3, {opacity:0,x:"100%", onComplete:function(){
+        TweenMax.set(navUl, {opacity:1, x:"0%"});
+        navUl.removeClass("nav-ul-display nav-open");
+      }});
+    }
     function hamburgerClick() {
       if (!navUl.hasClass("nav-open")) {
-        pageBody.addClass("body-scroll-lock");
-        $(this).addClass("change");
-        navUl.addClass("nav-ul-display nav-open");
-        TweenMax.fromTo(navUl, .3, {opacity:0,x:"100%"}, {opacity:1, x:"0%"});
+        openNav();
       } else {
-        pageBody.removeClass("body-scroll-lock");
-        $(this).removeClass("change");
-        TweenMax.to(navUl, .3, {opacity:0,x:"100%", onComplete:function(){
-          TweenMax.set(navUl, {opacity:1, x:"0%"});
-          navUl.removeClass("nav-ul-display nav-open");
-        }});
+        closeNav();
       }
     }
     //Scroll back to top btn function
@@ -267,6 +279,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       $(window).on('resize', resizeNav);
       $(window).on('scroll', scrollTopanim);
       scrollTopBtn.on('click', backToTop)
+      $('body').on('click', closeMenuOnSideClick);
       headerbarSize();
     }())
     //resize window remove body block
