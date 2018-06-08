@@ -76,7 +76,7 @@ if (!$errName && !$errEmail && !$errPhone && !$errMessage && !$errHuman) {
         <h1>Loading...</h1>
       </div>
     </div>
-    <header id="main-header">
+		<header id="main-header">
       <div class="container main-header-inner">
           <a href="index.html">
             <div id="header-branding" class="blur-bg">
@@ -84,18 +84,18 @@ if (!$errName && !$errEmail && !$errPhone && !$errMessage && !$errHuman) {
               <p>Seven Seals of Event<sup><i class="far fa-registered"></i></sup></p>
             </div>
           </a>
-          <a id="hamburger-btn" href="#">
+          <div id="hamburger-btn" class="hamburger-btn">
             <div class="bar bar1"></div>
             <div class="bar bar2"></div>
             <div class="bar bar3"></div>
-          </a>
+          </div>
           <nav id="main-nav">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="wedding.html">Weddings</a></li>
-              <li><a href="activities.html">Activities</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li class="active-page"><a href="contact.html">Contact</a></li>
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="wedding.html">Weddings</a></li>
+              <li><a class="nav-link" href="activities.html">Activities</a></li>
+              <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="active-page"><a class="nav-link" href="contact.php">Contact</a></li>
             </ul>
           </nav>
       </div>
