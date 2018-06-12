@@ -170,6 +170,30 @@ ul {
 }
 
 /*Testing navBar animation*/
+#main-nav ul li a {
+  font-size: 1.2rem;
+  padding:0 1rem;
+}
+#languages {
+  display: flex;
+  justify-content:space-around;
+}
+#languages a {
+  width: 50%;
+}
+#languages img {
+  width: 30px;
+  justify-self:center;
+  align-self:center;
+}
+#main-nav ul li#languages a {
+  font-size: 0.5rem;
+  padding:0.5rem;
+}
+
+#languages a:hover {
+  background:#dfd774;
+}
 #header-branding p {
   font-size: 1.2rem;
   padding-left: 5px;
@@ -251,7 +275,7 @@ ul {
 }
 
 #main-nav ul li a {
-  font-size: 1.7rem;
+  /* font-size: 1.7rem; */
   display: block;
   color: #fff;
   height: 100%;
@@ -1688,6 +1712,9 @@ figure:hover img{
     padding-right: 4rem;
   }
   /* Navigation rules */
+  #languages img {
+    width: 20px;
+  }
   #hamburger-btn {
     display:none;
   }
@@ -1702,21 +1729,6 @@ figure:hover img{
     padding: 0;
     background:none;
     position: relative;
-  }
-  #main-nav ul li a {
-    font-size: 1.2rem;
-    padding:0 1rem;
-  }
-  #testlang {
-    display: flex;
-  }
-  #main-nav ul li#testlang a {
-    font-size: 0.5rem;
-    padding:0.5rem;
-  }
-
-  #testlang a:hover {
-    background:red;
   }
   /* Activites page rules */
   #activities-more .card-include-list li {
