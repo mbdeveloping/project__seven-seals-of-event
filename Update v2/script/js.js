@@ -584,9 +584,156 @@ initPhotoSwipeFromDOM('.my-gallery');
           }
         },
         "weddingsPage":{
-
+          "hero":{
+            "h1":"设计您的完美婚礼",
+            "p":"我们为专属您的日子变得神奇而难忘"
+          },
+          "wedFirstStep":{
+            "h2":"浏览",
+            "p":"查看我们的婚礼类别"
+          },
+          "wedSecondStep":{
+            "h2":"精粹",
+            "p":"选择您的梦中婚礼"
+          },
+          "wedThirdStep":{
+            "h2":"设计",
+            "p":"让我们携手共创您的神奇之日"
+          },
+          "mainSectionHeader":"选择您的婚礼",
+          "royalThumbnail":{
+            "h3":"皇家婚礼",
+            "p":"没秘密-每个人心中都梦想成为被人拥戴的王子和公主。柒印皇家婚礼策划专家团队将为您实现。",
+            "btn":"阅读更多"
+          },
+          "traditionalThumbnail":{
+            "h3":"传统婚礼",
+            "p":"您在寻找充满传统色彩的传统婚礼吗？那你来对地方了！柒印专家团队将开启您的传统色彩之旅。",
+            "btn":"阅读更多"
+          },
+          "midClassThumbnail":{
+            "h3":"精致婚礼",
+            "p":"请记住-这只是名字的称呼,我们专家团队能足够确保您能想王子和公主一样被款待甚至能节省更多的花费。",
+            "btn":"阅读更多"
+          },
+          "simpleClassThumbnail":{
+            "h3":"精简婚礼",
+            "p":"为了精简喜好的您柒印团队打造专属您的日子。",
+            "btn":"阅读更多"
+          },
+          "westernThumbnail":{
+            "h3":"西式婚礼",
+            "p":"电影中的西式场景婚礼还让您记忆犹新吗？柒印专家团队为您量身打造专属您的浪漫婚礼。",
+            "btn":"阅读更多"
+          },
+          "mixThumbnail":{
+            "h3":"中西式婚礼",
+            "p":"为致力于梦想中混合式婚礼的你提供多样化选择。",
+            "btn":"阅读更多"
+          },
+          "royalCard":{
+            "h3":"皇家婚礼",
+            "p":"没秘密-每个人心中都梦想成为被人拥戴的王子和公主。柒印皇家婚礼策划专家团队将为您实现。",
+            "h4":"皇家婚礼服务项目（最终服务项目由双方合同协议达成）",
+            "li1":"50人至无限",
+            "li2":"婚礼仪式（室内/户外）",
+            "li3":"食物（中餐/西餐+甜品桌）",
+            "li4":"主持人（节目流程主持）",
+            "li5":"现场音乐/DJ音乐",
+            "li6":"婚礼图片（室内/户外）",
+            "li7":"蜜月-婚纱照片及录像（全部免费）",
+            "li8":"大型豪华轿车服务",
+            "li9":"任意海外婚礼供您选择",
+            "li10":"新人礼包"
+          },
+          "traditionalCard":{
+            "h3":"传统婚礼",
+            "p":"您在寻找充满传统色彩的传统婚礼吗？那你来对地方了！柒印专家团队将开启您的传统色彩之旅。",
+            "h4":"传统婚礼服务项目（最终服务项目由双方合同协议达成）",
+            "li1":"40人至无限",
+            "li2":"婚礼仪式（室内/户外）",
+            "li3":"食物（中式+甜品桌）",
+            "li4":"主持人（节目流程主持）",
+            "li5":"现场音乐/DJ音乐",
+            "li6":"婚礼照片（室内/户外）",
+            "li7":"传统蜜月（海外）",
+            "li8":"摄像，录影",
+            "li9":"新人大礼包"
+          },
+          "midClassCard":{
+            "h3":"精致婚礼",
+            "p":"请记住-这只是名字的称呼,我们专家团队能足够确保您能想王子和公主一样被款待甚至能节省更多的花费。",
+            "h4":"精致婚礼服务项目（最终服务项目由双方合同协议达成）",
+            "li1":"20-30人",
+            "li2":"婚礼仪式（室内/户外）",
+            "li3":"食物（中式/西式+甜品桌）",
+            "li4":"主持人（节目流程主持）",
+            "li5":"现场音乐/DJ音乐",
+            "li6":"婚礼照片（室内/户外）",
+            "li7":"蜜月设计",
+            "li8":"新人大礼包"
+          },
+          "simpleClassCard":{
+            "h3":"精简婚礼",
+            "p":"为了精简喜好的您柒印团队打造专属您的日子。",
+            "h4":"精简婚礼服务项目（最终服务项目由双方合同协议达成）",
+            "li1":"10至20人",
+            "li2":"婚礼仪式（室内/户外）",
+            "li3":"食物（中式/西式+甜品桌）",
+            "li4":"主持人（节目流程主持）",
+            "li5":"现场音乐/DJ音乐",
+            "li6":"婚礼照片（室内/户外）",
+            "li7":"新人大礼包"
+          },
+          "westernCard":{
+            "h3":"西式婚礼",
+            "p":"电影中的西式场景婚礼还让您记忆犹新吗？柒印专家团队为您量身打造专属您的浪漫婚礼。",
+            "h4":"西式婚礼服务项目（最终服务项目由双方合同协议达成）",
+            "li1":"30至40人",
+            "li2":"婚礼仪式（室内/户外）",
+            "li3":"食物（西餐+甜品桌）",
+            "li4":"主持人（节目流程主持）",
+            "li5":"现场音乐/DJ音乐",
+            "li6":"婚礼照片（户外）",
+            "li7":"外籍餐饮服务人员",
+            "li8":"蜜月",
+            "li9":"摄影,摄像",
+            "li10":"欧美婚礼",
+            "li11":"新人大礼包"
+          },
+          "mixCard":{
+            "h3":"中西式婚礼",
+            "p":"为致力于梦想中混合式婚礼的你提供多样化选择。",
+            "h4":"中西式婚礼服务项目（最终服务项目由双方合同协议达成）",
+            "li1":"30至40人",
+            "li2":"婚礼仪式（室内/户外）",
+            "li3":"食物（西餐+甜品桌）",
+            "li4":"主持人（节目流程主持）",
+            "li5":"现场音乐/DJ音乐",
+            "li6":"婚礼照片（户外）",
+            "li7":"外籍餐饮服务人员",
+            "li8":"蜜月",
+            "li9":"摄影,摄像",
+            "li10":"欧美婚礼",
+            "li11":"新人大礼包"
+          }
         }
       }
+    }
+    function translateLogoAndNav(){
+      const navLinks = $(".nav-link");
+      navLinks.each(function() {
+      $(this).text(lang.china.homePage.navBar[$(this).attr("key")]);
+      });
+      $("#header-branding p").text(lang.china.homePage.logo.p);
+    }
+    function translateLikeWhatYouSee() {
+      $(".like-what-you-see h4").text(lang.china.homePage.likeWhatYouSee.h4);
+      $(".like-what-you-see p").text(lang.china.homePage.likeWhatYouSee.p);
+      $(".like-what-you-see a").text(lang.china.homePage.likeWhatYouSee.btn);
+      $(".explore-events h4").text(lang.china.homePage.exploreEvents.h4);
+      $(".explore-events p").text(lang.china.homePage.exploreEvents.p);
+      $(".explore-events a").text(lang.china.homePage.exploreEvents.btn);
     }
     function translateHomePage() {
       $(".slide1 h1").text(lang.china.homePage.slide1.h1);
@@ -617,21 +764,122 @@ initPhotoSwipeFromDOM('.my-gallery');
       $("#travel p").text(lang.china.homePage.travel.p);
       $("#consultation h3").text(lang.china.homePage.consultation.h3);
       $("#consultation p").text(lang.china.homePage.consultation.p);
-
-      $(".like-what-you-see h4").text(lang.china.homePage.likeWhatYouSee.h4);
-      $(".like-what-you-see p").text(lang.china.homePage.likeWhatYouSee.p);
-      $(".like-what-you-see a").text(lang.china.homePage.likeWhatYouSee.btn);
-
-      $(".explore-events h4").text(lang.china.homePage.exploreEvents.h4);
-      $(".explore-events p").text(lang.china.homePage.exploreEvents.p);
-      $(".explore-events a").text(lang.china.homePage.exploreEvents.btn);
     }
-    function translateLogoAndNav(){
-      const navLinks = $(".nav-link");
-      navLinks.each(function() {
-      $(this).text(lang.china.homePage.navBar[$(this).attr("key")]);
-      });
-      $("#header-branding p").text(lang.china.homePage.logo.p);
+    function translateWeddingsPage() {
+      $("#wedding-hero h1").text(lang.china.weddingsPage.hero.h1);
+      $("#wedding-hero p").text(lang.china.weddingsPage.hero.p);
+
+      $("#weddings-item .first-step h2").text(lang.china.weddingsPage.wedFirstStep.h2);
+      $("#weddings-item .first-step p").text(lang.china.weddingsPage.wedFirstStep.p);
+      $("#weddings-item .second-step h2").text(lang.china.weddingsPage.wedSecondStep.h2);
+      $("#weddings-item .second-step p").text(lang.china.weddingsPage.wedSecondStep.p);
+      $("#weddings-item .third-step h2").text(lang.china.weddingsPage.wedThirdStep.h2);
+      $("#weddings-item .third-step p").text(lang.china.weddingsPage.wedThirdStep.p);
+
+      $(".main-wedding-section h2").text(lang.china.weddingsPage.mainSectionHeader);
+
+      $(".royal-thumbnail .cards-text h3").text(lang.china.weddingsPage.royalThumbnail.h3);
+      $(".royal-thumbnail .cards-text p").text(lang.china.weddingsPage.royalThumbnail.p);
+      $(".royal-thumbnail .thumbnail-icon-wrapper p").text(lang.china.weddingsPage.royalThumbnail.btn);
+
+      $(".traditional-thumbnail .cards-text h3").text(lang.china.weddingsPage.traditionalThumbnail.h3);
+      $(".traditional-thumbnail .cards-text p").text(lang.china.weddingsPage.traditionalThumbnail.p);
+      $(".traditional-thumbnail .thumbnail-icon-wrapper p").text(lang.china.weddingsPage.traditionalThumbnail.btn);
+
+      $(".midClass-thumbnail .cards-text h3").text(lang.china.weddingsPage.midClassThumbnail.h3);
+      $(".midClass-thumbnail .cards-text p").text(lang.china.weddingsPage.midClassThumbnail.p);
+      $(".midClass-thumbnail .thumbnail-icon-wrapper p").text(lang.china.weddingsPage.midClassThumbnail.btn);
+
+      $(".simpleClass-thumbnail .cards-text h3").text(lang.china.weddingsPage.simpleClassThumbnail.h3);
+      $(".simpleClass-thumbnail .cards-text p").text(lang.china.weddingsPage.simpleClassThumbnail.p);
+      $(".simpleClass-thumbnail .thumbnail-icon-wrapper p").text(lang.china.weddingsPage.simpleClassThumbnail.btn);
+
+      $(".western-thumbnail .cards-text h3").text(lang.china.weddingsPage.westernThumbnail.h3);
+      $(".western-thumbnail .cards-text p").text(lang.china.weddingsPage.westernThumbnail.p);
+      $(".western-thumbnail .thumbnail-icon-wrapper p").text(lang.china.weddingsPage.westernThumbnail.btn);
+
+      $(".mix-thumbnail .cards-text h3").text(lang.china.weddingsPage.mixThumbnail.h3);
+      $(".mix-thumbnail .cards-text p").text(lang.china.weddingsPage.mixThumbnail.p);
+      $(".mix-thumbnail .thumbnail-icon-wrapper p").text(lang.china.weddingsPage.mixThumbnail.btn);
+
+      $("#royal-main-card h3").text(lang.china.weddingsPage.royalCard.h3);
+      $("#royal-main-card p").text(lang.china.weddingsPage.royalCard.p);
+      $("#royal-main-card h4").text(lang.china.weddingsPage.royalCard.h4);
+      $("#royal-main-card li:nth-child(1)").text(lang.china.weddingsPage.royalCard.li1);
+      $("#royal-main-card li:nth-child(2)").text(lang.china.weddingsPage.royalCard.li2);
+      $("#royal-main-card li:nth-child(3)").text(lang.china.weddingsPage.royalCard.li3);
+      $("#royal-main-card li:nth-child(4)").text(lang.china.weddingsPage.royalCard.li4);
+      $("#royal-main-card li:nth-child(5)").text(lang.china.weddingsPage.royalCard.li5);
+      $("#royal-main-card li:nth-child(6)").text(lang.china.weddingsPage.royalCard.li6);
+      $("#royal-main-card li:nth-child(7)").text(lang.china.weddingsPage.royalCard.li7);
+      $("#royal-main-card li:nth-child(8)").text(lang.china.weddingsPage.royalCard.li8);
+      $("#royal-main-card li:nth-child(9)").text(lang.china.weddingsPage.royalCard.li9);
+      $("#royal-main-card li:nth-child(10)").text(lang.china.weddingsPage.royalCard.li10);
+
+      $("#traditional-main-card h3").text(lang.china.weddingsPage.traditionalCard.h3);
+      $("#traditional-main-card p").text(lang.china.weddingsPage.traditionalCard.p);
+      $("#traditional-main-card h4").text(lang.china.weddingsPage.traditionalCard.h4);
+      $("#traditional-main-card li:nth-child(1)").text(lang.china.weddingsPage.traditionalCard.li1);
+      $("#traditional-main-card li:nth-child(2)").text(lang.china.weddingsPage.traditionalCard.li2);
+      $("#traditional-main-card li:nth-child(3)").text(lang.china.weddingsPage.traditionalCard.li3);
+      $("#traditional-main-card li:nth-child(4)").text(lang.china.weddingsPage.traditionalCard.li4);
+      $("#traditional-main-card li:nth-child(5)").text(lang.china.weddingsPage.traditionalCard.li5);
+      $("#traditional-main-card li:nth-child(6)").text(lang.china.weddingsPage.traditionalCard.li6);
+      $("#traditional-main-card li:nth-child(7)").text(lang.china.weddingsPage.traditionalCard.li7);
+      $("#traditional-main-card li:nth-child(8)").text(lang.china.weddingsPage.traditionalCard.li8);
+      $("#traditional-main-card li:nth-child(9)").text(lang.china.weddingsPage.traditionalCard.li9);
+
+      $("#midClass-main-card h3").text(lang.china.weddingsPage.midClassCard.h3);
+      $("#midClass-main-card p").text(lang.china.weddingsPage.midClassCard.p);
+      $("#midClass-main-card h4").text(lang.china.weddingsPage.midClassCard.h4);
+      $("#midClass-main-card li:nth-child(1)").text(lang.china.weddingsPage.midClassCard.li1);
+      $("#midClass-main-card li:nth-child(2)").text(lang.china.weddingsPage.midClassCard.li2);
+      $("#midClass-main-card li:nth-child(3)").text(lang.china.weddingsPage.midClassCard.li3);
+      $("#midClass-main-card li:nth-child(4)").text(lang.china.weddingsPage.midClassCard.li4);
+      $("#midClass-main-card li:nth-child(5)").text(lang.china.weddingsPage.midClassCard.li5);
+      $("#midClass-main-card li:nth-child(6)").text(lang.china.weddingsPage.midClassCard.li6);
+      $("#midClass-main-card li:nth-child(7)").text(lang.china.weddingsPage.midClassCard.li7);
+      $("#midClass-main-card li:nth-child(8)").text(lang.china.weddingsPage.midClassCard.li8);
+
+      $("#simpleClass-main-card h3").text(lang.china.weddingsPage.simpleClassCard.h3);
+      $("#simpleClass-main-card p").text(lang.china.weddingsPage.simpleClassCard.p);
+      $("#simpleClass-main-card h4").text(lang.china.weddingsPage.simpleClassCard.h4);
+      $("#simpleClass-main-card li:nth-child(1)").text(lang.china.weddingsPage.simpleClassCard.li1);
+      $("#simpleClass-main-card li:nth-child(2)").text(lang.china.weddingsPage.simpleClassCard.li2);
+      $("#simpleClass-main-card li:nth-child(3)").text(lang.china.weddingsPage.simpleClassCard.li3);
+      $("#simpleClass-main-card li:nth-child(4)").text(lang.china.weddingsPage.simpleClassCard.li4);
+      $("#simpleClass-main-card li:nth-child(5)").text(lang.china.weddingsPage.simpleClassCard.li5);
+      $("#simpleClass-main-card li:nth-child(6)").text(lang.china.weddingsPage.simpleClassCard.li6);
+      $("#simpleClass-main-card li:nth-child(7)").text(lang.china.weddingsPage.simpleClassCard.li7);
+
+      $("#western-main-card h3").text(lang.china.weddingsPage.westernCard.h3);
+      $("#western-main-card p").text(lang.china.weddingsPage.westernCard.p);
+      $("#western-main-card h4").text(lang.china.weddingsPage.westernCard.h4);
+      $("#western-main-card li:nth-child(1)").text(lang.china.weddingsPage.westernCard.li1);
+      $("#western-main-card li:nth-child(2)").text(lang.china.weddingsPage.westernCard.li2);
+      $("#western-main-card li:nth-child(3)").text(lang.china.weddingsPage.westernCard.li3);
+      $("#western-main-card li:nth-child(4)").text(lang.china.weddingsPage.westernCard.li4);
+      $("#western-main-card li:nth-child(5)").text(lang.china.weddingsPage.westernCard.li5);
+      $("#western-main-card li:nth-child(6)").text(lang.china.weddingsPage.westernCard.li6);
+      $("#western-main-card li:nth-child(7)").text(lang.china.weddingsPage.westernCard.li7);
+      $("#western-main-card li:nth-child(8)").text(lang.china.weddingsPage.westernCard.li8);
+      $("#western-main-card li:nth-child(9)").text(lang.china.weddingsPage.westernCard.li9);
+      $("#western-main-card li:nth-child(10)").text(lang.china.weddingsPage.westernCard.li10);
+      $("#western-main-card li:nth-child(11)").text(lang.china.weddingsPage.westernCard.li11);
+    }
+
+
+    if (store.get("language") === "china") {
+      if ($("body").attr("id") === "home-page") {
+        translateLogoAndNav();
+        translateHomePage();
+        translateLikeWhatYouSee();
+      }
+      if ($("body").attr("id") === "weddings-page") {
+        translateLogoAndNav();
+        translateWeddingsPage();
+        translateLikeWhatYouSee();
+      }
     }
     $("#chineseLan").on('click', function() {
       store.set("language", "china");
@@ -643,14 +891,5 @@ initPhotoSwipeFromDOM('.my-gallery');
       store.remove('language');
       location.reload();
     });
-    if (store.get("language") === "china") {
-      if ($("body").attr("id") === "home-page") {
-        translateLogoAndNav();
-        translateHomePage();
-      }
-      if ($("body").attr("id") === "weddings-page") {
-        console.log("translating weddings page");
-      }
-    }
   }())
 })
