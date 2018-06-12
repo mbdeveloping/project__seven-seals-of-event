@@ -868,23 +868,30 @@ initPhotoSwipeFromDOM('.my-gallery');
       $("#western-main-card li:nth-child(11)").text(lang.china.weddingsPage.westernCard.li11);
     }
 
-
-    if (store.get("language") === "china") {
-      if ($("body").attr("id") === "home-page") {
-        translateLogoAndNav();
-        translateHomePage();
-        translateLikeWhatYouSee();
-      }
-      if ($("body").attr("id") === "weddings-page") {
-        translateLogoAndNav();
-        translateWeddingsPage();
-        translateLikeWhatYouSee();
+    function checkLanguageAndPage() {
+      if (store.get("language") === "china") {
+        if ($("body").attr("id") === "home-page") {
+          translateLogoAndNav();
+          translateHomePage();
+          translateLikeWhatYouSee();
+        }
+        if ($("body").attr("id") === "weddings-page") {
+          translateLogoAndNav();
+          translateWeddingsPage();
+          translateLikeWhatYouSee();
+        }
+        if ($("body").attr("id") === "activities-page") {
+          translateLogoAndNav();
+          translateLikeWhatYouSee();
+        }
       }
     }
+
+    checkLanguageAndPage();
+
     $("#chineseLan").on('click', function() {
       store.set("language", "china");
-      translateLogoAndNav();
-      translateHomePage();
+      checkLanguageAndPage();
     });
 
     $("#enlanguage").on('click', function() {
