@@ -519,5 +519,27 @@ initPhotoSwipeFromDOM('.my-gallery');
         e.preventDefault();
       }
     })
+  }());
+  /*********** LANGUAGES RULES **********/
+  (function() {
+    const lang = {
+      "china" : {
+        "navBar" : {
+          "home": "主页",
+          "weddings": "婚礼",
+          "activities": "活动",
+          "gallery": "图册",
+          "contact": "联系"
+        }
+      }
+    }
+
+
+    $("#chineseLan").on('click', function() {
+      const navLinks = $(".nav-link");
+      navLinks.each(function() {
+      $(this).text(lang.china.navBar[$(this).attr("key")]);
+      })
+    })
   }())
 })

@@ -246,7 +246,7 @@ ul {
   transition: background .3s;
 }
 
-#main-nav ul li:hover{
+#main-nav ul li:not(:last-child):hover{
   background:#dfd774;
 }
 
@@ -1693,7 +1693,7 @@ figure:hover img{
   }
   #main-nav ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     list-style-type: none;
@@ -1706,6 +1706,16 @@ figure:hover img{
   #main-nav ul li a {
     font-size: 1.2rem;
     padding:0 1rem;
+  }
+  #testlang {
+    display: flex;
+  }
+  #main-nav ul li#testlang a {
+    font-size: 0.5rem;
+    padding:0.5rem;
+  }
+  #testlang a:hover {
+    background:red;
   }
   /* Activites page rules */
   #activities-more .card-include-list li {
