@@ -3,10 +3,12 @@ $(document).ready(function() {
   const pageBody = $("body");
   const preloader = $(".preloader");
   /*** Website preloader screen spinner rules ***/
+  $(window).on("load", function() {
     TweenMax.to(preloader, .3, {opacity:0, onComplete:function() {
       preloader.detach();
+      pageBody.removeClass("body-scroll-lock");
     }});
-    pageBody.removeClass("body-scroll-lock");
+  });
   //Home page owl carousel
   let homeOwl = $('.owl1');
   homeOwl.owlCarousel({

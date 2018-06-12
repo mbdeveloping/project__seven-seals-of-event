@@ -178,9 +178,6 @@ ul {
   display: flex;
   justify-content:space-around;
 }
-#languages a {
-  width: 50%;
-}
 #languages img {
   width: 30px;
   justify-self:center;
@@ -189,6 +186,7 @@ ul {
 #main-nav ul li#languages a {
   font-size: 0.5rem;
   padding:0.5rem;
+  transition: background .3s;
 }
 
 #languages a:hover {
@@ -1713,7 +1711,7 @@ figure:hover img{
   }
   /* Navigation rules */
   #languages img {
-    width: 20px;
+    width: 15px;
   }
   #hamburger-btn {
     display:none;
