@@ -543,42 +543,96 @@ initPhotoSwipeFromDOM('.my-gallery');
             "btn":"了解更多"
           },
           "slide3":{
-            "h1":"我们提供基督徒商业咨询服务",
-            "p":"我们希望陪您一起度过商业旅途的艰难时刻!",
-            "btn":"了解更多"
+            "h1" : "我们提供基督徒商业咨询服务",
+            "p" : "我们希望陪您一起度过商业旅途的艰难时刻!",
+            "btn" : "了解更多"
           },
-        }
-      },
-      "en" : {
-        "navBar" : {
-          "home": "Home",
-          "weddings": "Weddings",
-          "activities": "Activities",
-          "gallery": "Gallery",
-          "contact": "Contact"
+          "intro":{
+            "h2" : "柒印策划有限公司",
+            "p" : "我们秉着欧洲丰富的策划经验予2017年正式成立（中国）柒印策划有限公司。以专业高质量为主体的宗旨为您全权打造任何一场你所需的非凡体验。柒印策划团队专家们随时为您准备打造一场专属您的难忘感动时刻。"
+          },
+          "parallax":{
+            "h2" : "发现您的完美婚礼",
+            "p" : "为了您此生难忘的一日我们提供多种类的婚礼场景布置供你选择",
+            "btn": "发现"
+          },
+          "activities":{
+            "h2":"活动",
+            "p":"我们提供多样化的活动供您选择。我们专业团队竭尽全力达到您满意的要求。",
+            "btn":"探索更多"
+          },
+          "exhibition":{
+            "h3":"展会",
+            "p":"我们致力于创造全新；独特及前所未有的目标为宗旨。"
+          },
+          "travel":{
+            "h3":"旅游",
+            "p":"我们专业团队为您量身打造的旅途确保您的一路尽享欧洲风情。"
+          },
+          "consultation":{
+            "h3":"咨询",
+            "p":"我们为商务人士提供并组织商务会议及培训"
+          },
+          "likeWhatYouSee":{
+            "h4":"喜欢您所看到的吗？",
+            "p":"告诉我们您需要的活动策划",
+            "btn":"联系我们"
+          },
+          "exploreEvents":{
+            "h4":"探索发现最新活动",
+            "p":"告诉我们您所需的服务",
+            "btn":"发现更多"
+          }
         }
       }
     }
 
-
     $("#chineseLan").on('click', function() {
       const navLinks = $(".nav-link");
-      const slide1H1 = $(".slide1 h1");
-      const slide1p = $(".slide1 p");
-      const slide1Btn = $("#slide1-btn");
 
       navLinks.each(function() {
       $(this).text(lang.china.homePage.navBar[$(this).attr("key")]);
       });
-      slide1H1.text(lang.china.homePage.slide1.h1);
-      slide1p.text(lang.china.homePage.slide1.p);
-      slide1Btn.text(lang.china.homePage.slide1.btn);
+      $(".slide1 h1").text(lang.china.homePage.slide1.h1);
+      $(".slide1 p").text(lang.china.homePage.slide1.p);
+      $("#slide1-btn").text(lang.china.homePage.slide1.btn);
+
+      $(".slide2 h1").text(lang.china.homePage.slide2.h1);
+      $(".slide2 p").text(lang.china.homePage.slide2.p);
+      $("#slide2-btn").text(lang.china.homePage.slide2.btn);
+
+      $(".slide3 h1").text(lang.china.homePage.slide3.h1);
+      $(".slide3 p").text(lang.china.homePage.slide3.p);
+      $("#slide3-btn").text(lang.china.homePage.slide3.btn);
+
+      $("#intro-about h2").text(lang.china.homePage.intro.h2);
+      $("#intro-about p").text(lang.china.homePage.intro.p);
+
+      $("#home-parallax-text h2").text(lang.china.homePage.parallax.h2);
+      $("#home-parallax-text p").text(lang.china.homePage.parallax.p);
+      $("#home-parallax-btn").text(lang.china.homePage.parallax.btn);
+
+      $("#home-activity-header h2").text(lang.china.homePage.activities.h2);
+      $("#home-activity-header p").text(lang.china.homePage.activities.p);
+      $("#home-activity-btn").text(lang.china.homePage.activities.btn);
+      $("#exhibition h3").text(lang.china.homePage.exhibition.h3);
+      $("#exhibition p").text(lang.china.homePage.exhibition.p);
+      $("#travel h3").text(lang.china.homePage.travel.h3);
+      $("#travel p").text(lang.china.homePage.travel.p);
+      $("#consultation h3").text(lang.china.homePage.consultation.h3);
+      $("#consultation p").text(lang.china.homePage.consultation.p);
+
+      $(".like-what-you-see h4").text(lang.china.homePage.likeWhatYouSee.h4);
+      $(".like-what-you-see p").text(lang.china.homePage.likeWhatYouSee.p);
+      $(".like-what-you-see a").text(lang.china.homePage.likeWhatYouSee.btn);
+
+      $(".explore-events h4").text(lang.china.homePage.exploreEvents.h4);
+      $(".explore-events p").text(lang.china.homePage.exploreEvents.p);
+      $(".explore-events a").text(lang.china.homePage.exploreEvents.btn);
     });
+
     $("#enlanguage").on('click', function() {
-      const navLinks = $(".nav-link");
-      navLinks.each(function() {
-      $(this).text(lang.en.navBar[$(this).attr("key")]);
-      })
+      location.reload();
     });
   }())
 })
