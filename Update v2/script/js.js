@@ -490,7 +490,6 @@ initPhotoSwipeFromDOM('.my-gallery');
           $('#email').addClass("formValidationError");
           $('#email').next("p").text("Please enter a valid email");
           TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH, autoKill:false}});
-          console.log("enter valdi email on submit")
         }
       }
       //ANTI-SPAM
@@ -498,12 +497,10 @@ initPhotoSwipeFromDOM('.my-gallery');
       if (antiSpamlVal) {
         if (antiSpamlVal==="5") {
           $('#human').removeClass("formValidationError");
-          console.log("antispam is correct!!!")
         }else {
           $('#human').addClass("formValidationError");
           $('#human').next("p").text("Your anti-spam is inccorect");
           TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH, autoKill:false}});
-          console.log("Your anti-spam is inccorect on submit")
           isFormValid = false;
         }
       }
@@ -513,7 +510,6 @@ initPhotoSwipeFromDOM('.my-gallery');
       } else {
         isFormValid = true;
       }
-      console.log(isFormValid)
       //Prevent form from being subbmited
       if (!isFormValid) {
         e.preventDefault();
@@ -525,6 +521,9 @@ initPhotoSwipeFromDOM('.my-gallery');
     const lang = {
       "china" : {
         "homePage":{
+          "logo":{
+            "p":"柒印策划有限公司"
+          },
           "navBar" : {
             "home": "主页",
             "weddings": "婚礼",
@@ -583,16 +582,13 @@ initPhotoSwipeFromDOM('.my-gallery');
             "p":"告诉我们您所需的服务",
             "btn":"发现更多"
           }
+        },
+        "weddingsPage":{
+
         }
       }
     }
-
-    $("#chineseLan").on('click', function() {
-      const navLinks = $(".nav-link");
-
-      navLinks.each(function() {
-      $(this).text(lang.china.homePage.navBar[$(this).attr("key")]);
-      });
+    function translateHomePage() {
       $(".slide1 h1").text(lang.china.homePage.slide1.h1);
       $(".slide1 p").text(lang.china.homePage.slide1.p);
       $(".slide1 a").text(lang.china.homePage.slide1.btn);
@@ -629,11 +625,32 @@ initPhotoSwipeFromDOM('.my-gallery');
       $(".explore-events h4").text(lang.china.homePage.exploreEvents.h4);
       $(".explore-events p").text(lang.china.homePage.exploreEvents.p);
       $(".explore-events a").text(lang.china.homePage.exploreEvents.btn);
-      console.log($("#slide2-btn").text())
+    }
+    function translateLogoAndNav(){
+      const navLinks = $(".nav-link");
+      navLinks.each(function() {
+      $(this).text(lang.china.homePage.navBar[$(this).attr("key")]);
+      });
+      $("#header-branding p").text(lang.china.homePage.logo.p);
+    }
+    $("#chineseLan").on('click', function() {
+      store.set("language", "china");
+      translateLogoAndNav();
+      translateHomePage();
     });
 
     $("#enlanguage").on('click', function() {
+      store.remove('language');
       location.reload();
     });
+    if (store.get("language") === "china") {
+      if ($("body").attr("id") === "home-page") {
+        translateLogoAndNav();
+        translateHomePage();
+      }
+      if ($("body").attr("id") === "weddings-page") {
+        console.log("translating weddings page");
+      }
+    }
   }())
 })
