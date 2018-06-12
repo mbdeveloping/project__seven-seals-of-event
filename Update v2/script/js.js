@@ -524,12 +524,38 @@ initPhotoSwipeFromDOM('.my-gallery');
   (function() {
     const lang = {
       "china" : {
+        "homePage":{
+          "navBar" : {
+            "home": "主页",
+            "weddings": "婚礼",
+            "activities": "活动",
+            "gallery": "图册",
+            "contact": "联系"
+          },
+          "slide1":{
+            "h1":"您的大日子是我们的责任",
+            "p":"您的梦想我们专业团队帮",
+            "btn":"您实现"
+          },
+          "slide2":{
+            "h1":"欧洲旅游",
+            "p":"今天我们为量身设计专属您的假日生活",
+            "btn":"了解更多"
+          },
+          "slide3":{
+            "h1":"我们提供基督徒商业咨询服务",
+            "p":"我们希望陪您一起度过商业旅途的艰难时刻!",
+            "btn":"了解更多"
+          },
+        }
+      },
+      "en" : {
         "navBar" : {
-          "home": "主页",
-          "weddings": "婚礼",
-          "activities": "活动",
-          "gallery": "图册",
-          "contact": "联系"
+          "home": "Home",
+          "weddings": "Weddings",
+          "activities": "Activities",
+          "gallery": "Gallery",
+          "contact": "Contact"
         }
       }
     }
@@ -537,9 +563,22 @@ initPhotoSwipeFromDOM('.my-gallery');
 
     $("#chineseLan").on('click', function() {
       const navLinks = $(".nav-link");
+      const slide1H1 = $(".slide1 h1");
+      const slide1p = $(".slide1 p");
+      const slide1Btn = $("#slide1-btn");
+
       navLinks.each(function() {
-      $(this).text(lang.china.navBar[$(this).attr("key")]);
+      $(this).text(lang.china.homePage.navBar[$(this).attr("key")]);
+      });
+      slide1H1.text(lang.china.homePage.slide1.h1);
+      slide1p.text(lang.china.homePage.slide1.p);
+      slide1Btn.text(lang.china.homePage.slide1.btn);
+    });
+    $("#enlanguage").on('click', function() {
+      const navLinks = $(".nav-link");
+      navLinks.each(function() {
+      $(this).text(lang.en.navBar[$(this).attr("key")]);
       })
-    })
+    });
   }())
 })
