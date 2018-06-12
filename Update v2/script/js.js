@@ -595,15 +595,15 @@ initPhotoSwipeFromDOM('.my-gallery');
       });
       $(".slide1 h1").text(lang.china.homePage.slide1.h1);
       $(".slide1 p").text(lang.china.homePage.slide1.p);
-      $("#slide1-btn").text(lang.china.homePage.slide1.btn);
+      $(".slide1 a").text(lang.china.homePage.slide1.btn);
 
       $(".slide2 h1").text(lang.china.homePage.slide2.h1);
       $(".slide2 p").text(lang.china.homePage.slide2.p);
-      $("#slide2-btn").text(lang.china.homePage.slide2.btn);
+      $(".slide2 a").text(lang.china.homePage.slide2.btn);
 
       $(".slide3 h1").text(lang.china.homePage.slide3.h1);
       $(".slide3 p").text(lang.china.homePage.slide3.p);
-      $("#slide3-btn").text(lang.china.homePage.slide3.btn);
+      $(".slide3 a").text(lang.china.homePage.slide3.btn);
 
       $("#intro-about h2").text(lang.china.homePage.intro.h2);
       $("#intro-about p").text(lang.china.homePage.intro.p);
@@ -629,6 +629,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       $(".explore-events h4").text(lang.china.homePage.exploreEvents.h4);
       $(".explore-events p").text(lang.china.homePage.exploreEvents.p);
       $(".explore-events a").text(lang.china.homePage.exploreEvents.btn);
+      console.log($("#slide2-btn").text())
     });
 
     $("#enlanguage").on('click', function() {
