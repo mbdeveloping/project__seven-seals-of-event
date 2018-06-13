@@ -19,7 +19,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="midclass-gallery-page">
     <div class="preloader">
       <div class="preloader-inner">
         <img class="rotating" src="images/home/preloader1.png" alt="">
@@ -42,11 +42,12 @@
           </div>
           <nav id="main-nav">
             <ul>
-              <li><a class="nav-link" href="index.html">Home</a></li>
-              <li><a class="nav-link" href="wedding.html">Weddings</a></li>
-              <li><a class="nav-link" href="activities.html">Activities</a></li>
-              <li class="active-page"><a class="nav-link" href="gallery.html">Gallery</a></li>
-              <li><a class="nav-link" href="contact.php">Contact</a></li>
+              <li><a class="nav-link" key="home" href="index.html">Home</a></li>
+              <li ><a class="nav-link" key="weddings" href="wedding.html">Weddings</a></li>
+              <li ><a class="nav-link" key="activities" href="activities.html">Activities</a></li>
+              <li class="active-page" ><a class="nav-link" key="gallery" href="gallery.html">Gallery</a></li>
+              <li ><a class="nav-link" key="contact" href="contact.php">Contact</a></li>
+              <li id="languages"> <a id="enlanguage" href="#"><img src="images/engflag.png" alt=""></a> <a id="chineseLan" href="#"><img src="images/chinaflag.png" alt=""></a> </li>
             </ul>
           </nav>
       </div>
@@ -212,6 +213,7 @@
     <script src="script/photoswipe.min.js"></script>
     <script src="script/photoswipe-ui-default.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
+    <script src="script/store.everything.min.js"></script>
     <script src="script/js.js"></script>
   </body>
 </html>

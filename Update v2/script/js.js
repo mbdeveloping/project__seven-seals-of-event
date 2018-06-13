@@ -1036,10 +1036,13 @@ initPhotoSwipeFromDOM('.my-gallery');
       $("#activities-gallery-thumbnail h1").text(lang.china.galleryPage.activitiesGalleryHeader);
     }
 
-    function translateWeddingsGalleryPage() {
-      $("#weddings-gallery h1").text(lang.china.galleryPage.weddingsGalleryHeader);
+    function weddingsGalleryTwoLocationLinks() {
       $(".gallery-location-links li:nth-child(1) > a").text(lang.china.weddingsGalleryPage.linkLocation1);
       $(".gallery-location-links li:nth-child(3) > a").text(lang.china.weddingsGalleryPage.linkLocation2);
+    }
+    function translateWeddingsGalleryPage() {
+      $("#weddings-gallery h1").text(lang.china.galleryPage.weddingsGalleryHeader);
+      weddingsGalleryTwoLocationLinks();
 
       $("#gallery-thumbnail-royal h2").text(lang.china.weddingsPage.royalThumbnail.h3);
       $("#gallery-thumbnail-traditional h2").text(lang.china.weddingsPage.traditionalThumbnail.h3);
@@ -1047,6 +1050,42 @@ initPhotoSwipeFromDOM('.my-gallery');
       $("#gallery-thumbnail-simpleClass h2").text(lang.china.weddingsPage.simpleClassThumbnail.h3);
       $("#gallery-thumbnail-western h2").text(lang.china.weddingsPage.westernThumbnail.h3);
       $("#gallery-thumbnail-mix h2").text(lang.china.weddingsPage.mixThumbnail.h3);
+    }
+
+    function translateRoyalGallery() {
+      $(".main-images-page h1").text(lang.china.weddingsPage.royalThumbnail.h3);
+      weddingsGalleryTwoLocationLinks();
+      $(".gallery-location-links li:nth-child(5) > a").text(lang.china.weddingsPage.royalThumbnail.h3);
+    }
+
+    function translateTraditionalGallery() {
+      $(".main-images-page h1").text(lang.china.weddingsPage.traditionalThumbnail.h3);
+      weddingsGalleryTwoLocationLinks();
+      $(".gallery-location-links li:nth-child(5) > a").text(lang.china.weddingsPage.traditionalThumbnail.h3);
+    }
+
+    function translateMidClassGallery() {
+      $(".main-images-page h1").text(lang.china.weddingsPage.midClassThumbnail.h3);
+      weddingsGalleryTwoLocationLinks();
+      $(".gallery-location-links li:nth-child(5) > a").text(lang.china.weddingsPage.midClassThumbnail.h3);
+    }
+
+    function translateSimpleClassGallery() {
+      $(".main-images-page h1").text(lang.china.weddingsPage.simpleClassThumbnail.h3);
+      weddingsGalleryTwoLocationLinks();
+      $(".gallery-location-links li:nth-child(5) > a").text(lang.china.weddingsPage.simpleClassThumbnail.h3);
+    }
+
+    function translateWesternGallery() {
+      $(".main-images-page h1").text(lang.china.weddingsPage.westernThumbnail.h3);
+      weddingsGalleryTwoLocationLinks();
+      $(".gallery-location-links li:nth-child(5) > a").text(lang.china.weddingsPage.westernThumbnail.h3);
+    }
+
+    function translateMixnGallery() {
+      $(".main-images-page h1").text(lang.china.weddingsPage.mixThumbnail.h3);
+      weddingsGalleryTwoLocationLinks();
+      $(".gallery-location-links li:nth-child(5) > a").text(lang.china.weddingsPage.mixThumbnail.h3);
     }
 
     function checkLanguageAndPage() {
@@ -1073,6 +1112,30 @@ initPhotoSwipeFromDOM('.my-gallery');
         if ($("body").attr("id") === "weddings-gallery-page") {
           translateLogoAndNav();
           translateWeddingsGalleryPage();
+        }
+        if ($("body").attr("id") === "royal-gallery-page") {
+          translateLogoAndNav();
+          translateRoyalGallery();
+        }
+        if ($("body").attr("id") === "traditional-gallery-page") {
+          translateLogoAndNav();
+          translateTraditionalGallery();
+        }
+        if ($("body").attr("id") === "midclass-gallery-page") {
+          translateLogoAndNav();
+          translateMidClassGallery();
+        }
+        if ($("body").attr("id") === "simpleclass-gallery-page") {
+          translateLogoAndNav();
+          translateSimpleClassGallery();
+        }
+        if ($("body").attr("id") === "western-gallery-page") {
+          translateLogoAndNav();
+          translateWesternGallery();
+        }
+        if ($("body").attr("id") === "mix-gallery-page") {
+          translateLogoAndNav();
+          translateMixnGallery();
         }
       }
     }
