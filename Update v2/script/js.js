@@ -1040,6 +1040,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       $(".gallery-location-links li:nth-child(1) > a").text(lang.china.weddingsGalleryPage.linkLocation1);
       $(".gallery-location-links li:nth-child(3) > a").text(lang.china.weddingsGalleryPage.linkLocation2);
     }
+
     function translateWeddingsGalleryPage() {
       $("#weddings-gallery h1").text(lang.china.galleryPage.weddingsGalleryHeader);
       weddingsGalleryTwoLocationLinks();
@@ -1086,6 +1087,18 @@ initPhotoSwipeFromDOM('.my-gallery');
       $(".main-images-page h1").text(lang.china.weddingsPage.mixThumbnail.h3);
       weddingsGalleryTwoLocationLinks();
       $(".gallery-location-links li:nth-child(5) > a").text(lang.china.weddingsPage.mixThumbnail.h3);
+    }
+
+    function activitiesGalleryTwoLocationLinks() {
+      $(".gallery-location-links li:nth-child(1) > a").text(lang.china.weddingsGalleryPage.linkLocation1);
+      $(".gallery-location-links li:nth-child(3) > a").text(lang.china.galleryPage.activitiesGalleryHeader);
+    }
+
+    function translateActivitiesGalleryPage() {
+      $("#activities-gallery h1").text(lang.china.galleryPage.activitiesGalleryHeader);
+      activitiesGalleryTwoLocationLinks();
+
+      $("#baby100 h2").text(lang.china.activitiesPage.moreActivities.li4);
     }
 
     function checkLanguageAndPage() {
@@ -1136,6 +1149,10 @@ initPhotoSwipeFromDOM('.my-gallery');
         if ($("body").attr("id") === "mix-gallery-page") {
           translateLogoAndNav();
           translateMixnGallery();
+        }
+        if ($("body").attr("id") === "activities-gallery-page") {
+          translateLogoAndNav();
+          translateActivitiesGalleryPage();
         }
       }
     }
