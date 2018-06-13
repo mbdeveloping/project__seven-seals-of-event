@@ -23,7 +23,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="weddings-gallery-page">
     <div class="preloader">
       <div class="preloader-inner">
         <img class="rotating" src="images/home/preloader1.png" alt="">
@@ -46,11 +46,12 @@
           </div>
           <nav id="main-nav">
             <ul>
-              <li><a class="nav-link" href="index.html">Home</a></li>
-              <li><a class="nav-link" href="wedding.html">Weddings</a></li>
-              <li><a class="nav-link" href="activities.html">Activities</a></li>
-              <li class="active-page"><a class="nav-link" href="gallery.html">Gallery</a></li>
-              <li><a class="nav-link" href="contact.php">Contact</a></li>
+              <li><a class="nav-link" key="home" href="index.html">Home</a></li>
+              <li ><a class="nav-link" key="weddings" href="wedding.html">Weddings</a></li>
+              <li ><a class="nav-link" key="activities" href="activities.html">Activities</a></li>
+              <li class="active-page" ><a class="nav-link" key="gallery" href="gallery.html">Gallery</a></li>
+              <li ><a class="nav-link" key="contact" href="contact.php">Contact</a></li>
+              <li id="languages"> <a id="enlanguage" href="#"><img src="images/engflag.png" alt=""></a> <a id="chineseLan" href="#"><img src="images/chinaflag.png" alt=""></a> </li>
             </ul>
           </nav>
       </div>
@@ -88,7 +89,7 @@
               </a>
             </li>
             <li>
-              <a id="gallery-thumbnail-royal" role="button" href="traditional-photos.html">
+              <a id="gallery-thumbnail-traditional" role="button" href="traditional-photos.html">
                 <div class="gallery-thumbnail">
                   <img src="images/gallery/traditional/traditional-card-thumbnail.jpg" alt="Royal wedding avatar">
                   <p id="traditional-count" class="images-count">10 Photos</p>
@@ -97,7 +98,7 @@
               </a>
             </li>
             <li>
-              <a id="gallery-thumbnail-royal" role="button" href="mid-class-photos.html">
+              <a id="gallery-thumbnail-midClass" role="button" href="mid-class-photos.html">
                 <div class="gallery-thumbnail">
                   <img src="images/gallery/mid-class/mid-class-card-thumbnail.jpg" alt="Royal wedding avatar">
                   <p id="midClass-count" class="images-count">10 Photos</p>
@@ -106,7 +107,7 @@
               </a>
             </li>
             <li>
-              <a id="gallery-thumbnail-royal" role="button" href="simple-class-photos.html">
+              <a id="gallery-thumbnail-simpleClass" role="button" href="simple-class-photos.html">
                 <div class="gallery-thumbnail">
                   <img src="images/gallery/simple-class/simple-class-card-thumbnail.jpg" alt="Royal wedding avatar">
                   <p id="simpleClass-count" class="images-count">23 Photos</p>
@@ -115,7 +116,7 @@
               </a>
             </li>
             <li>
-              <a id="gallery-thumbnail-royal" role="button" href="western-photos.html">
+              <a id="gallery-thumbnail-western" role="button" href="western-photos.html">
                 <div class="gallery-thumbnail">
                   <img src="images/gallery/western/western-card-thumbnail.jpg" alt="Royal wedding avatar">
                   <p id="western-count" class="images-count">1 Photo</p>
@@ -124,7 +125,7 @@
               </a>
             </li>
             <li>
-              <a id="gallery-thumbnail-royal" role="button" href="mix-photos.html">
+              <a id="gallery-thumbnail-mix" role="button" href="mix-photos.html">
                 <div class="gallery-thumbnail">
                   <img src="images/gallery/mix/mix-card-thumbnail.jpg" alt="Royal wedding avatar">
                   <p id="mix-count" class="images-count">1 Photo</p>
@@ -184,6 +185,7 @@
     <script src="script/owl.carousel.min.js"></script>
     <script src="script/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
+    <script src="script/store.everything.min.js"></script>
     <script src="script/js.js"></script>
   </body>
 </html>

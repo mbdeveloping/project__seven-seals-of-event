@@ -808,6 +808,10 @@ initPhotoSwipeFromDOM('.my-gallery');
         "galleryPage":{
           "weddingsGalleryHeader":"婚礼图册",
           "activitiesGalleryHeader":"活动图册"
+        },
+        "weddingsGalleryPage":{
+          "linkLocation1":"图册",
+          "linkLocation2":"婚礼图册"
         }
       }
     }
@@ -1032,6 +1036,19 @@ initPhotoSwipeFromDOM('.my-gallery');
       $("#activities-gallery-thumbnail h1").text(lang.china.galleryPage.activitiesGalleryHeader);
     }
 
+    function translateWeddingsGalleryPage() {
+      $("#weddings-gallery h1").text(lang.china.galleryPage.weddingsGalleryHeader);
+      $(".gallery-location-links li:nth-child(1) > a").text(lang.china.weddingsGalleryPage.linkLocation1);
+      $(".gallery-location-links li:nth-child(3) > a").text(lang.china.weddingsGalleryPage.linkLocation2);
+
+      $("#gallery-thumbnail-royal h2").text(lang.china.weddingsPage.royalThumbnail.h3);
+      $("#gallery-thumbnail-traditional h2").text(lang.china.weddingsPage.traditionalThumbnail.h3);
+      $("#gallery-thumbnail-midClass h2").text(lang.china.weddingsPage.midClassThumbnail.h3);
+      $("#gallery-thumbnail-simpleClass h2").text(lang.china.weddingsPage.simpleClassThumbnail.h3);
+      $("#gallery-thumbnail-western h2").text(lang.china.weddingsPage.westernThumbnail.h3);
+      $("#gallery-thumbnail-mix h2").text(lang.china.weddingsPage.mixThumbnail.h3);
+    }
+
     function checkLanguageAndPage() {
       if (store.get("language") === "china") {
         if ($("body").attr("id") === "home-page") {
@@ -1052,6 +1069,10 @@ initPhotoSwipeFromDOM('.my-gallery');
         if ($("body").attr("id") === "gallery-page") {
           translateLogoAndNav();
           translateGalleryPage();
+        }
+        if ($("body").attr("id") === "weddings-gallery-page") {
+          translateLogoAndNav();
+          translateWeddingsGalleryPage();
         }
       }
     }
