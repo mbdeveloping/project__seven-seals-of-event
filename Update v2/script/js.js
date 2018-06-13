@@ -804,6 +804,10 @@ initPhotoSwipeFromDOM('.my-gallery');
               "h4":"其它活动"
             }
           }
+        },
+        "galleryPage":{
+          "weddingsGalleryHeader":"婚礼图册",
+          "activitiesGalleryHeader":"活动图册"
         }
       }
     }
@@ -1023,6 +1027,11 @@ initPhotoSwipeFromDOM('.my-gallery');
       $(".inout-other h5").text(lang.china.activitiesPage.inoutThumbnail.h3);
     }
 
+    function translateGalleryPage() {
+      $("#weddings-gallery-thumbnail h1").text(lang.china.galleryPage.weddingsGalleryHeader);
+      $("#activities-gallery-thumbnail h1").text(lang.china.galleryPage.activitiesGalleryHeader);
+    }
+
     function checkLanguageAndPage() {
       if (store.get("language") === "china") {
         if ($("body").attr("id") === "home-page") {
@@ -1039,6 +1048,10 @@ initPhotoSwipeFromDOM('.my-gallery');
           translateLogoAndNav();
           translateLikeWhatYouSee();
           translateActivitiesPage();
+        }
+        if ($("body").attr("id") === "gallery-page") {
+          translateLogoAndNav();
+          translateGalleryPage();
         }
       }
     }
