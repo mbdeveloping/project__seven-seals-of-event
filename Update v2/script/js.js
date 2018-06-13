@@ -718,6 +718,91 @@ initPhotoSwipeFromDOM('.my-gallery');
             "li9":"摄影,摄像",
             "li10":"欧美婚礼",
             "li11":"新人大礼包"
+          },
+          "otherWeddings":{
+            "mainHeader":{
+              "h4":"其它婚礼"
+            }
+          }
+        },
+        "activitiesPage":{
+          "hero":{
+            "h1":"生活中的趣味活动",
+            "p":"柒印让您全天充满活力"
+          },
+          "actFirstStep":{
+            "h2":"浏览",
+            "p":"查看我们的活动类别"
+          },
+          "actSecondStep":{
+            "h2":"精粹",
+            "p":"选择您的活动喜好"
+          },
+          "actThirdStep":{
+            "h2":"设计",
+            "p":"让我们携手共创您的神奇之日"
+          },
+          "mainSectionHeader":{
+            "h2":"选择您的活动"
+          },
+          "exhibitionsThumbnail":{
+            "h3":"展会",
+            "p":"这是柒印专长之一，我们迫不及待展示我们各个领域杰出的特色风格（时尚；艺术和任意领域）",
+            "btn":"阅读更多"
+          },
+          "travelThumbnail":{
+            "h3":"旅游",
+            "p":"我们专业团队热诚为您打造专属您的欧洲假日，让您每分每秒都乐在其中。",
+            "btn":"阅读更多"
+          },
+          "consultationThumbnail":{
+            "h3":"咨询",
+            "p":"这是一项基督徒商务咨询专业团队，以道德为原则，传统为主，集结众多经验丰富，种类多样的公司代表人物组织。",
+            "btn":"阅读更多"
+          },
+          "charitiesThumbnail":{
+            "h3":"慈善",
+            "p":"柒印慈善组织起源于2009年在立陶宛帮助孤儿寻找住所并提供他们衣物；玩具；食物和一些生活必须用品",
+            "btn":"阅读更多"
+          },
+          "inoutThumbnail":{
+            "h3":"室内/室外",
+            "p":"我们提供多种室内外团队建设活动。",
+            "btn":"阅读更多"
+          },
+          "moreActivities":{
+            "h3":"更多活动",
+            "li1":"新店开张",
+            "li2":"宴会/会议",
+            "li3":"进出口业务",
+            "li4":"宝宝满月",
+            "li5":"翻译（中文；立陶宛语；英语）",
+            "li6":"商标设计"
+          },
+          "exhibitionsCard":{
+            "h3":"展会",
+            "p":"这是柒印专长之一，我们迫不及待展示我们各个领域杰出的特色风格（时尚；艺术和任意领域），柒印的宗旨是创造出全新的、独一无二的甚至是前所未有的。如果你致力于新事物那么你选对了地方！"
+          },
+          "travelCard":{
+            "h3":"旅游",
+            "p":"我们专业团队热诚为您打造专属您的欧洲假日，让您每分每秒都乐在其中。我们强烈推荐——立陶宛，蕴藏丰富的历史基底，天然无害大氧吧，健康美味的当地美食，更多趣味的它等你区发现。你的旅途从早到晚全程安排，当然还有著名的波罗的海风景如画的沙丘，堪称立陶宛金子的琥珀等你带它们回家。兴奋了吗？"
+          },
+          "consultationCard":{
+            "h3":"咨询",
+            "p":"这是一项基督徒商务咨询专业团队，以道德为原则，传统为主，集结众多经验丰富，种类多样的公司代表人物组织。我们为创业者组织会议及培训，最重要的是我们有基督基金会帮助年轻的创业者！想了解更多的信息请于我们联系获取进一步的细节。"
+          },
+          "charitiesCard":{
+            "h3":"慈善",
+            "p":"柒印慈善组织起源于2009年在立陶宛帮助孤儿寻找住所并提供他们衣物；玩具；食物和一些生活必须用品与此同时立陶宛孤儿人数直线下降40%（参考：新闻，YouTube）。如果你有感动爱心帮助立陶宛或者其它地区的孤儿请联系我们讨论进一步的细节。"
+          },
+          "inoutCard":{
+            "h3":"室内/室外",
+            "p":"我们提供多种室内外团队建设活动。组织生日派对；公司庆典及团队建设等。"
+          },
+          "otherActivities":{
+            "mainHeader":{
+              "h4":"其它活动"
+            }
           }
         }
       }
@@ -868,6 +953,74 @@ initPhotoSwipeFromDOM('.my-gallery');
       $("#western-main-card li:nth-child(9)").text(lang.china.weddingsPage.westernCard.li9);
       $("#western-main-card li:nth-child(10)").text(lang.china.weddingsPage.westernCard.li10);
       $("#western-main-card li:nth-child(11)").text(lang.china.weddingsPage.westernCard.li11);
+
+      $(".other-wedding-categories h4").text(lang.china.weddingsPage.otherWeddings.mainHeader.h4);
+      $(".royal-other h5").text(lang.china.weddingsPage.royalThumbnail.h3);
+      $(".traditional-other h5").text(lang.china.weddingsPage.traditionalThumbnail.h3);
+      $(".mid-other h5").text(lang.china.weddingsPage.midClassThumbnail.h3);
+      $(".simple-other h5").text(lang.china.weddingsPage.simpleClassThumbnail.h3);
+      $(".western-other h5").text(lang.china.weddingsPage.westernThumbnail.h3);
+      $(".mix-other h5").text(lang.china.weddingsPage.mixThumbnail.h3);
+    }
+
+    function translateActivitiesPage() {
+      $("#activities-hero h1").text(lang.china.activitiesPage.hero.h1);
+      $("#activities-hero p").text(lang.china.activitiesPage.hero.p);
+
+      $("#activities-item .first-step h2").text(lang.china.activitiesPage.actFirstStep.h2);
+      $("#activities-item .first-step p").text(lang.china.activitiesPage.actFirstStep.p);
+      $("#activities-item .second-step h2").text(lang.china.activitiesPage.actSecondStep.h2);
+      $("#activities-item .second-step p").text(lang.china.activitiesPage.actSecondStep.p);
+      $("#activities-item .third-step h2").text(lang.china.activitiesPage.actThirdStep.h2);
+      $("#activities-item .third-step p").text(lang.china.activitiesPage.actThirdStep.p);
+
+      $("#main-activities-section h2").text(lang.china.activitiesPage.mainSectionHeader.h2);
+
+      $(".exhibitions-thumbnail .cards-text h3").text(lang.china.activitiesPage.exhibitionsThumbnail.h3);
+      $(".exhibitions-thumbnail .cards-text p").text(lang.china.activitiesPage.exhibitionsThumbnail.p);
+      $(".exhibitions-thumbnail .thumbnail-icon-wrapper p").text(lang.china.activitiesPage.exhibitionsThumbnail.btn);
+
+      $(".travel-thumbnail .cards-text h3").text(lang.china.activitiesPage.travelThumbnail.h3);
+      $(".travel-thumbnail .cards-text p").text(lang.china.activitiesPage.travelThumbnail.p);
+      $(".travel-thumbnail .thumbnail-icon-wrapper p").text(lang.china.activitiesPage.travelThumbnail.btn);
+
+      $(".consultation-thumbnail .cards-text h3").text(lang.china.activitiesPage.consultationThumbnail.h3);
+      $(".consultation-thumbnail .cards-text p").text(lang.china.activitiesPage.consultationThumbnail.p);
+      $(".consultation-thumbnail .thumbnail-icon-wrapper p").text(lang.china.activitiesPage.consultationThumbnail.btn);
+
+      $(".charities-thumbnail .cards-text h3").text(lang.china.activitiesPage.charitiesThumbnail.h3);
+      $(".charities-thumbnail .cards-text p").text(lang.china.activitiesPage.charitiesThumbnail.p);
+      $(".charities-thumbnail .thumbnail-icon-wrapper p").text(lang.china.activitiesPage.charitiesThumbnail.btn);
+
+      $(".inout-thumbnail .cards-text h3").text(lang.china.activitiesPage.inoutThumbnail.h3);
+      $(".inout-thumbnail .cards-text p").text(lang.china.activitiesPage.inoutThumbnail.p);
+      $(".inout-thumbnail .thumbnail-icon-wrapper p").text(lang.china.activitiesPage.inoutThumbnail.btn);
+
+      $("#activities-more h3").text(lang.china.activitiesPage.moreActivities.h3);
+      $("#more-activities-list li:nth-child(1)").text(lang.china.activitiesPage.moreActivities.li1);
+      $("#more-activities-list li:nth-child(2)").text(lang.china.activitiesPage.moreActivities.li2);
+      $("#more-activities-list li:nth-child(3)").text(lang.china.activitiesPage.moreActivities.li3);
+      $("#more-activities-list li:nth-child(4)").text(lang.china.activitiesPage.moreActivities.li4);
+      $("#more-activities-list li:nth-child(5)").text(lang.china.activitiesPage.moreActivities.li5);
+      $("#more-activities-list li:nth-child(6)").text(lang.china.activitiesPage.moreActivities.li6);
+
+      $("#exhibitions-main-card h3").text(lang.china.activitiesPage.exhibitionsCard.h3);
+      $("#exhibitions-main-card p").text(lang.china.activitiesPage.exhibitionsCard.p);
+      $("#travel-main-card h3").text(lang.china.activitiesPage.travelCard.h3);
+      $("#travel-main-card p").text(lang.china.activitiesPage.travelCard.p);
+      $("#consultation-main-card h3").text(lang.china.activitiesPage.consultationCard.h3);
+      $("#consultation-main-card p").text(lang.china.activitiesPage.consultationCard.p);
+      $("#charities-main-card h3").text(lang.china.activitiesPage.charitiesCard.h3);
+      $("#charities-main-card p").text(lang.china.activitiesPage.charitiesCard.p);
+      $("#inout-main-card h3").text(lang.china.activitiesPage.inoutCard.h3);
+      $("#inout-main-card p").text(lang.china.activitiesPage.inoutCard.p);
+
+      $("#other-activities h4").text(lang.china.activitiesPage.otherActivities.mainHeader.h4);
+      $(".exhibitions-other h5").text(lang.china.activitiesPage.exhibitionsThumbnail.h3);
+      $(".travel-other h5").text(lang.china.activitiesPage.travelThumbnail.h3);
+      $(".consultation-other h5").text(lang.china.activitiesPage.consultationThumbnail.h3);
+      $(".charities-other h5").text(lang.china.activitiesPage.charitiesThumbnail.h3);
+      $(".inout-other h5").text(lang.china.activitiesPage.inoutThumbnail.h3);
     }
 
     function checkLanguageAndPage() {
@@ -885,6 +1038,7 @@ initPhotoSwipeFromDOM('.my-gallery');
         if ($("body").attr("id") === "activities-page") {
           translateLogoAndNav();
           translateLikeWhatYouSee();
+          translateActivitiesPage();
         }
       }
     }
