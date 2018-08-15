@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding:0;
   background: #fff;
-  font-family: "Noto Serif",serif;
+  font-family: "Noto Serif", serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,6 +138,7 @@ ul {
 }
 /* Main Header rules */
 #main-header {
+  font-family: serif;
   position: fixed;
   width: 100%;
   height: 90px;
@@ -369,6 +370,7 @@ ul {
 }
 
 .slide1 h1 {
+  font-family: 'Great Vibes', 'Tangerine', cursive;
   color: #fff;
   text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
   font-style: italic;

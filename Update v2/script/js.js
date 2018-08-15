@@ -1168,5 +1168,5 @@ initPhotoSwipeFromDOM('.my-gallery');
       store.remove('language');
       location.reload();
     });
-  }())
+  }());
 })
