@@ -59,7 +59,8 @@ if (!$errName && !$errEmail && !$errPhone && !$errMessage && !$errHuman) {
     <meta name="language" content="en-GB">
     <meta name="author" content="Mantvydas Binderis">
     <title>Contact Sevens Seals of Event</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/owl.carousel.min.css">
     <link rel="stylesheet" href="styles/main-css.css">
     <link rel="icon" href="favicon.png">
