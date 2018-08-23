@@ -524,7 +524,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       "china" : {
         "homePage":{
           "logo":{
-            "p":"柒印策划有限公司"
+            "p":`柒印策划有限公司`
           },
           "navBar" : {
             "home": "主页",
@@ -820,7 +820,8 @@ initPhotoSwipeFromDOM('.my-gallery');
       navLinks.each(function() {
       $(this).text(lang.china.homePage.navBar[$(this).attr("key")]);
       });
-      $("#header-branding p").text(lang.china.homePage.logo.p);
+      // $("#header-branding p").text(lang.china.homePage.logo.p);
+      $('#header-branding p')[0].childNodes[0].nodeValue = lang.china.homePage.logo.p;
     }
     function translateLikeWhatYouSee() {
       $(".like-what-you-see h4").text(lang.china.homePage.likeWhatYouSee.h4);
