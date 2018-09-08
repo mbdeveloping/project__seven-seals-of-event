@@ -13,5 +13,3 @@ It is my first project that I have done. This website is for Chinese company cal
  •	Making Home page anchor link to open a specific class in Wedding/Activity page;
  
  •	Solved problems to stop inefficiencies in the website’s parallax scroll animation;
- 
- •	Making weddings and Activity page option section  more accessible.
