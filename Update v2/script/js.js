@@ -961,6 +961,19 @@ initPhotoSwipeFromDOM('.my-gallery');
       $("#western-main-card li:nth-child(10)").text(lang.china.weddingsPage.westernCard.li10);
       $("#western-main-card li:nth-child(11)").text(lang.china.weddingsPage.westernCard.li11);
 
+      $("#mix-main-card h3").text(lang.china.weddingsPage.mixThumbnail.h3);
+      $("#mix-main-card p").text(lang.china.weddingsPage.mixCard.p);
+      $("#mix-main-card h4").text(lang.china.weddingsPage.mixCard.h4);
+      $("#mix-main-card li:nth-child(1)").text(lang.china.weddingsPage.mixCard.li1);
+      $("#mix-main-card li:nth-child(2)").text(lang.china.weddingsPage.mixCard.li2);
+      $("#mix-main-card li:nth-child(3)").text(lang.china.weddingsPage.mixCard.li3);
+      $("#mix-main-card li:nth-child(4)").text(lang.china.weddingsPage.mixCard.li4);
+      $("#mix-main-card li:nth-child(5)").text(lang.china.weddingsPage.mixCard.li5);
+      $("#mix-main-card li:nth-child(6)").text(lang.china.weddingsPage.mixCard.li6);
+      $("#mix-main-card li:nth-child(7)").text(lang.china.weddingsPage.mixCard.li7);
+      $("#mix-main-card li:nth-child(8)").text(lang.china.weddingsPage.mixCard.li8);
+      $("#mix-main-card li:nth-child(9)").text(lang.china.weddingsPage.mixCard.li9);
+
       $(".other-wedding-categories h4").text(lang.china.weddingsPage.otherWeddings.mainHeader.h4);
       $(".royal-other h5").text(lang.china.weddingsPage.royalThumbnail.h3);
       $(".traditional-other h5").text(lang.china.weddingsPage.traditionalThumbnail.h3);
