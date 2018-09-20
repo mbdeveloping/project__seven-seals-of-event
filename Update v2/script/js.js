@@ -809,7 +809,8 @@ initPhotoSwipeFromDOM('.my-gallery');
         },
         "weddingsGalleryPage":{
           "linkLocation1":"图册",
-          "linkLocation2":"婚礼图册"
+          "linkLocation2":"婚礼图册",
+          "backToMainGalleryBtn":"返回主页图册"
         }
       }
     }
@@ -1063,6 +1064,8 @@ initPhotoSwipeFromDOM('.my-gallery');
       $("#gallery-thumbnail-simpleClass h2").text(lang.china.weddingsPage.simpleClassThumbnail.h3);
       $("#gallery-thumbnail-western h2").text(lang.china.weddingsPage.westernThumbnail.h3);
       $("#gallery-thumbnail-mix h2").text(lang.china.weddingsPage.mixThumbnail.h3);
+
+      $("#wp-back-to-main").text(lang.china.weddingsGalleryPage.backToMainGalleryBtn);
     }
 
     function translateRoyalGallery() {
