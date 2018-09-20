@@ -811,6 +811,9 @@ initPhotoSwipeFromDOM('.my-gallery');
           "linkLocation1":"图册",
           "linkLocation2":"婚礼图册",
           "backToMainGalleryBtn":"返回主页图册"
+        },
+        "ActivitiesGalleryPage": {
+
         }
       }
     }
@@ -1114,6 +1117,8 @@ initPhotoSwipeFromDOM('.my-gallery');
       activitiesGalleryTwoLocationLinks();
 
       $("#baby100 h2").text(lang.china.activitiesPage.moreActivities.li4);
+
+      $("#ap-back-to-main").text(lang.china.weddingsGalleryPage.backToMainGalleryBtn);
     }
 
     function checkLanguageAndPage() {
