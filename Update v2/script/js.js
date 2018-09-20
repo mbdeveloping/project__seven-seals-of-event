@@ -501,7 +501,7 @@ initPhotoSwipeFromDOM('.my-gallery');
           $('#human').removeClass("formValidationError");
         }else {
           $('#human').addClass("formValidationError");
-          $('#human').next("p").text("Your anti-spam is inccorect");
+          $('#human').next("p").text("Your anti-spam is incorrect");
           TweenMax.to(window, .3, {scrollTo:{y:formOffsetTop-navBarH, autoKill:false}});
           isFormValid = false;
         }
@@ -705,19 +705,17 @@ initPhotoSwipeFromDOM('.my-gallery');
           },
           "mixCard":{
             "h3":"中西式婚礼",
-            "p":"为致力于梦想中混合式婚礼的你提供多样化选择。",
-            "h4":"中西式婚礼服务项目（最终服务项目由双方合同协议达成）",
-            "li1":"30至40人",
+            "p":"对于追求独特的你可将传统风格搭配任意喜欢的风格组成混合风，这是一种不错的选择搭配。可任由你 选择不同的风格搭配，我们将成就你独一无二的婚礼。",
+            "h4":"混合婚礼包括",
+            "li1":"人数20-35人",
             "li2":"婚礼仪式（室内/户外）",
-            "li3":"食物（西餐+甜品桌）",
-            "li4":"主持人（节目流程主持）",
+            "li3":"食物（中式/西式+甜品桌）",
+            "li4":"主持（气氛控制）",
             "li5":"现场音乐/DJ音乐",
-            "li6":"婚礼照片（户外）",
-            "li7":"外籍餐饮服务人员",
-            "li8":"蜜月",
-            "li9":"摄影,摄像",
-            "li10":"欧美婚礼",
-            "li11":"新人大礼包"
+            "li6":"婚礼照片（室内/户外）",
+            "li7":"蜜月",
+            "li8":"摄影摄像",
+            "li9":"神秘礼品"
           },
           "otherWeddings":{
             "mainHeader":{
