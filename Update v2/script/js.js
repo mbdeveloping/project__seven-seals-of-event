@@ -533,6 +533,9 @@ initPhotoSwipeFromDOM('.my-gallery');
             "gallery": "图册",
             "contact": "联系"
           },
+          "footer": {
+            "h4":"联系我们"
+          },
           "slide1":{
             "h1":"您的大日子是我们的责任",
             "p":"您的梦想我们专业团队帮",
@@ -815,6 +818,7 @@ initPhotoSwipeFromDOM('.my-gallery');
         "ActivitiesGalleryPage": {
 
         }
+
       }
     }
     function translateLogoAndNav(){
@@ -824,6 +828,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       });
       // $("#header-branding p").text(lang.china.homePage.logo.p);
       $('#header-branding p')[0].childNodes[0].nodeValue = lang.china.homePage.logo.p;
+      $(".footer-textarea h4").text(lang.china.homePage.footer.h4);
     }
     function translateLikeWhatYouSee() {
       $(".like-what-you-see h4").text(lang.china.homePage.likeWhatYouSee.h4);
