@@ -5,7 +5,8 @@ $(document).ready(function() {
   /*** Website preloader screen spinner rules ***/
   $(window).on("load", function() {
     TweenMax.to(preloader, .3, {opacity:0, onComplete:function() {
-      preloader.detach();
+      // preloader.detach();
+      $(preloader).css("display", "none");
       pageBody.removeClass("body-scroll-lock");
     }});
   });
@@ -524,8 +525,9 @@ initPhotoSwipeFromDOM('.my-gallery');
       "china" : {
         "homePage":{
           "logo":{
-            "p":`柒印策划有限公司`
+            "p":`柒印策划有限公司`,
           },
+          "preloader":"加载中…",
           "navBar" : {
             "home": "主页",
             "weddings": "婚礼",
@@ -829,6 +831,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       // $("#header-branding p").text(lang.china.homePage.logo.p);
       $('#header-branding p')[0].childNodes[0].nodeValue = lang.china.homePage.logo.p;
       $(".footer-textarea h4").text(lang.china.homePage.footer.h4);
+      $(".preloader-inner h1").text(lang.china.homePage.preloader);
     }
     function translateLikeWhatYouSee() {
       $(".like-what-you-see h4").text(lang.china.homePage.likeWhatYouSee.h4);
