@@ -818,7 +818,8 @@ initPhotoSwipeFromDOM('.my-gallery');
           "backToMainGalleryBtn":"返回主页图册"
         },
         "ActivitiesGalleryPage": {
-          "counter": "图片"
+          "counter": "图片",
+          "bakcToActivitiesGalleryBtn":"返回活动相册"
         },
         "WeChat": {
           "p":"扫描添加或者 ID 查询添加",
@@ -1148,59 +1149,59 @@ initPhotoSwipeFromDOM('.my-gallery');
           translateHomePage();
           translateLikeWhatYouSee();
         }
-        if ($("body").attr("id") === "weddings-page") {
+        else if ($("body").attr("id") === "weddings-page") {
           translateWeChat();
           translateLogoAndNav();
           translateWeddingsPage();
           translateLikeWhatYouSee();
         }
-        if ($("body").attr("id") === "activities-page") {
+        else if ($("body").attr("id") === "activities-page") {
           translateWeChat();
           translateLogoAndNav();
           translateLikeWhatYouSee();
           translateActivitiesPage();
         }
-        if ($("body").attr("id") === "gallery-page") {
+        else if ($("body").attr("id") === "gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateGalleryPage();
         }
-        if ($("body").attr("id") === "weddings-gallery-page") {
+        else if ($("body").attr("id") === "weddings-gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateWeddingsGalleryPage();
         }
-        if ($("body").attr("id") === "royal-gallery-page") {
+        else if ($("body").attr("id") === "royal-gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateRoyalGallery();
         }
-        if ($("body").attr("id") === "traditional-gallery-page") {
+        else if ($("body").attr("id") === "traditional-gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateTraditionalGallery();
         }
-        if ($("body").attr("id") === "midclass-gallery-page") {
+        else if ($("body").attr("id") === "midclass-gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateMidClassGallery();
         }
-        if ($("body").attr("id") === "simpleclass-gallery-page") {
+        else if ($("body").attr("id") === "simpleclass-gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateSimpleClassGallery();
         }
-        if ($("body").attr("id") === "western-gallery-page") {
+        else if ($("body").attr("id") === "western-gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateWesternGallery();
         }
-        if ($("body").attr("id") === "mix-gallery-page") {
+        else if ($("body").attr("id") === "mix-gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateMixnGallery();
         }
-        if ($("body").attr("id") === "activities-gallery-page") {
+        else if ($("body").attr("id") === "activities-gallery-page") {
           translateWeChat();
           translateLogoAndNav();
           translateActivitiesGalleryPage();
