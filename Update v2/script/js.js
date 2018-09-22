@@ -818,7 +818,7 @@ initPhotoSwipeFromDOM('.my-gallery');
           "backToMainGalleryBtn":"返回主页图册"
         },
         "ActivitiesGalleryPage": {
-
+          "counter": "图片"
         }
 
       }
@@ -831,7 +831,7 @@ initPhotoSwipeFromDOM('.my-gallery');
       // $("#header-branding p").text(lang.china.homePage.logo.p);
       $('#header-branding p')[0].childNodes[0].nodeValue = lang.china.homePage.logo.p;
       $(".footer-textarea h4").text(lang.china.homePage.footer.h4);
-      $(".preloader-inner h1").text(lang.china.homePage.preloader);
+      // $(".preloader-inner h1").text(lang.china.homePage.preloader);
     }
     function translateLikeWhatYouSee() {
       $(".like-what-you-see h4").text(lang.china.homePage.likeWhatYouSee.h4);
@@ -1066,6 +1066,7 @@ initPhotoSwipeFromDOM('.my-gallery');
     }
 
     function translateWeddingsGalleryPage() {
+      $(".phword").text(lang.china.ActivitiesGalleryPage.counter);
       $("#weddings-gallery h1").text(lang.china.galleryPage.weddingsGalleryHeader);
       weddingsGalleryTwoLocationLinks();
 
@@ -1121,6 +1122,7 @@ initPhotoSwipeFromDOM('.my-gallery');
     }
 
     function translateActivitiesGalleryPage() {
+      $(".phword").text(lang.china.ActivitiesGalleryPage.counter);
       $("#activities-gallery h1").text(lang.china.galleryPage.activitiesGalleryHeader);
       activitiesGalleryTwoLocationLinks();
 

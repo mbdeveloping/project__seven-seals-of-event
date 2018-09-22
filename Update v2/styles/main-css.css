@@ -72,6 +72,14 @@ ul {
   transform: translate( -50%);
   letter-spacing: 2px;
 }
+.gallery-thumbnail span.phword {
+  display: inline-block;
+  color: #fff;
+}
+#main-weddings-gallery-section .gallery-thumbnail span.phword {
+  display: inline-block;
+  color: #555;
+}
 .preloader-inner img {
   position: absolute;
 }
